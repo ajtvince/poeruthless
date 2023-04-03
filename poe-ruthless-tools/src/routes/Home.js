@@ -60,175 +60,99 @@ const originalArray = [
       "act": 1,
       "quest": "The Siren's Cadence(Cavern of Wrath WP)"
     },
-    {
-      "name": "Summon Carrion Golem",
-      "class": "Templar",
-      "act": 4,
-      "quest": "Breaking the Seal(Open the Mines)"
-    },
-    {
-      "name": "Summon Carrion Golem",
-      "class": "Witch",
-      "act": 4,
-      "quest": "Breaking the Seal(Open the Mines)"
-    },
-    {
-      "name": "Summon Stone Golem",
-      "class": "Duelist",
-      "act": 4,
-      "quest": "Breaking the Seal(Open the Mines)"
-    },
-    {
-      "name": "Summon Stone Golem",
-      "class": "Marauder",
-      "act": 4,
-      "quest": "Breaking the Seal(Open the Mines)"
-    },
-    {
-      "name": "Summon Stone Golem",
-      "class": "Ranger",
-      "act": 4,
-      "quest": "Breaking the Seal(Open the Mines)"
-    },
-    {
-      "name": "Summon Stone Golem",
-      "class": "Scion",
-      "act": 4,
-      "quest": "Breaking the Seal(Open the Mines)"
-    },
-    {
-      "name": "Summon Stone Golem",
-      "class": "Shadow",
-      "act": 4,
-      "quest": "Breaking the Seal(Open the Mines)"
-    },
-    {
-      "name": "Summon Stone Golem",
-      "class": "Templar",
-      "act": 4,
-      "quest": "Breaking the Seal(Open the Mines)"
-    },
-    {
-      "name": "Summon Stone Golem",
-      "class": "Witch",
-      "act": 4,
-      "quest": "Breaking the Seal(Open the Mines)"
-    },
-    {
-      "name": "Summon Flame Golem",
-      "class": "Duelist",
-      "act": 4,
-      "quest": "Breaking the Seal(Open the Mines)"
-    },
-    {
-      "name": "Summon Flame Golem",
-      "class": "Marauder",
-      "act": 4,
-      "quest": "Breaking the Seal(Open the Mines)"
-    },
-    {
-      "name": "Summon Flame Golem",
-      "class": "Ranger",
-      "act": 4,
-      "quest": "Breaking the Seal(Open the Mines)"
-    },
-    {
-      "name": "Summon Flame Golem",
-      "class": "Scion",
-      "act": 4,
-      "quest": "Breaking the Seal(Open the Mines)"
-    },
-    {
-      "name": "Summon Flame Golem",
-      "class": "Shadow",
-      "act": 4,
-      "quest": "Breaking the Seal(Open the Mines)"
-    },
-    {
-      "name": "Summon Flame Golem",
-      "class": "Templar",
-      "act": 4,
-      "quest": "Breaking the Seal(Open the Mines)"
-    },
-    {
-      "name": "Summon Flame Golem",
-      "class": "Witch",
-      "act": 4,
-      "quest": "Breaking the Seal(Open the Mines)"
-    },
-    {
-      "name": "Shield Crush",
-      "class": "Marauder",
-      "act": 1,
-      "quest": "Enemy at the Gate (Kill Hillock)"
-    },
-    {
-      "name": "Vulnerability",
-      "class": "Marauder",
-      "act": 3,
-      "quest": "Lost in Love(Find Tolman)Maramoa"
-    },
-    {
-      "name": "Vulnerability",
-      "class": "Scion",
-      "act": 3,
-      "quest": "Lost in Love(Find Tolman)Maramoa"
-    },
-    {
-      "name": "Vulnerability",
-      "class": "Templar",
-      "act": 3,
-      "quest": "Lost in Love(Find Tolman)Maramoa"
-    }
 ];
 
-const uniqueNames = [...new Set(originalArray.map(item => item.name))];
+console.log(originalArray);
 
-const reducedArrays = [];
+function findUniqueCombos(arr) {
+  let result = [];
 
-for (let i = 0; i < Math.pow(2, uniqueNames.length); i++) {
-  const reducedArray = [];
-
-  for (let j = 0; j < uniqueNames.length; j++) {
-    if (i & (1 << j)) {
-      const item = originalArray.find(item => item.name === uniqueNames[j]);
-      reducedArray.push(item);
-    }
+  // Helper function to check if two objects have the same class and quest values
+  function haveSameClassAndQuest(obj1, obj2) {
+    return obj1.class === obj2.class && obj1.quest === obj2.quest;
   }
 
-  const isUnique = reducedArrays.every(array => {
-    if (array.length !== reducedArray.length) {
-      return true;
+  // Recursive function to find all unique combinations
+  function findCombos(currArr, remainingArr) {
+    // Base case: If there are no more objects remaining, add the current array to the result
+    if (remainingArr.length === 0) {
+      result.push(currArr);
+      return;
     }
 
-    for (let k = 0; k < array.length; k++) {
-      if (array[k].name !== reducedArray[k].name) {
-        return true;
+    // For each object in the remaining array
+    for (let i = 0; i < remainingArr.length; i++) {
+      // If the current array does not already contain an object with the same name value
+      if (!currArr.some(obj => obj.name === remainingArr[i].name)) {
+        // If the current array does not already contain an object with the same class and quest values
+        if (!currArr.some(obj => haveSameClassAndQuest(obj, remainingArr[i]))) {
+          // Recursively call the function with the current array plus the current object, and the remaining array without the current object
+          findCombos([...currArr, remainingArr[i]], remainingArr.slice(i + 1));
+        }
       }
     }
-
-    return false;
-  });
-
-  if (isUnique) {
-    reducedArrays.push(reducedArray);
   }
+
+  findCombos([], arr);
+  return result;
 }
 
-console.log(reducedArrays);
+const uniqueCombos = findUniqueCombos(originalArray);
+console.log(uniqueCombos);
+let correctCombos = [];
+uniqueCombos.forEach(arr => {
+  if(arr.length === uniqueCombos[0].length) {
+    console.log('length 10');
+    console.log(arr);
+    correctCombos.push(arr);
+  }
+});
+
+let numDiffClasses=Infinity;
+let minOptimalPath = [];
+let classMaxCount=-Infinity;
+let mainClass = "Duelist";
+
+correctCombos.forEach( arr => {
+  let x = countClassNames(arr);
+  let tc = Object.keys(x).length;
+  if (tc <= numDiffClasses) {
+    numDiffClasses = tc;
+    let z = Object.values(x);
+    let max = Math.max(...z);
+    console.log(max);
+    if (max >= classMaxCount) {
+      classMaxCount = max;
+      console.log(arr);
+      if (x[mainClass] === max) {
+        minOptimalPath.push(arr);
+      }
+    }
+  }
+});
+
+console.log(minOptimalPath);
+
+
+
+function countClassNames(arr) {
+  let count = {};
+
+  for (let i = 0; i < arr.length; i++) {
+    if (count[arr[i].class]) {
+      count[arr[i].class]++;
+    } else {
+      count[arr[i].class] = 1;
+    }
+  }
+  console.log(count);
+  return count;
+}
 
 function Home() {
   return (
     <div>
-      {reducedArrays.map((array, index) => (
-        <div key={index}>
-          {array.map(item => (
-            <div key={`${item.name}-${item.class}-${item.act}`}>
-              {item.name}, {item.class}, Act {item.act}
-            </div>
-          ))}
-        </div>
-      ))}
+
     </div>
   );
 }
@@ -236,4 +160,197 @@ function Home() {
 
 export default Home;
 
-
+[
+  [
+      {
+          "name": "Ancestral Protector",
+          "class": "Templar",
+          "act": 1,
+          "quest": "Breaking Some Eggs(Mud Flats)"
+      },
+      {
+          "name": "Battlemage's Cry",
+          "class": "Templar",
+          "act": 3,
+          "quest": "Lost in Love(Find Tolman)Maramoa"
+      },
+      {
+          "name": "Bladefall",
+          "class": "Scion",
+          "act": 3,
+          "quest": "Sever the Right Hand(Kill Gravicius)"
+      },
+      {
+          "name": "Blood Rage",
+          "class": "Duelist",
+          "act": 2,
+          "quest": "Intruders in Black(Kill Fidelitas)"
+      },
+      {
+          "name": "Clarity",
+          "class": "Witch",
+          "act": 1,
+          "quest": "The Caged Brute(Kill Brutus)"
+      }
+  ],
+  [
+      {
+          "name": "Ancestral Protector",
+          "class": "Templar",
+          "act": 1,
+          "quest": "Breaking Some Eggs(Mud Flats)"
+      },
+      {
+          "name": "Battlemage's Cry",
+          "class": "Templar",
+          "act": 3,
+          "quest": "Lost in Love(Find Tolman)Maramoa"
+      },
+      {
+          "name": "Bladefall",
+          "class": "Scion",
+          "act": 3,
+          "quest": "Sever the Right Hand(Kill Gravicius)"
+      },
+      {
+          "name": "Blood Rage",
+          "class": "Ranger",
+          "act": 2,
+          "quest": "Intruders in Black(Kill Fidelitas)"
+      },
+      {
+          "name": "Clarity",
+          "class": "Witch",
+          "act": 1,
+          "quest": "The Caged Brute(Kill Brutus)"
+      }
+  ],
+  [
+      {
+          "name": "Ancestral Protector",
+          "class": "Templar",
+          "act": 1,
+          "quest": "Breaking Some Eggs(Mud Flats)"
+      },
+      {
+          "name": "Battlemage's Cry",
+          "class": "Templar",
+          "act": 3,
+          "quest": "Lost in Love(Find Tolman)Maramoa"
+      },
+      {
+          "name": "Bladefall",
+          "class": "Scion",
+          "act": 3,
+          "quest": "Sever the Right Hand(Kill Gravicius)"
+      },
+      {
+          "name": "Blood Rage",
+          "class": "Shadow",
+          "act": 2,
+          "quest": "Intruders in Black(Kill Fidelitas)"
+      },
+      {
+          "name": "Clarity",
+          "class": "Witch",
+          "act": 1,
+          "quest": "The Caged Brute(Kill Brutus)"
+      }
+  ],
+  [
+      {
+          "name": "Ancestral Protector",
+          "class": "Templar",
+          "act": 1,
+          "quest": "Breaking Some Eggs(Mud Flats)"
+      },
+      {
+          "name": "Battlemage's Cry",
+          "class": "Templar",
+          "act": 3,
+          "quest": "Lost in Love(Find Tolman)Maramoa"
+      },
+      {
+          "name": "Bladefall",
+          "class": "Shadow",
+          "act": 3,
+          "quest": "Sever the Right Hand(Kill Gravicius)"
+      },
+      {
+          "name": "Blood Rage",
+          "class": "Duelist",
+          "act": 2,
+          "quest": "Intruders in Black(Kill Fidelitas)"
+      },
+      {
+          "name": "Clarity",
+          "class": "Witch",
+          "act": 1,
+          "quest": "The Caged Brute(Kill Brutus)"
+      }
+  ],
+  [
+      {
+          "name": "Ancestral Protector",
+          "class": "Templar",
+          "act": 1,
+          "quest": "Breaking Some Eggs(Mud Flats)"
+      },
+      {
+          "name": "Battlemage's Cry",
+          "class": "Templar",
+          "act": 3,
+          "quest": "Lost in Love(Find Tolman)Maramoa"
+      },
+      {
+          "name": "Bladefall",
+          "class": "Shadow",
+          "act": 3,
+          "quest": "Sever the Right Hand(Kill Gravicius)"
+      },
+      {
+          "name": "Blood Rage",
+          "class": "Ranger",
+          "act": 2,
+          "quest": "Intruders in Black(Kill Fidelitas)"
+      },
+      {
+          "name": "Clarity",
+          "class": "Witch",
+          "act": 1,
+          "quest": "The Caged Brute(Kill Brutus)"
+      }
+  ],
+  [
+      {
+          "name": "Ancestral Protector",
+          "class": "Templar",
+          "act": 1,
+          "quest": "Breaking Some Eggs(Mud Flats)"
+      },
+      {
+          "name": "Battlemage's Cry",
+          "class": "Templar",
+          "act": 3,
+          "quest": "Lost in Love(Find Tolman)Maramoa"
+      },
+      {
+          "name": "Bladefall",
+          "class": "Shadow",
+          "act": 3,
+          "quest": "Sever the Right Hand(Kill Gravicius)"
+      },
+      {
+          "name": "Blood Rage",
+          "class": "Shadow",
+          "act": 2,
+          "quest": "Intruders in Black(Kill Fidelitas)"
+      },
+      {
+          "name": "Clarity",
+          "class": "Witch",
+          "act": 1,
+          "quest": "The Caged Brute(Kill Brutus)"
+      }
+  ]
+]
