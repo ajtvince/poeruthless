@@ -1,0 +1,210 @@
+.gemIconContainer {
+    display: inline-block;
+    margin:12px;
+    position: relative;
+    width:auto;
+    color:#e8ba7f;
+    width:22%;
+    max-width: 360px;
+    min-width: 240px;
+    vertical-align: top;
+    box-shadow: 1px 1px 8px black;
+    overflow: hidden;
+    border-radius: 6px;
+    background-color: #1f1f1f;
+}
+.gemIconContainer > .gemIconPic {
+    width:100%;
+    position:relative;
+    background-color: #0f0f0f;
+}
+.gemIconContainer > .gemIconPic > img {
+    width:100%;
+    height:100px;
+    object-fit: cover;
+    display:block;
+}
+.gemIconName {
+    text-align: center;
+    background-color: #0f0f0f;
+    padding-top:4px;
+    padding-bottom: 4px;
+    font-weight: bold;
+}
+.gemIconClass {
+    text-align: left;
+    background-color: #2f2f2f;
+    padding:4px;
+    padding-left:8px;
+}
+.gemIconQuest {
+    text-align: left;
+    background-color: #2f2f2f;
+    padding:4px;
+    padding-left:8px;
+}
+.gemIconContainer > .gemIconDelete {
+    position:absolute;
+    top:0px;
+    right:0px;
+    z-index: 9;
+    background-color: #151515;
+    padding:4px;
+    cursor: pointer;
+}
+.gemIconContainer >.gemIconContainerL, .gemIconContainer > .gemIconContainerR {
+    position:relative;
+    display: inline-block;
+    vertical-align: top;
+}
+.gemIconContainer > .gemIconContainerL {
+    width:30%;
+    background-color: #1f1f1f;
+}
+.gemIconContainer > .gemIconContainerR {
+    width:70%;
+}
+.gemIconClassLabel {
+    background-color: #1f1f1f;
+    padding:4px;
+    text-align: center;
+}
+.gemIconQuestLabel {
+    padding:4px;
+    background-color: #1f1f1f;
+    text-align: center;
+    flex-grow: 1;
+}
+
+
+
+.gemThumbContainer {
+    width:auto;
+    position:relative;
+    display:inline-block;
+    margin:8px;
+    cursor: pointer;
+}
+.gemThumbContainer > .gemThumbOverlay {
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    background-color: rgba(0,0,0,.7);
+    color:whitesmoke;
+    text-align: center;
+    display:flex;
+    align-items: center;
+    font-size: 18px;
+    width:100%;
+}
+.gemThumbContainer > .gemThumbPic {
+    width:100px;
+}
+.gemThumbContainer > .gemThumbPic > img {
+    width:100%;
+}
+
+
+
+.pageName {
+    text-align: center;
+    color:whitesmoke;
+    font-size:36px;
+    padding-top:18px;
+}
+#searchGems {
+    width:100%;
+    padding-bottom:24px;
+}
+#searchGems > input {
+    width:80%;
+    margin:auto;
+    display:block;
+    max-width: 320px;
+    padding:2px;
+    font-size: 18px;
+    border-radius: 2px;
+}
+#searchGems > #searchGemsLabel {
+    text-align: center;
+    padding:4px;
+    color:whitesmoke;
+}
+
+
+
+#selectedGemContainer {
+    max-height: 400px;
+    overflow-y: scroll;
+    margin:auto;
+    margin-top:18px;
+    margin-bottom:18px;
+    width:80%;
+    border:12px solid #0f0f0f;
+    display:block;
+    width:60%;
+    margin:auto;
+    text-align: center;
+    position: relative;
+}
+
+#buildGems {
+    width:70%;
+    position: relative;
+    margin:auto;
+}
+#buildGemsContainer {
+    width:90%;
+    margin:auto;
+    text-align: center;
+    position: relative;
+}
+#buildGemsContainerOptimal {
+    width:90%;
+    margin:auto;
+    text-align: center;
+    position: relative;
+}
+#sGemContainer {
+    width:100%;
+    position: relative;
+}
+#sGemContainer > * {
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 1280px) {
+    .gemIconContainer * {
+      font-size: .6rem;
+    }
+    .gemIconContainer {
+        max-width: 220px;
+        min-width: 120px;
+    }
+    #selectedGemContainer {
+        width:90%;
+    }
+    #buildGems {
+        width:90%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .gemIconContainer * {
+      font-size: .5rem;
+    }
+    .gemIconContainer {
+        max-width: 180px;
+        min-width: 80px;
+        width:40%;
+    }
+    #buildGemsContainer {
+        width:100%;
+    }
+    #buildGemsContainerOptimal {
+        width:100%;
+    }
+}

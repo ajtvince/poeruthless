@@ -1,44 +1,61 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css'
-import GemGuide from './components/GemGuide';
-import Home from './components/Home';
-import LeagueContent from './components/LeagueContent';
-import Navigation from './components/Navigation';
-import RecipeGuide from './components/RecipeGuide';
-import Streamers from './components/Streamers';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import GemGuide from './routes/GemGuide';
+import Home from './routes/Home';
+import LeagueContent from './routes/LeagueContent';
+import Navigation from './routes/Navigation';
+import RecipeGuide from './routes/RecipeGuide';
+import Streamers from './routes/Streamers';
+import { createBrowserRouter, createRoutesFromElements, RouterProvider } from "react-router-dom";
 //import reportWebVitals from './reportWebVitals';
+import { createRoot } from "react-dom/client";
+import {
+  Route,
+  Link,
+  Outlet,
+} from "react-router-dom";
+
+const AppLayout = () => {
+  return (
+    <>
+    <Navigation />
+    <Outlet />
+    </>
+ )}
+
 
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: <Home/>,
-  },
-  {
-    path: '/skillgems',
-    element: <GemGuide/>,
-  },
-  {
-    path: '/leaguecontent',
-    element: <LeagueContent/>,
-  },
-  {
-    path: '/recipes',
-    element: <RecipeGuide/>,
-  },
-  {
-    path: '/streamers',
-    element: <Streamers/>,
+    element: <AppLayout/>,
+    children: [
+      {
+        path: 'home',
+        element: <Home/>,
+      },
+      {
+        path: 'skillgems',
+        element: <GemGuide/>,
+      },
+      {
+        path: '/leaguecontent',
+        element: <LeagueContent/>,
+      },
+      {
+        path: '/recipes',
+        element: <RecipeGuide/>,
+      },
+      {
+        path: '/streamers',
+        element: <Streamers/>,
+      }
+    ]
   },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Navigation />
     <RouterProvider router={router} />
-  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
