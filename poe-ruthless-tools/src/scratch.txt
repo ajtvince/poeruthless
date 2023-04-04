@@ -1,3 +1,32 @@
 [
-  {    "name": "Summon Chaos Golem",    "class": "Duelist",    "act": 4,    "quest": "Breaking the Seal(Open the Mines)"},  {    "name": "Summon Chaos Golem",    "class": "Marauder",    "act": 4,    "quest": "Breaking the Seal(Open the Mines)"},  {    "name": "Summon Chaos Golem",    "class": "Ranger",    "act": 4,    "quest": "Breaking the Seal(Open the Mines)"},  {    "name": "Summon Chaos Golem",    "class": "Scion",    "act": 4,    "quest": "Breaking the Seal(Open the Mines)"},  {    "name": "Summon Chaos Golem",    "class": "Shadow",    "act": 4,    "quest": "Breaking the Seal(Open the Mines)"},  {    "name": "Summon Chaos Golem",    "class": "Templar",    "act": 4,    "quest": "Breaking the Seal(Open the Mines)"},  {    "name": "Summon Chaos Golem",    "class": "Witch",    "act": 4,    "quest": "Breaking the Seal(Open the Mines)"},  {    "name": "Summon Flame Golem",    "class": "Duelist",    "act": 4,    "quest": "Breaking the Seal(Open the Mines)"},  {    "name": "Summon Flame Golem",    "class": "Marauder",    "act": 4,    "quest": "Breaking the Seal(Open the Mines)"},  {    "name": "Summon Flame Golem",    "class": "Ranger",    "act": 4,    "quest": "Breaking the Seal(Open the Mines)"},  {    "name": "Summon Flame Golem",    "class": "Scion",    "act": 4,    "quest": "Breaking the Seal(Open the Mines)"},  {    "name": "Summon Flame Golem",    "class": "Shadow",    "act": 4,    "quest": "Breaking the Seal(Open the Mines)"},  {    "name": "Summon Flame Golem",    "class": "Templar",    "act": 4,    "quest": "Breaking the Seal(Open the Mines)"},  {    "name": "Summon Flame Golem",    "class": "Witch",    "act": 4,    "quest": "Breaking the Seal(Open the Mines)"},  {    "name": "Flame Wall",    "class": "Templar",    "act": 1,    "quest": "Breaking Some Eggs(Mud Flats)"},  {    "name": "Flame Wall",    "class": "Witch",    "act": 1,    "quest": "Breaking Some Eggs(Mud Flats)"},  {    "name": "Firestorm",    "class": "Templar",    "act": 3,    "quest": "Sever the Right Hand(Kill Gravicius)"},  {    "name": "Firestorm",    "class": "Witch",    "act": 3,    "quest": "Sever the Right Hand(Kill Gravicius)"},  {    "name": "Fireball",    "class": "Witch",    "act": 1,    "quest": "Starter Gem"}
+  {
+    "name": "Burning Arrow",
+    "class": "Ranger",
+    "act": 1,
+    "quest": "Starter Gem"
+  },
+  {
+    "name": "Caustic Arrow",
+    "class": "Ranger",
+    "act": 1,
+    "quest": "Enemy at the Gate (Kill Hillock)"
+  },
+  {
+    "name": "Ensnaring Arrow",
+    "class": "Ranger",
+    "act": 2,
+    "quest": "Intruders in Black(Kill Fidelitas)"
+  },
+  {
+    "name": "Galvanic Arrow",
+    "class": "Duelist",
+    "act": 1,
+    "quest": "Enemy at the Gate (Kill Hillock)"
+  },
+  {
+    "name": "Galvanic Arrow",
+    "class": "Ranger",
+    "act": 1,
+    "quest": "Enemy at the Gate (Kill Hillock)"
+  }
 ]

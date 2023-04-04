@@ -12,6 +12,7 @@
     overflow: hidden;
     border-radius: 6px;
     background-color: #1f1f1f;
+    transition-duration: 200ms;
 }
 .gemIconContainer > .gemIconPic {
     width:100%;
@@ -75,6 +76,13 @@
     text-align: center;
     flex-grow: 1;
 }
+.gemIconContainer > .gemIconWiki {
+    position:absolute;
+    top:0px;
+    left:0px;
+    padding:8px;
+}
+
 
 
 
@@ -94,10 +102,9 @@
     background-color: rgba(0,0,0,.7);
     color:whitesmoke;
     text-align: center;
-    display:flex;
-    align-items: center;
     font-size: 18px;
     width:100%;
+    display:block;
 }
 .gemThumbContainer > .gemThumbPic {
     width:100px;
@@ -105,7 +112,6 @@
 .gemThumbContainer > .gemThumbPic > img {
     width:100%;
 }
-
 
 
 .pageName {
@@ -136,7 +142,8 @@
 
 
 #selectedGemContainer {
-    max-height: 400px;
+    height:50vh;
+    min-height: 300px;
     overflow-y: scroll;
     margin:auto;
     margin-top:18px;
@@ -176,6 +183,48 @@
 }
 
 
+#resetBtn {
+    padding:12px;
+    text-align: center;
+    display: block;
+    width: 30%;
+    margin:auto;
+    margin-top:1rem;
+    margin-bottom:1rem;
+}
+
+.buildPathHeader {
+    font-size: 2rem;
+    color:white;
+    font-weight: bold;
+    text-align: center;
+}
+
+#selectMainBtns {
+    width:60%;
+    display:block;
+    margin:auto;
+    text-align: center;
+}
+#selectMainBtns button {
+    padding:8px;
+    width:13%;
+    margin:auto;
+    text-align: center;
+}
+
+
+
+#selectedGemContainer::-webkit-scrollbar {
+    display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+#selectedGemContainer {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
 @media only screen and (max-width: 1280px) {
     .gemIconContainer * {
       font-size: .6rem;
@@ -189,6 +238,9 @@
     }
     #buildGems {
         width:90%;
+    }
+    #selectMainBtns {
+        width:95%;
     }
 }
 

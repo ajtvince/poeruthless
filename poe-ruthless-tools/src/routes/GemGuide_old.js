@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useRef } from 'react';
 import useState from 'react-usestateref';
 import './stylesheets/GemGuide.css';
-import questData from './data/datatemp.json';
+import questData from './data/datatemp';
 //show how to get the skills available from quests
 //show removed gems
 //show drop only gems
@@ -175,12 +175,8 @@ export default function GemGuide() {
         }
       });
 
-      console.log(foundQuestGems);
       //get optimalpath for mule
       const uniqueCombos = findUniqueCombos(foundQuestGems);
-      const filteredSkills = filterSkills(foundQuestGems);
-      console.log(uniqueCombos);
-      console.log(filteredSkills);
       
       //further parse the array
       let correctCombos = [];
@@ -216,15 +212,12 @@ export default function GemGuide() {
       });
 
       console.log(minOptimalPath);
+
       let bestPossiblePath = getBestPath(minOptimalPath);
+
       console.log(bestPossiblePath);
 
-      if(bestPossiblePath.length < filteredSkills.length) {
-        setMuleGemsFiltered(filteredSkills);
-      } else {
-        setMuleGemsFiltered(bestPossiblePath);
-      }
-
+      setMuleGemsFiltered(bestPossiblePath);
       setMuleGems(foundQuestGems);
     } else {
       setMuleGemsFiltered([]);
@@ -245,21 +238,6 @@ export default function GemGuide() {
     return count;
   }
 
-  function filterSkills(skills) {
-    const uniqueSkills = skills.reduce((acc, skill) => {
-      if (!acc.some((s) => s.name === skill.name)) {
-        acc.push(skill);
-      }
-      return acc;
-    }, []);
-  
-    return uniqueSkills.filter((skill, index, arr) => {
-      return !arr.some((s, i) => {
-        return i !== index && s.class === skill.class && s.quest === skill.quest;
-      });
-    });
-  }
-
   function findUniqueCombos(arr) {
     let result = [];
   
@@ -273,9 +251,9 @@ export default function GemGuide() {
       // Base case: If there are no more objects remaining, add the current array to the result
       if (remainingArr.length === 0) {
         result.push(currArr);
-        return; 
-      } 
-      
+        return;
+      }
+  
       // For each object in the remaining array
       for (let i = 0; i < remainingArr.length; i++) {
         // If the current array does not already contain an object with the same name value
@@ -324,44 +302,6 @@ export default function GemGuide() {
     return arr[minIndex];
   }
 
-  function GemIcon({ gem, removeGemFromList }) {
-    const [flash, setFlash] = useState(false);
-
-    useEffect(() => {
-      // Set flash to true when gem.name changes
-      setFlash(true);
-
-      // Set flash back to false after the animation ends
-      const timeoutId = setTimeout(() => {
-        setFlash(false);
-      }, 800);
-  
-      // Clear the timeout if the component unmounts before the animation ends
-      return () => clearTimeout(timeoutId);
-    }, [gem.name]);
-
-    const style = flash ? { transform: 'scale(1.05)' } : {}
-  
-    return (
-      <div key={gem.class + '' + gem.name} className='gemIconContainer' style={style}>
-        <div className='gemIconPic'>
-          <img src='/media/Absolution_skill_icon.png' alt='-------'/>
-        </div>
-        <div className='gemIconName'>{gem.name}</div>
-        <div className='gemIconContainerL'>
-          <div className='gemIconClassLabel'>Class: </div>
-          <div className='gemIconQuestLabel'>Quest: </div>
-        </div>
-        <div className='gemIconContainerR'>
-          <div className='gemIconClass'>{gem.class}</div>
-          <div className='gemIconQuest'>Act {gem.act}: {gem.quest}</div>
-        </div>
-        <div className='gemIconDelete' onClick={() => removeGemFromList(gem)}>X</div>
-        <a href={'https://www.poewiki.net/wiki/' + gem.name} className='gemIconWiki'>wiki</a>
-      </div>
-    );
-  }
-
   //fill initial selectable gems list, and update based on search query
   useEffect(() => {
     
@@ -380,28 +320,50 @@ export default function GemGuide() {
   return (
     <div className='pageContainer'>
       <div className='pageName'>Ruthless Skill Gem Mule Guide</div>
+
+      <div id='questGems'>
+      </div>
+
+      <div id='droppedGems'>
+      </div>
+
+      <div id='removedGems'>
+      </div>
+
       <div id='muleGemPlanner'>
         <div id='searchGems'>
           <div id='searchGemsLabel'>Search Gems:</div>
           <input type='text' value={searchTerm} onChange={editSearchTerm} />
         </div>
-        <div id='selectMainBtns'>
-          <button onClick={() => selectMainClass('Templar')}>Templar</button>
-          <button onClick={() => selectMainClass('Marauder')}>Marauder</button>
-          <button onClick={() => selectMainClass('Duelist')}>Duelist</button>
-          <button onClick={() => selectMainClass('Ranger')}>Ranger</button>
-          <button onClick={() => selectMainClass('Shadow')}>Shadow</button>
-          <button onClick={() => selectMainClass('Witch')}>Witch</button>
-          <button onClick={() => selectMainClass('Scion')}>Scion</button>
-        </div>
         <div id='selectedGemContainer'><div id='sGemContainer'>{buildGems}</div></div>
         <div id='buildGems'>
-          <button id='resetBtn' onClick={() => clearGemList()}>Reset</button>
-          <div className='buildPathHeader'>Optimal mule path</div>
-          <div id='buildGemsContainerOptimal'>
-            {muleGemsFiltered.map(gem => <GemIcon key={gem.class + '' + gem.name} gem={gem} removeGemFromList={removeGemFromList} />)}
+          <button onClick={() => clearGemList()}>Reset</button>
+          <div>Optimal mule path</div>
+          <div id='selectMainBtns'>
+            <button onClick={() => selectMainClass('Templar')}>Templar</button>
+            <button onClick={() => selectMainClass('Marauder')}>Marauder</button>
+            <button onClick={() => selectMainClass('Duelist')}>Duelist</button>
+            <button onClick={() => selectMainClass('Ranger')}>Ranger</button>
+            <button onClick={() => selectMainClass('Shadow')}>Shadow</button>
+            <button onClick={() => selectMainClass('Witch')}>Witch</button>
+            <button onClick={() => selectMainClass('Scion')}>Scion</button>
           </div>
-          <div className='buildPathHeader'>All gem options</div>
+          <div id='buildGemsContainerOptimal'>{muleGemsFiltered.map(gem => <div className='gemIconContainer'>
+            <div className='gemIconPic'><img src='/media/Absolution_skill_icon.png' alt='-------'/></div>
+            <div className='gemIconName'>{gem.name}</div>
+            <div className='gemIconContainerL'>
+              <div className='gemIconClassLabel'>Class: </div>
+              <div className='gemIconQuestLabel'>Quest: </div>
+            </div>
+            <div className='gemIconContainerR'>
+              <div className='gemIconClass'>{gem.class}</div>
+              <div className='gemIconQuest'>Act {gem.act}: {gem.quest}</div>
+            </div>
+            <div className='gemIconDelete' onClick={() => removeGemFromList(gem)}>X</div>
+            </div>
+            )} 
+          </div>
+          <div>All options</div>
           <div id='buildGemsContainer'>{muleGems.map(gem => <div className='gemIconContainer'>
             <div className='gemIconPic'><img src='/media/Absolution_skill_icon.png' alt='-------'/></div>
             <div className='gemIconName'>{gem.name}</div>
@@ -414,7 +376,6 @@ export default function GemGuide() {
               <div className='gemIconQuest'>Act {gem.act}: {gem.quest}</div>
             </div>
             <div className='gemIconDelete' onClick={() => removeGemFromList(gem)}>X</div>
-            <a href={'https://www.poewiki.net/wiki/' + gem.name} className='gemIconWiki'>wiki</a>
             </div>
             )} 
           </div>

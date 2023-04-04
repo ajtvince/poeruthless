@@ -30,11 +30,11 @@ const router = createBrowserRouter([
     element: <AppLayout/>,
     children: [
       {
-        path: 'home',
+        path: '',
         element: <Home/>,
       },
       {
-        path: 'skillgems',
+        path: '/skillgems',
         element: <GemGuide/>,
       },
       {
