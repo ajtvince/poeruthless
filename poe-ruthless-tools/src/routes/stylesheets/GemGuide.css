@@ -258,4 +258,8 @@
     #buildGemsContainerOptimal {
         width:100%;
     }
+    .buildPathHeader {
+        font-size: 1.2rem;
+    }
 }
+

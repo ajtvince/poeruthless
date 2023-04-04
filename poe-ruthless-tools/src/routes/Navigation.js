@@ -15,7 +15,7 @@ function Navigation() {
       duration: 150,
       fill: 'forwards',
     };
-    if(navZIndex === -99) {
+    if(navZIndex == -99) {
       navZ.style.zIndex = 99;
       let bar1anim = [
         { transform: 'translateY(0px)', offset: 0 },
