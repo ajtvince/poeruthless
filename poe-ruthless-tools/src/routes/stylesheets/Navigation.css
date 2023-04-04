@@ -39,6 +39,13 @@
     object-fit: cover;
 }
 
+.pageName {
+  text-align: center;
+  color:whitesmoke;
+  font-size:36px;
+  padding-top:18px;
+}
+
 @media only screen and (max-width: 1279px) {
     #navbarM {
         display:block;
@@ -77,6 +84,12 @@
 @media only screen and (min-width: 1280px) {
     #navbar {
         z-index: 98;
-      }
+    }
     
+}
+
+@media only screen and (max-width: 799px) {
+  .pageName {
+    font-size: 1.5rem;
+  }
 }

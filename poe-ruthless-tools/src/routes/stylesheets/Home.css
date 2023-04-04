@@ -1,0 +1,22 @@
+#homeContainer {
+  width:60%;
+  display:block;
+  margin:auto;
+}
+#homeContainer > #homeDesc {
+  width:100%;
+  color:white;
+}
+
+@media only screen and (max-width: 1279px) {
+  #homeContainer {
+    width:80%;
+  }
+  
+}
+
+@media only screen and (max-width: 799px) {
+  #homeContainer {
+    width:90%;
+  }
+}

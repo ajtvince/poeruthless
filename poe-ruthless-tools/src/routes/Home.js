@@ -3,74 +3,19 @@ import './stylesheets/Home.css';
 //show current race leader
 //show news posts related to ruthless
 
-
-
-const originalArray = [
-    {
-      "name": "Double Strike",
-      "class": "Duelist",
-      "act": 1,
-      "quest": "Starter Gem"
-    },
-    {
-      "name": "Cleave",
-      "class": "Duelist",
-      "act": 1,
-      "quest": "Enemy at the Gate (Kill Hillock)"
-    },
-    {
-      "name": "Galvanic Arrow",
-      "class": "Duelist",
-      "act": 1,
-      "quest": "Enemy at the Gate (Kill Hillock)"
-    },
-    {
-      "name": "Galvanic Arrow",
-      "class": "Ranger",
-      "act": 1,
-      "quest": "Enemy at the Gate (Kill Hillock)"
-    },
-    {
-      "name": "Molten Strike",
-      "class": "Duelist",
-      "act": 1,
-      "quest": "Enemy at the Gate (Kill Hillock)"
-    },
-    {
-      "name": "Molten Strike",
-      "class": "Marauder",
-      "act": 1,
-      "quest": "Enemy at the Gate (Kill Hillock)"
-    },
-    {
-      "name": "Molten Strike",
-      "class": "Scion",
-      "act": 1,
-      "quest": "Enemy at the Gate (Kill Hillock)"
-    },
-    {
-      "name": "Molten Strike",
-      "class": "Templar",
-      "act": 1,
-      "quest": "Enemy at the Gate (Kill Hillock)"
-    },
-    {
-      "name": "Lacerate",
-      "class": "Duelist",
-      "act": 1,
-      "quest": "The Siren's Cadence(Cavern of Wrath WP)"
-    },
-];
-
-
-function Home() {
+export default function Home() {
   return (
-    <div>
-
+    <div className='pageContainer'>
+      <div className='pageName'>PoERuthless</div>
+      <div id='homeContainer'>
+        <p id='homeDesc'>
+          PoERuthless.com is a website that collects ruthless specific information and consolidates it into an easily readable format, as well as provides a tool to easily determine which mule accounts you will need to level to aqcuire all quest reward gems you desire. If you have any suggestions for tools or information to be put onto this site, or run into any bugs/errors, please create an issue on the GitHub page for this project: <a href='https://github.com/ajtvince/poeruthless/issues'>GitHub</a>
+        </p>
+        <div id='top5CurrentLeague'>
+          <div>list current league leaders here in each class</div>
+        </div>
+      </div>
     </div>
   );
 }
-
-
-export default Home;
 

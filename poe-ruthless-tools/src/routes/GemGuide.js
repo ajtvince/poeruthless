@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react';
 import useState from 'react-usestateref';
 import './stylesheets/GemGuide.css';
 import questData from './data/datatemp.json';
+import GemCard from './components/GemCard';
 //show how to get the skills available from quests
 //show removed gems
 //show drop only gems
@@ -108,8 +109,11 @@ export default function GemGuide() {
 
   //select main class
   function selectMainClass(selectedClass) {
-    setMainClass(selectedClass);
-    console.log(mainClassRef.current);
+    if (selectedClass === mainClassRef.current) {
+      setMainClass('');
+    } else {
+      setMainClass(selectedClass);
+    }
   }
 
   //count duplicates, check if class exists already with chosen gems
@@ -324,6 +328,26 @@ export default function GemGuide() {
     return arr[minIndex];
   }
 
+  useEffect(() => {
+    let idArr = ['templarMain', 'marauderMain', 'duelistMain', 'rangerMain', 'shadowMain', 'witchMain', 'scionMain'];
+    if(mainClassRef.current === '') {
+      for (let x=0; x<idArr.length; x++) {
+        document.getElementById(`${idArr[x]}`).style.backgroundColor = 'whitesmoke';
+      }
+      getRequiredMules(gemRef.current);
+    } else {
+      for (let x=0; x<idArr.length; x++) {
+        console.log(idArr[x]);
+        if (idArr[x].includes(mainClassRef.current.toLowerCase())) {
+          document.getElementById(`${idArr[x]}`).style.backgroundColor = 'blue';
+          getRequiredMules(gemRef.current);
+        } else {
+          document.getElementById(`${idArr[x]}`).style.backgroundColor = 'whitesmoke';
+        }
+      }
+    }
+  }, [mainClass]);
+
   //fill initial selectable gems list, and update based on search query
   useEffect(() => {
     
@@ -348,20 +372,20 @@ export default function GemGuide() {
           <input type='text' value={searchTerm} onChange={editSearchTerm} />
         </div>
         <div id='selectMainBtns'>
-          <button onClick={() => selectMainClass('Templar')}>Templar</button>
-          <button onClick={() => selectMainClass('Marauder')}>Marauder</button>
-          <button onClick={() => selectMainClass('Duelist')}>Duelist</button>
-          <button onClick={() => selectMainClass('Ranger')}>Ranger</button>
-          <button onClick={() => selectMainClass('Shadow')}>Shadow</button>
-          <button onClick={() => selectMainClass('Witch')}>Witch</button>
-          <button onClick={() => selectMainClass('Scion')}>Scion</button>
+          <button id='templarMain' onClick={() => selectMainClass('Templar')}>Templar</button>
+          <button id='marauderMain'onClick={() => selectMainClass('Marauder')}>Marauder</button>
+          <button id='duelistMain'onClick={() => selectMainClass('Duelist')}>Duelist</button>
+          <button id='rangerMain' onClick={() => selectMainClass('Ranger')}>Ranger</button>
+          <button id='shadowMain'onClick={() => selectMainClass('Shadow')}>Shadow</button>
+          <button id='witchMain'onClick={() => selectMainClass('Witch')}>Witch</button>
+          <button id='scionMain'onClick={() => selectMainClass('Scion')}>Scion</button>
         </div>
         <div id='selectedGemContainer'><div id='sGemContainer'>{buildGems}</div></div>
         <div id='buildGems'>
           <button id='resetBtn' onClick={() => clearGemList()}>Reset</button>
           <div className='buildPathHeader'>Optimal mule path</div>
           <div id='buildGemsContainerOptimal'>
-            {muleGemsFiltered.map(gem => <GemIcon key={gem.class + '' + gem.name} gem={gem} removeGemFromList={removeGemFromList} />)}
+            {muleGemsFiltered.map(gem => <GemCard key={gem.class + '' + gem.name} gem={gem} removeGemFromList={removeGemFromList} />)}
           </div>
           <div className='buildPathHeader'>All gem options</div>
           <div id='buildGemsContainer'>{muleGems.map(gem => <div className='gemIconContainer'>
@@ -386,6 +410,7 @@ export default function GemGuide() {
   );
 }
 
+/**
 class GemIcon extends React.Component<{isFlash: boolean}> {
   constructor(props) {
     super(props);
@@ -416,7 +441,7 @@ class GemIcon extends React.Component<{isFlash: boolean}> {
 
   componentDidMount() {
     console.log('test mounted');
-    this.setState({isFlash: true, styling: {transform: 'scale(1.05)', boxShadow: 'yellow 0px 0px 20px'}});
+    this.setState({isFlash: true, styling: {transform: 'scale(1.05)', boxShadow: '#e8ba7f 0px 0px 20px'}});
     setTimeout(() => {
       this.setState({
         isFlash: false,
@@ -453,3 +478,4 @@ class GemIcon extends React.Component<{isFlash: boolean}> {
     );
   }
 }
+**/

@@ -83,6 +83,10 @@
     padding:8px;
 }
 
+#selectedClass {
+    background-color:green;
+}
+
 
 
 
@@ -114,12 +118,7 @@
 }
 
 
-.pageName {
-    text-align: center;
-    color:whitesmoke;
-    font-size:36px;
-    padding-top:18px;
-}
+
 #searchGems {
     width:100%;
     padding-bottom:24px;
