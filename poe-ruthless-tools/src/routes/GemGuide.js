@@ -117,22 +117,6 @@ export default function GemGuide() {
     }
   }
 
-  function generateCombinations(arr, size) {
-    const result = [];
-    const f = (prefix, arr) => {
-      if (prefix.length === size) {
-        result.push(prefix);
-      } else {
-        for (let i = 0; i < arr.length; i++) {
-          const remaining = arr.slice(0, i).concat(arr.slice(i + 1));
-          f(prefix.concat(arr[i]), remaining);
-        }
-      }
-    };
-    f([], arr);
-    return result;
-  }
-
   function uniqueNameCombinations(input) {
     function generateCombinations(arr, k) {
       let combinations = [];
@@ -169,21 +153,31 @@ export default function GemGuide() {
 
   function countUniqueNames(arr) {
     const uniqueNames = new Set(); // Create a new Set to store unique names
-  
     arr.forEach(obj => {
       uniqueNames.add(obj.name); // Add each name property to the Set
     });
-  
     return uniqueNames.size; // Return the number of unique names in the Set
   }
+
   function countUniqueClasses(arr) {
     const uniqueNames = new Set(); // Create a new Set to store unique names
-  
     arr.forEach(obj => {
       uniqueNames.add(obj.class); // Add each name property to the Set
     });
-  
     return uniqueNames.size; // Return the number of unique names in the Set
+  }
+
+  function countClassNames(arr) {
+    let count = {};
+  
+    for (let i = 0; i < arr.length; i++) {
+      if (count[arr[i].class]) {
+        count[arr[i].class]++;
+      } else {
+        count[arr[i].class] = 1;
+      }
+    }
+    return count;
   }
 
   function haveSameClassAndQuest2(obj1, obj2) {
@@ -205,40 +199,6 @@ export default function GemGuide() {
         questGemArr.filter(qgem => {
           if (qgem.name === gem.gemID) {
             foundQuestGems.push(qgem);
-          }
-        });
-      });
-
-      let tc1max = 0;
-      let tc2max = 0;
-      let tc1class = '';
-      let tc2class = '';
-
-      let duplicateGemList = [];
-
-      //fill duplicateGemList array with duplicate gem names
-      foundQuestGems.forEach(fgem1 => {
-        foundQuestGems.forEach(fgem2 => {
-          if(fgem1.name === fgem2.name && fgem1.class !== fgem2.class) {
-            let tempFilter = duplicateGemList.filter(dupgem => (dupgem.name === fgem1.name && dupgem.class === fgem1.class)).length;
-            if ( tempFilter == 0 ) {
-              duplicateGemList.push(fgem1);
-            }    
-            let tc1 = fgem1.class;
-            let tc2 = fgem2.class;
-            let tc1count = foundQuestGems.filter(fgem => fgem.class === tc1).length;
-            let tc2count = foundQuestGems.filter(fgem => fgem.class === tc2).length;
-            if(tc1count > tc2count){
-              if(tc1count > tc1max){
-                tc1max = tc1count;
-                tc1class = tc1;
-              }
-            } else if (tc2count > tc1count) {
-              if(tc2count > tc2max) {
-                tc2max = tc2count;
-                tc2class = tc2;
-              }
-            }
           }
         });
       });
@@ -284,7 +244,6 @@ export default function GemGuide() {
         newFunc.splice(tempNum, 1);
       })
       console.log(newFunc);
-      let maxClassCount = 0;
       let lowestDiffClassArr = [];
       newFunc.forEach(arr => {
         if(countUniqueClasses(arr) === lowestCount) {
@@ -333,192 +292,65 @@ export default function GemGuide() {
           setMuleGems(foundQuestGems);
         } else {
           if (mainClassRef.current !== '') {
+            let maxFound = false;
             highestSingleClassCountTotalArr.forEach( arr => {
               let checkClass = countClassNames(arr);
               console.log(checkClass[mainClassRef.current]);
               if(checkClass[mainClassRef.current] === highestClassCount) {
                 setMuleGemsFiltered(arr);
                 setMuleGems(foundQuestGems);
+                maxFound = true;
               }
             });
+            while (!maxFound) {
+              for (let x=highestClassCount-1; x>0; x--) {
+                highestSingleClassCountTotalArr.forEach( arr => {
+                  let checkClass = countClassNames(arr);
+                  console.log(checkClass[mainClassRef.current]);
+                  if(checkClass[mainClassRef.current] === x) {
+                    setMuleGemsFiltered(arr);
+                    setMuleGems(foundQuestGems);
+                    maxFound = true;
+                  }
+                });
+                if(!maxFound && x===1) {
+                  maxFound = true;
+                }
+              }
+
+            }
           } else {
             setMuleGemsFiltered(highestSingleClassCountTotalArr[0]);
             setMuleGems(foundQuestGems);
           }
         }
       }
-
-
-
-      //take newfunc and return all arrays that have unique names
-      //take the unique name arrays and count the classes
-      //
-      /**
-      //get optimalpath for mule
-      const uniqueCombos = findUniqueCombos(foundQuestGems);
-      const filteredSkills = filterSkills(foundQuestGems);
-      console.log(uniqueCombos);
-      console.log(filteredSkills);
-      
-      //further parse the array
-      let correctCombos = [];
-      uniqueCombos.forEach(arr => {
-        if(arr.length === uniqueCombos[0].length) {
-          correctCombos.push(arr);
-        }
-      });
-
-      let numDiffClasses=Infinity;
-      let minOptimalPath = [];
-      let classMaxCount=-Infinity;
-      console.log(correctCombos);
-
-      correctCombos.forEach( arr => {
-        let x = countClassNames(arr);
-        let tc = Object.keys(x).length;
-        if (tc <= numDiffClasses) {
-          numDiffClasses = tc;
-          let z = Object.values(x);
-          let max = Math.max(...z);
-          if (max >= classMaxCount) {
-            classMaxCount = max;
-            if (mainClassRef !== '' && x[mainClassRef.current] === max) {
-              minOptimalPath.push(arr);
-            } else if (mainClassRef === '') {
-              minOptimalPath.push(arr);
-            } else if (mainClassRef !== arr.class && minOptimalPath.length === 0) {
-              minOptimalPath.push(arr);
-            }
-          }
-        }
-      });
-
-      console.log(minOptimalPath);
-      let bestPossiblePath = getBestPath(minOptimalPath);
-      console.log(bestPossiblePath);
-
-      if(bestPossiblePath.length < filteredSkills.length) {
-        setMuleGemsFiltered(filteredSkills);
-      } else {
-        setMuleGemsFiltered(bestPossiblePath);
-      }
-
-
-      setMuleGems(foundQuestGems);
-      **/
+      console.log(muleGemsFiltered);
+      console.log(countClassNames(muleGemsFiltered));
     } else {
       setMuleGemsFiltered([]);
       setMuleGems([]);
     }
   }
 
-  function countClassNames(arr) {
-    let count = {};
-  
-    for (let i = 0; i < arr.length; i++) {
-      if (count[arr[i].class]) {
-        count[arr[i].class]++;
-      } else {
-        count[arr[i].class] = 1;
-      }
-    }
-    return count;
-  }
-
-  function filterSkills(skills) {
-    const uniqueSkills = skills.reduce((acc, skill) => {
-      if (!acc.some((s) => s.name === skill.name)) {
-        acc.push(skill);
-      }
-      return acc;
-    }, []);
-  
-    return uniqueSkills.filter((skill, index, arr) => {
-      return !arr.some((s, i) => {
-        return i !== index && s.class === skill.class && s.quest === skill.quest;
-      });
-    });
-  }
-
-  function findUniqueCombos(arr) {
-    let result = [];
-  
-    // Helper function to check if two objects have the same class and quest values
-    function haveSameClassAndQuest(obj1, obj2) {
-      return obj1.class === obj2.class && obj1.quest === obj2.quest;
-    }
-  
-    // Recursive function to find all unique combinations
-    function findCombos(currArr, remainingArr) {
-      // Base case: If there are no more objects remaining, add the current array to the result
-      if (remainingArr.length === 0) {
-        result.push(currArr);
-        return; 
-      } 
-      
-      // For each object in the remaining array
-      for (let i = 0; i < remainingArr.length; i++) {
-        // If the current array does not already contain an object with the same name value
-        if (!currArr.some(obj => obj.name === remainingArr[i].name)) {
-          // If the current array does not already contain an object with the same class and quest values
-          if (!currArr.some(obj => haveSameClassAndQuest(obj, remainingArr[i]))) {
-            // Recursively call the function with the current array plus the current object, and the remaining array without the current object
-            findCombos([...currArr, remainingArr[i]], remainingArr.slice(i + 1));
-          }
-        }
-      }
-    }
-  
-    findCombos([], arr);
-    return result;
-  }
-
-  //find the best path for mule leveling with least number of characters
-  function getBestPath(arr) {
-    let uniqueClasses = {};
-    let counts = [];
-  
-    // Loop through each array in the main array
-    for (let i = 0; i < arr.length; i++) {
-      // Loop through each object in the current array
-      for (let j = 0; j < arr[i].length; j++) {
-        // Add the class to the uniqueClasses object
-        if (!uniqueClasses.hasOwnProperty(arr[i][j].class)) {
-          uniqueClasses[arr[i][j].class] = true;
-        }
-      }
-      // Add the count of unique classes to the counts array
-      counts.push(Object.keys(uniqueClasses).length);
-      uniqueClasses = {};
-    }
-  
-    // Find the index of the array with the lowest count
-    let minIndex = 0;
-    for (let i = 1; i < counts.length; i++) {
-      if (counts[i] < counts[minIndex]) {
-        minIndex = i;
-      }
-    }
-  
-    // Return the array with the lowest count
-    return arr[minIndex];
-  }
-
   useEffect(() => {
     let idArr = ['templarMain', 'marauderMain', 'duelistMain', 'rangerMain', 'shadowMain', 'witchMain', 'scionMain'];
     if(mainClassRef.current === '') {
       for (let x=0; x<idArr.length; x++) {
-        document.getElementById(`${idArr[x]}`).style.backgroundColor = 'rgb(220, 220, 220)';
+        document.getElementById(`${idArr[x]}`).style.backgroundColor = 'rgba(0, 0, 0, .4)';
+        document.getElementById(`${idArr[x]}`).style.fontWeight = '400';
       }
       getRequiredMules(gemRef.current);
     } else {
       for (let x=0; x<idArr.length; x++) {
         console.log(idArr[x]);
         if (idArr[x].includes(mainClassRef.current.toLowerCase())) {
-          document.getElementById(`${idArr[x]}`).style.backgroundColor = 'rgb(170, 170, 170)';
+          document.getElementById(`${idArr[x]}`).style.backgroundColor = 'rgba(0, 0, 0, .8)';
+          document.getElementById(`${idArr[x]}`).style.fontWeight = 'bold';
           getRequiredMules(gemRef.current);
         } else {
-          document.getElementById(`${idArr[x]}`).style.backgroundColor = 'rgb(220, 220, 220)';
+          document.getElementById(`${idArr[x]}`).style.backgroundColor = 'rgba(0, 0, 0, .4)';
+          document.getElementById(`${idArr[x]}`).style.fontWeight = '400';
         }
       }
     }
@@ -537,16 +369,16 @@ export default function GemGuide() {
       <div id='searchGems'>
         <div id='searchGemsLabel'>Search Gems:</div>
         <input type='text' value={searchTerm} onChange={editSearchTerm} />
-        <div>*Main class functionality may not be 100% accurate</div>
       </div>
+      <div id='selectMainBtnHeader'>Select Primary Class<span><em>(If optimal path has multiple equivalent options, this will set the optimal path to the path with the highest count of the primary class)</em></span></div>
       <div id='selectMainBtns'>
-        <button id='templarMain' onClick={() => selectMainClass('Templar')}>Templar</button>
-        <button id='marauderMain'onClick={() => selectMainClass('Marauder')}>Marauder</button>
-        <button id='duelistMain'onClick={() => selectMainClass('Duelist')}>Duelist</button>
-        <button id='rangerMain' onClick={() => selectMainClass('Ranger')}>Ranger</button>
-        <button id='shadowMain'onClick={() => selectMainClass('Shadow')}>Shadow</button>
-        <button id='witchMain'onClick={() => selectMainClass('Witch')}>Witch</button>
-        <button id='scionMain'onClick={() => selectMainClass('Scion')}>Scion</button>
+        <button onClick={() => selectMainClass('Templar')}><img src='/media/Absolution_skill_icon.png'></img><div id='templarMain'>Templar</div></button>
+        <button onClick={() => selectMainClass('Marauder')}><img src='/media/Absolution_skill_icon.png'></img><div id='marauderMain'>Marauder</div></button>
+        <button onClick={() => selectMainClass('Duelist')}><img src='/media/Absolution_skill_icon.png'></img><div id='duelistMain'>Duelist</div></button>
+        <button onClick={() => selectMainClass('Ranger')}><img src='/media/Absolution_skill_icon.png'></img><div id='rangerMain'>Ranger</div></button>
+        <button onClick={() => selectMainClass('Shadow')}><img src='/media/Absolution_skill_icon.png'></img><div id='shadowMain'>Shadow</div></button>
+        <button onClick={() => selectMainClass('Witch')}><img src='/media/Absolution_skill_icon.png'></img><div id='witchMain'>Witch</div></button>
+        <button onClick={() => selectMainClass('Scion')}><img src='/media/Absolution_skill_icon.png'></img><div id='scionMain'>Scion</div></button>
       </div>
       <div id='selectedGemContainer'><div id='sGemContainer'>{
         buildGems.map(gem => <GemThumb gem={gem} selectGemFromList={selectGemFromList}/>)
@@ -554,6 +386,7 @@ export default function GemGuide() {
       <div id='buildGems'>
         <button id='resetBtn' onClick={() => clearGemList()}>Reset</button>
         <div className='buildPathHeader'>Optimal mule path</div>
+        <div id='uniqueClassCount'></div>
         <div className='buildGemsContainer'>
           {muleGemsFiltered.map(gem => <GemCard key={gem.class + '' + gem.name} gem={gem} optimal={true} removeGemFromList={removeGemFromList} />)}
         </div>

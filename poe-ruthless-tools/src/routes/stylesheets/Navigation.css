@@ -46,7 +46,7 @@
   position:relative;
 }
 #root > .pageContainer {
-  background-color: darkslategray;
+  background-color: whitesmoke;
   padding-top:60px;
   width:60%;
   margin:auto;
@@ -56,7 +56,7 @@
   top:0px;
   left:0px;
   right:0px;
-  background-color: whitesmoke;
+  background-color: rgb(204, 204, 204);
 }
 
 @media only screen and (max-width: 1279px) {
@@ -108,6 +108,8 @@
     font-size: 1.5rem;
   }
   #root > .pageContainer {
-    width:95%;
+    width:100%;
+    padding-left:12px;
+    padding-right:12px;
   }
 }
