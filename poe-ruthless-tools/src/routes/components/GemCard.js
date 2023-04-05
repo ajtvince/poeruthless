@@ -1,49 +1,26 @@
 import React from 'react';
 
-class GemCard extends React.Component<{isFlash: boolean}> {
+class GemCard extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {isFlash: false, styling: {transform: 'scale(1.05'} };
+    this.state = { styling: {} };
     console.log(this.state);
-  }
-
-  handleStatusChange(status) {
-
-    console.log('status change');
-    this.setState({
-      isFlash: true
-    });
-
-    console.log(this.state);
-
-    // Set flash back to false after the animation ends
-    setTimeout(() => {
-      this.setState({
-        isFlash: false,
-        styling: {},
-      });
-    }, 800);
-
-    // Clear the timeout if the component unmounts before the animation ends
-    //return () => clearTimeout(timeoutId);
   }
 
   componentDidMount() {
-    console.log('test mounted');
-    this.setState({isFlash: true, styling: {transform: 'scale(1.05)', boxShadow: '#e8ba7f 0px 0px 20px'}});
-    setTimeout(() => {
+    console.log('mounted');
+    if (this.props.optimal === true) {
       this.setState({
-        isFlash: false,
-        styling: {},
+        styling: {transform: 'scale(1.05)', boxShadow: '#e8ba7f 0px 0px 20px'}
       });
-    }, 800);
-
+      setTimeout(() => {
+        this.setState({
+          styling: {},
+        });
+      }, 800);
+    }
   }
   componentDidUpdate(prevProps, prevState) {
-
-    console.log('test updated');
-
-    console.log(this.state);
   }
 
   render() {

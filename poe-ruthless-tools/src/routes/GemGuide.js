@@ -4,6 +4,7 @@ import useState from 'react-usestateref';
 import './stylesheets/GemGuide.css';
 import questData from './data/datatemp.json';
 import GemCard from './components/GemCard';
+import GemThumb from './components/GemThumb';
 //show how to get the skills available from quests
 //show removed gems
 //show drop only gems
@@ -276,12 +277,83 @@ export default function GemGuide() {
         }
         arrCount++;
       });
+
       console.log(testArr);
       testArr.forEach( num => {
         let tempNum = testArr.length - (num+1);
         newFunc.splice(tempNum, 1);
       })
       console.log(newFunc);
+      let maxClassCount = 0;
+      let lowestDiffClassArr = [];
+      newFunc.forEach(arr => {
+        if(countUniqueClasses(arr) === lowestCount) {
+          lowestDiffClassArr.push(arr);
+        }
+      });
+      if (lowestDiffClassArr.length === 0) {
+        lowestCount += 1;
+        newFunc.forEach(arr => {
+          if(countUniqueClasses(arr) === lowestCount) {
+            lowestDiffClassArr.push(arr);
+          }
+        });
+      }
+
+      console.log(lowestDiffClassArr);
+      let highestSingleClassCountTotalArr = [];
+      let highestClassCount = 0;
+
+      if (lowestDiffClassArr.length === 1) {
+        console.log('only one option');
+        setMuleGemsFiltered(lowestDiffClassArr[0]);
+        setMuleGems(foundQuestGems);
+      } else {
+        lowestDiffClassArr.forEach(arr => {
+          //get the total count of the most common class
+          let x = countClassNames(arr);
+          let z = Object.values(x);
+          let max = Math.max(...z);
+          if(max > highestClassCount) {
+            highestClassCount = max;
+          }
+        });
+        console.log(highestClassCount);
+        lowestDiffClassArr.forEach(arr => {
+          let x = countClassNames(arr);
+          let z = Object.values(x);
+          let max = Math.max(...z);
+          if (max === highestClassCount) {
+            highestSingleClassCountTotalArr.push(arr);
+          }
+        });
+        console.log(highestSingleClassCountTotalArr);
+        if(highestSingleClassCountTotalArr.length === 1) {
+          setMuleGemsFiltered(highestSingleClassCountTotalArr[0]);
+          setMuleGems(foundQuestGems);
+        } else {
+          if (mainClassRef.current !== '') {
+            highestSingleClassCountTotalArr.forEach( arr => {
+              let checkClass = countClassNames(arr);
+              console.log(checkClass[mainClassRef.current]);
+              if(checkClass[mainClassRef.current] === highestClassCount) {
+                setMuleGemsFiltered(arr);
+                setMuleGems(foundQuestGems);
+              }
+            });
+          } else {
+            setMuleGemsFiltered(highestSingleClassCountTotalArr[0]);
+            setMuleGems(foundQuestGems);
+          }
+        }
+      }
+
+
+
+      //take newfunc and return all arrays that have unique names
+      //take the unique name arrays and count the classes
+      //
+      /**
       //get optimalpath for mule
       const uniqueCombos = findUniqueCombos(foundQuestGems);
       const filteredSkills = filterSkills(foundQuestGems);
@@ -331,7 +403,9 @@ export default function GemGuide() {
         setMuleGemsFiltered(bestPossiblePath);
       }
 
+
       setMuleGems(foundQuestGems);
+      **/
     } else {
       setMuleGemsFiltered([]);
       setMuleGems([]);
@@ -452,61 +526,40 @@ export default function GemGuide() {
 
   //fill initial selectable gems list, and update based on search query
   useEffect(() => {
-    
     let muleGemsFiltered = allGems.filter(gem => gem.name.toLowerCase().includes(searchTerm.toLowerCase()));
     muleGemsFiltered = muleGemsFiltered.sort((a, b) => (a.name > b.name ? 1 : -1));
-    setBuildGems(muleGemsFiltered.filter((value, index, self) => {
-      return self.findIndex(v => v.name === value.name) === index;
-    }).map(gem => <div className='gemThumbContainer' onClick={() => selectGemFromList(gem)}>
-        <div className='gemThumbPic'><img src='/media/Absolution_inventory_icon.png'></img></div>
-        <div className='gemThumbOverlay'>{gem.name}</div>
-      </div>
-    ));
-
+    setBuildGems(muleGemsFiltered.filter((value, index, self) => self.findIndex(v => v.name === value.name) === index));
   }, [searchTerm]);
 
   return (
     <div className='pageContainer'>
       <div className='pageName'>Ruthless Skill Gem Mule Guide</div>
-      <div id='muleGemPlanner'>
-        <div id='searchGems'>
-          <div id='searchGemsLabel'>Search Gems:</div>
-          <input type='text' value={searchTerm} onChange={editSearchTerm} />
-          <div>*Main class functionality may not be 100% accurate</div>
+      <div id='searchGems'>
+        <div id='searchGemsLabel'>Search Gems:</div>
+        <input type='text' value={searchTerm} onChange={editSearchTerm} />
+        <div>*Main class functionality may not be 100% accurate</div>
+      </div>
+      <div id='selectMainBtns'>
+        <button id='templarMain' onClick={() => selectMainClass('Templar')}>Templar</button>
+        <button id='marauderMain'onClick={() => selectMainClass('Marauder')}>Marauder</button>
+        <button id='duelistMain'onClick={() => selectMainClass('Duelist')}>Duelist</button>
+        <button id='rangerMain' onClick={() => selectMainClass('Ranger')}>Ranger</button>
+        <button id='shadowMain'onClick={() => selectMainClass('Shadow')}>Shadow</button>
+        <button id='witchMain'onClick={() => selectMainClass('Witch')}>Witch</button>
+        <button id='scionMain'onClick={() => selectMainClass('Scion')}>Scion</button>
+      </div>
+      <div id='selectedGemContainer'><div id='sGemContainer'>{
+        buildGems.map(gem => <GemThumb gem={gem} selectGemFromList={selectGemFromList}/>)
+      }</div></div>
+      <div id='buildGems'>
+        <button id='resetBtn' onClick={() => clearGemList()}>Reset</button>
+        <div className='buildPathHeader'>Optimal mule path</div>
+        <div className='buildGemsContainer'>
+          {muleGemsFiltered.map(gem => <GemCard key={gem.class + '' + gem.name} gem={gem} optimal={true} removeGemFromList={removeGemFromList} />)}
         </div>
-        <div id='selectMainBtns'>
-          <button id='templarMain' onClick={() => selectMainClass('Templar')}>Templar</button>
-          <button id='marauderMain'onClick={() => selectMainClass('Marauder')}>Marauder</button>
-          <button id='duelistMain'onClick={() => selectMainClass('Duelist')}>Duelist</button>
-          <button id='rangerMain' onClick={() => selectMainClass('Ranger')}>Ranger</button>
-          <button id='shadowMain'onClick={() => selectMainClass('Shadow')}>Shadow</button>
-          <button id='witchMain'onClick={() => selectMainClass('Witch')}>Witch</button>
-          <button id='scionMain'onClick={() => selectMainClass('Scion')}>Scion</button>
-        </div>
-        <div id='selectedGemContainer'><div id='sGemContainer'>{buildGems}</div></div>
-        <div id='buildGems'>
-          <button id='resetBtn' onClick={() => clearGemList()}>Reset</button>
-          <div className='buildPathHeader'>Optimal mule path</div>
-          <div id='buildGemsContainerOptimal'>
-            {muleGemsFiltered.map(gem => <GemCard key={gem.class + '' + gem.name} gem={gem} removeGemFromList={removeGemFromList} />)}
-          </div>
-          <div className='buildPathHeader'>All gem options</div>
-          <div id='buildGemsContainer'>{muleGems.map(gem => <div className='gemIconContainer'>
-            <div className='gemIconPic'><img src='/media/Absolution_skill_icon.png' alt='-------'/></div>
-            <div className='gemIconName'>{gem.name}</div>
-            <div className='gemIconContainerL'>
-              <div className='gemIconClassLabel'>Class: </div>
-              <div className='gemIconQuestLabel'>Quest: </div>
-            </div>
-            <div className='gemIconContainerR'>
-              <div className='gemIconClass'>{gem.class}</div>
-              <div className='gemIconQuest'>Act {gem.act}: {gem.quest}</div>
-            </div>
-            <div className='gemIconDelete' onClick={() => removeGemFromList(gem)}>X</div>
-            <a href={'https://www.poewiki.net/wiki/' + gem.name} className='gemIconWiki'>wiki</a>
-            </div>
-            )} 
-          </div>
+        <div className='buildPathHeader'>All gem options</div>
+        <div className='buildGemsContainer'>
+          {muleGems.map(gem => <GemCard gem={gem} optimal={false} removeGemFromList={removeGemFromList} />)} 
         </div>
       </div>
     </div>

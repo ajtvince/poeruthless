@@ -9,7 +9,7 @@
     margin:auto;
     text-align: center;
   }
-    
+
   #navbar > a {
     color:whitesmoke;
     display:inline-block;
@@ -36,7 +36,6 @@
 }
 
 #siteBG > img {
-    z-index: -98;
     object-fit: cover;
 }
 
@@ -44,7 +43,20 @@
   text-align: center;
   color:black;
   font-size:36px;
-  padding-top:18px;
+  position:relative;
+}
+#root > .pageContainer {
+  background-color: darkslategray;
+  padding-top:60px;
+  width:60%;
+  margin:auto;
+}
+#root {
+  position: absolute;
+  top:0px;
+  left:0px;
+  right:0px;
+  background-color: whitesmoke;
 }
 
 @media only screen and (max-width: 1279px) {
@@ -59,7 +71,7 @@
       #navbarM > div{
         width:22px;
         height:4px;
-        background-color: whitesmoke;
+        background-color: black;
         margin:4px;
       }
     
@@ -68,7 +80,6 @@
         height:100vh;
         z-index: -99;
         background-color: black;
-        padding-top:4rem;
       }
     
       #navbar > a {
@@ -78,6 +89,9 @@
       }
       .pageName {
         padding-top:0px;
+      }
+      #root > .pageContainer {
+        width:80%;
       }
 
 }
@@ -92,5 +106,8 @@
 @media only screen and (max-width: 799px) {
   .pageName {
     font-size: 1.5rem;
+  }
+  #root > .pageContainer {
+    width:95%;
   }
 }

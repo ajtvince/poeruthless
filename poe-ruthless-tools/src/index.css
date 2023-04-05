@@ -5,12 +5,3 @@
   font-family: 'ZCOOL XiaoWei', sans-serif;
   font-size: 18px;
 }
-
-body {
-  margin-top:62px;
-  background-color: darkslategray;
-}
-
-.pageContainer {
-  z-index: 1;
-}

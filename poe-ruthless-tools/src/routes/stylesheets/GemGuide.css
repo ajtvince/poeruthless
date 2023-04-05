@@ -82,7 +82,6 @@
     left:0px;
     padding:8px;
 }
-
 #selectedClass {
     background-color:green;
 }
@@ -96,6 +95,7 @@
     display:inline-block;
     margin:8px;
     cursor: pointer;
+    border-radius: 8px;
 }
 .gemThumbContainer > .gemThumbOverlay {
     position:absolute;
@@ -122,6 +122,7 @@
 #searchGems {
     width:100%;
     padding-bottom:24px;
+    background-color: black;
 }
 #searchGems > input {
     width:80%;
@@ -162,13 +163,7 @@
     position: relative;
     margin:auto;
 }
-#buildGemsContainer {
-    width:90%;
-    margin:auto;
-    text-align: center;
-    position: relative;
-}
-#buildGemsContainerOptimal {
+.buildGemsContainer {
     width:90%;
     margin:auto;
     text-align: center;
