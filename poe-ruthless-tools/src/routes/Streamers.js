@@ -167,6 +167,6 @@ function isUnique(arr) {
 }
 **/
 function Streamers() {
-  
+  return <div>test</div>
 }
 export default Streamers;

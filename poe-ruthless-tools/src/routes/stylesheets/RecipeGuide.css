@@ -14,7 +14,7 @@
   vertical-align: middle;
 }
 .recipeTable > * {
-  color:white;
+  color:black;
 }
 .recipeTable {
   width:60%;
@@ -29,7 +29,7 @@
 }
 .recipeTableHeaders {
   width:50%;
-  color:white;
+  color:black;
   display:inline-block;
   padding-left:8px;
   padding-bottom:4px;

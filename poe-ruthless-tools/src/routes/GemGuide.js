@@ -15,9 +15,10 @@ export default function GemGuide() {
   //create state variables
   const [buildGemList, setGem, gemRef] = useState([]);
   const [muleGems, setMuleGems] = useState([]);
-  const [muleGemsFiltered, setMuleGemsFiltered] = useState([]);
+  const [muleGemsFiltered, setMuleGemsFiltered, muleGemsFilteredRef] = useState([]);
   const [allGems, setAllGems] = useState(questData.questSkills);
   const [buildGems, setBuildGems] = useState([]);
+  const [charsNeeded, setCharsNeeded, charsNeededRef] = useState({});
   const [searchTerm, setSearchTerm] = useState('');
   const [mainClass, setMainClass, mainClassRef] = useState('');
 
@@ -106,6 +107,7 @@ export default function GemGuide() {
     console.log('after');
     console.log(gemRef.current);
     getRequiredMules(gemRef.current);
+    setCharsNeeded({});
   }
 
   //select main class
@@ -317,7 +319,6 @@ export default function GemGuide() {
                   maxFound = true;
                 }
               }
-
             }
           } else {
             setMuleGemsFiltered(highestSingleClassCountTotalArr[0]);
@@ -325,11 +326,15 @@ export default function GemGuide() {
           }
         }
       }
+      console.log(buildGems);
       console.log(muleGemsFiltered);
-      console.log(countClassNames(muleGemsFiltered));
+      console.log(countClassNames(muleGemsFilteredRef.current));
+      setCharsNeeded(countClassNames(muleGemsFilteredRef.current));
+      console.log(charsNeededRef.current);
     } else {
       setMuleGemsFiltered([]);
       setMuleGems([]);
+      setCharsNeeded({});
     }
   }
 
@@ -339,6 +344,7 @@ export default function GemGuide() {
       for (let x=0; x<idArr.length; x++) {
         document.getElementById(`${idArr[x]}`).style.backgroundColor = 'rgba(0, 0, 0, .4)';
         document.getElementById(`${idArr[x]}`).style.fontWeight = '400';
+        document.getElementById(`${idArr[x]}`).style.color = 'whitesmoke';
       }
       getRequiredMules(gemRef.current);
     } else {
@@ -347,10 +353,12 @@ export default function GemGuide() {
         if (idArr[x].includes(mainClassRef.current.toLowerCase())) {
           document.getElementById(`${idArr[x]}`).style.backgroundColor = 'rgba(0, 0, 0, .8)';
           document.getElementById(`${idArr[x]}`).style.fontWeight = 'bold';
+          document.getElementById(`${idArr[x]}`).style.color = '#e8ba7f';
           getRequiredMules(gemRef.current);
         } else {
           document.getElementById(`${idArr[x]}`).style.backgroundColor = 'rgba(0, 0, 0, .4)';
           document.getElementById(`${idArr[x]}`).style.fontWeight = '400';
+          document.getElementById(`${idArr[x]}`).style.color = 'whitesmoke';
         }
       }
     }
@@ -370,22 +378,25 @@ export default function GemGuide() {
         <div id='searchGemsLabel'>Search Gems:</div>
         <input type='text' value={searchTerm} onChange={editSearchTerm} />
       </div>
-      <div id='selectMainBtnHeader'>Select Primary Class<span><em>(If optimal path has multiple equivalent options, this will set the optimal path to the path with the highest count of the primary class)</em></span></div>
-      <div id='selectMainBtns'>
-        <button onClick={() => selectMainClass('Templar')}><img src='/media/Absolution_skill_icon.png'></img><div id='templarMain'>Templar</div></button>
-        <button onClick={() => selectMainClass('Marauder')}><img src='/media/Absolution_skill_icon.png'></img><div id='marauderMain'>Marauder</div></button>
-        <button onClick={() => selectMainClass('Duelist')}><img src='/media/Absolution_skill_icon.png'></img><div id='duelistMain'>Duelist</div></button>
-        <button onClick={() => selectMainClass('Ranger')}><img src='/media/Absolution_skill_icon.png'></img><div id='rangerMain'>Ranger</div></button>
-        <button onClick={() => selectMainClass('Shadow')}><img src='/media/Absolution_skill_icon.png'></img><div id='shadowMain'>Shadow</div></button>
-        <button onClick={() => selectMainClass('Witch')}><img src='/media/Absolution_skill_icon.png'></img><div id='witchMain'>Witch</div></button>
-        <button onClick={() => selectMainClass('Scion')}><img src='/media/Absolution_skill_icon.png'></img><div id='scionMain'>Scion</div></button>
-      </div>
       <div id='selectedGemContainer'><div id='sGemContainer'>{
         buildGems.map(gem => <GemThumb gem={gem} selectGemFromList={selectGemFromList}/>)
       }</div></div>
       <div id='buildGems'>
         <button id='resetBtn' onClick={() => clearGemList()}>Reset</button>
+        <div id='selectMainBtnHeader'>Select Primary Class<span><em>(If optimal path has multiple equivalent options, this will set the optimal path to the path with the highest count of the primary class)</em></span></div>
+        <div id='selectMainBtns'>
+          <button onClick={() => selectMainClass('Templar')}><img src='/media/Absolution_skill_icon.png'></img><div id='templarMain'>Templar</div></button>
+          <button onClick={() => selectMainClass('Marauder')}><img src='/media/Absolution_skill_icon.png'></img><div id='marauderMain'>Marauder</div></button>
+          <button onClick={() => selectMainClass('Duelist')}><img src='/media/Absolution_skill_icon.png'></img><div id='duelistMain'>Duelist</div></button>
+          <button onClick={() => selectMainClass('Ranger')}><img src='/media/Absolution_skill_icon.png'></img><div id='rangerMain'>Ranger</div></button>
+          <button onClick={() => selectMainClass('Shadow')}><img src='/media/Absolution_skill_icon.png'></img><div id='shadowMain'>Shadow</div></button>
+          <button onClick={() => selectMainClass('Witch')}><img src='/media/Absolution_skill_icon.png'></img><div id='witchMain'>Witch</div></button>
+          <button onClick={() => selectMainClass('Scion')}><img src='/media/Absolution_skill_icon.png'></img><div id='scionMain'>Scion</div></button>
+        </div>
         <div className='buildPathHeader'>Optimal mule path</div>
+        <div>{Object.entries(charsNeeded).map( char => 
+          <div>{char[0]}</div>
+        )}</div>
         <div id='uniqueClassCount'></div>
         <div className='buildGemsContainer'>
           {muleGemsFiltered.map(gem => <GemCard key={gem.class + '' + gem.name} gem={gem} optimal={true} removeGemFromList={removeGemFromList} />)}

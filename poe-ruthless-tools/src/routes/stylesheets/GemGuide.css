@@ -5,8 +5,8 @@
     width:auto;
     color:#e8ba7f;
     width:22%;
-    max-width: 360px;
-    min-width: 240px;
+    max-width: 200px;
+    min-width: 180px;
     vertical-align: top;
     box-shadow: 1px 1px 8px black;
     overflow: hidden;
@@ -153,14 +153,13 @@
     border:2px solid #0f0f0f;
     border-radius: 8px;
     display:block;
-    width:60%;
     margin:auto;
     text-align: center;
     position: relative;
 }
 
 #buildGems {
-    width:70%;
+    width:100%;
     position: relative;
     margin:auto;
 }
@@ -210,8 +209,8 @@
 }
 #selectMainBtns button {
     padding:8px;
-    width:60px;
-    height:60px;
+    width:80px;
+    height:80px;
     margin:4px;
     border-radius: 8px;
     text-align: center;
@@ -233,13 +232,13 @@
     top:0px;
     left:0px;
     width:100%;
-    height:60px;
+    height:80px;
     border-radius: 8px;
     background-color: rgba(0,0,0,.4);
     z-index: 2;
     color:white;
-    line-height: 60px;
-    font-size:.6rem;
+    line-height: 80px;
+    font-size:.8rem;
 }
 #selectMainBtnHeader {
     display:block;
@@ -260,6 +259,9 @@
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
+.gemIconContainer * {
+    font-size: .8rem;
+  }
 
 
 @media only screen and (max-width: 1279px) {
@@ -278,6 +280,15 @@
     }
     #selectMainBtns {
         width:95%;
+    }
+    #selectMainBtns button {
+        width:60px;
+        height:60px;
+    }
+    #selectMainBtns button > div {
+        height:60px;
+        font-size:.6rem;
+        line-height: 60px;
     }
 }
 
