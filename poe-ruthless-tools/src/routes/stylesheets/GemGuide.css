@@ -135,7 +135,7 @@
 #searchGems > #searchGemsLabel {
     text-align: center;
     padding:4px;
-    color:whitesmoke;
+    color:black;
 }
 
 
@@ -148,7 +148,8 @@
     margin-top:18px;
     margin-bottom:18px;
     width:80%;
-    border:12px solid #0f0f0f;
+    border:2px solid #0f0f0f;
+    border-radius: 32px;
     display:block;
     width:60%;
     margin:auto;
@@ -190,11 +191,18 @@
     margin:auto;
     margin-top:1rem;
     margin-bottom:1rem;
+    background-color: rgb(220, 220, 220);
+}
+#resetBtn:hover {
+    background-color: rgb(200, 200, 200);
+}
+#selectMainBtns button:hover {
+    background-color: rgb(200, 200, 200);
 }
 
 .buildPathHeader {
     font-size: 2rem;
-    color:white;
+    color:black;
     font-weight: bold;
     text-align: center;
 }
@@ -208,8 +216,10 @@
 #selectMainBtns button {
     padding:8px;
     width:13%;
-    margin:auto;
+    margin:4px;
+    border-radius: 8px;
     text-align: center;
+    background-color: rgb(220, 220, 220);
 }
 
 

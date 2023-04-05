@@ -21,16 +21,16 @@
   padding-left: 1rem;
 }
 .contentDesc > .contentDescTitle {
-  color:white;
+  color:black;
   font-size:1.5rem;
 }
 .contentDesc > .contentDescInfo p:nth-child(1){
-  color:white;
+  color:black;
   margin:0px;
   text-decoration: underline;
 }
 .contentDesc > .contentDescInfo p:nth-child(2){
-  color:white;
+  color:black;
   margin:0px;
 }
 

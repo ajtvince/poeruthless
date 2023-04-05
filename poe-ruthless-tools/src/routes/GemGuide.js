@@ -116,6 +116,79 @@ export default function GemGuide() {
     }
   }
 
+  function generateCombinations(arr, size) {
+    const result = [];
+    const f = (prefix, arr) => {
+      if (prefix.length === size) {
+        result.push(prefix);
+      } else {
+        for (let i = 0; i < arr.length; i++) {
+          const remaining = arr.slice(0, i).concat(arr.slice(i + 1));
+          f(prefix.concat(arr[i]), remaining);
+        }
+      }
+    };
+    f([], arr);
+    return result;
+  }
+
+  function uniqueNameCombinations(input) {
+    function generateCombinations(arr, k) {
+      let combinations = [];
+      let comb = [];
+      
+      function recur(idx, n) {
+        if (comb.length === k) {
+          combinations.push([...comb]);
+          return;
+        }
+        for (let i = idx; i < n; i++) {
+          comb.push(arr[i]);
+          recur(i + 1, n);
+          comb.pop();
+        }
+      }
+      
+      recur(0, arr.length);
+      return combinations;
+    }
+  
+    function hasUniqueNames(arr) {
+      const names = arr.map(obj => obj.name);
+      const uniqueNames = new Set(names);
+      return names.length === uniqueNames.size;
+    }
+  
+    let countOfUnique = countUniqueNames(input);
+    const allCombinations = generateCombinations(input, countOfUnique);
+    const uniqueNameCombinations = allCombinations.filter(hasUniqueNames);
+    
+    return uniqueNameCombinations;
+  }
+
+  function countUniqueNames(arr) {
+    const uniqueNames = new Set(); // Create a new Set to store unique names
+  
+    arr.forEach(obj => {
+      uniqueNames.add(obj.name); // Add each name property to the Set
+    });
+  
+    return uniqueNames.size; // Return the number of unique names in the Set
+  }
+  function countUniqueClasses(arr) {
+    const uniqueNames = new Set(); // Create a new Set to store unique names
+  
+    arr.forEach(obj => {
+      uniqueNames.add(obj.class); // Add each name property to the Set
+    });
+  
+    return uniqueNames.size; // Return the number of unique names in the Set
+  }
+
+  function haveSameClassAndQuest2(obj1, obj2) {
+    return obj1.class === obj2.class && obj1.quest === obj2.quest && obj1.name !== obj2.name;
+  }
+
   //count duplicates, check if class exists already with chosen gems
   function getRequiredMules(data) {
     
@@ -180,6 +253,35 @@ export default function GemGuide() {
       });
 
       console.log(foundQuestGems);
+      let newFunc = uniqueNameCombinations(foundQuestGems);
+      console.log(newFunc);
+
+      let lowestCount = Infinity;
+      newFunc.forEach( arr => {
+        let tempCount = countUniqueClasses(arr);
+        if (tempCount < lowestCount) {
+          lowestCount = tempCount;
+        }
+      });
+      console.log(lowestCount);
+
+      let testArr = [];
+      let arrCount = 0;
+      newFunc.forEach( arr => {
+        for (let i=0; i<arr.length; i++) {
+          if (arr.some(obj => haveSameClassAndQuest2(obj, arr[i]))) {
+            testArr.push(arrCount);
+            i = arr.length;
+          }
+        }
+        arrCount++;
+      });
+      console.log(testArr);
+      testArr.forEach( num => {
+        let tempNum = testArr.length - (num+1);
+        newFunc.splice(tempNum, 1);
+      })
+      console.log(newFunc);
       //get optimalpath for mule
       const uniqueCombos = findUniqueCombos(foundQuestGems);
       const filteredSkills = filterSkills(foundQuestGems);
@@ -208,11 +310,11 @@ export default function GemGuide() {
           let max = Math.max(...z);
           if (max >= classMaxCount) {
             classMaxCount = max;
-            if (mainClass !== '' && x[mainClass] === max) {
+            if (mainClassRef !== '' && x[mainClassRef.current] === max) {
               minOptimalPath.push(arr);
-            } else if (mainClass === '') {
+            } else if (mainClassRef === '') {
               minOptimalPath.push(arr);
-            } else if (mainClass !== arr.class && minOptimalPath.length === 0) {
+            } else if (mainClassRef !== arr.class && minOptimalPath.length === 0) {
               minOptimalPath.push(arr);
             }
           }
@@ -332,17 +434,17 @@ export default function GemGuide() {
     let idArr = ['templarMain', 'marauderMain', 'duelistMain', 'rangerMain', 'shadowMain', 'witchMain', 'scionMain'];
     if(mainClassRef.current === '') {
       for (let x=0; x<idArr.length; x++) {
-        document.getElementById(`${idArr[x]}`).style.backgroundColor = 'whitesmoke';
+        document.getElementById(`${idArr[x]}`).style.backgroundColor = 'rgb(220, 220, 220)';
       }
       getRequiredMules(gemRef.current);
     } else {
       for (let x=0; x<idArr.length; x++) {
         console.log(idArr[x]);
         if (idArr[x].includes(mainClassRef.current.toLowerCase())) {
-          document.getElementById(`${idArr[x]}`).style.backgroundColor = 'blue';
+          document.getElementById(`${idArr[x]}`).style.backgroundColor = 'rgb(170, 170, 170)';
           getRequiredMules(gemRef.current);
         } else {
-          document.getElementById(`${idArr[x]}`).style.backgroundColor = 'whitesmoke';
+          document.getElementById(`${idArr[x]}`).style.backgroundColor = 'rgb(220, 220, 220)';
         }
       }
     }
