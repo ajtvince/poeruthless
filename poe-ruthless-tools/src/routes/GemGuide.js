@@ -398,7 +398,7 @@ export default function GemGuide() {
               for (let x=0; x < Object.keys(charsNeededRef.current).length; x++) {
                 if (tempCharArr[x] === gem1.class) {
                   console.log('duplicate found add extra class');
-                  //setCharsNeeded([...charsNeeded], {Duelist: 8})
+                  classActArr[x] += '*';
                 }
               }
             }
@@ -462,7 +462,7 @@ export default function GemGuide() {
       }</div></div>
       <div id='buildGems'>
         <button id='resetBtn' onClick={() => clearGemList()}>Reset</button>
-        <div id='selectMainBtnHeader'>Select Primary Class<span><em>(If a primary class is selected, this will set the optimal path to the path with the highest possible number of gem unlocks for that specific class, while optimizing the rest of the classes required)</em></span></div>
+        <div id='selectMainBtnHeader'>Select Primary Class (Optional)<span><em>(If a primary class is selected, this will set the optimal path to the path with the highest possible number of gem unlocks for that specific class, while optimizing the rest of the classes required. NOTE: This may create suboptimal paths)</em></span></div>
         <div id='selectMainBtns'>
           <button onClick={() => selectMainClass('Templar')}><img src='/media/Templar_character_class.png'></img><div id='templarMain'>Templar</div></button>
           <button onClick={() => selectMainClass('Marauder')}><img src='/media/Marauder_character_class.png'></img><div id='marauderMain'>Marauder</div></button>
@@ -474,7 +474,7 @@ export default function GemGuide() {
         </div>
         <div id='uniqueClassCount'></div>
         <div className='buildGemsContainer'>
-          <div className='buildPathHeader'>Optimal mule path</div>
+          <div className='buildPathHeader'>Optimal mule path <span style={{fontSize:'.6rem', fontWeight:'400', display:'block'}}>(** after the number of an act indicates a duplicate character is required)</span></div>
           <div>{Object.entries(charsNeeded).map( (char, index) => 
           <div class='charNeededContainer'>
             <div class='charNeededName'>{char[0]}</div>

@@ -13,6 +13,9 @@
 .contentContainer > .contentImg {
   width:40%;
   display:inline-block;
+  max-height: 170px;
+  object-fit: cover;
+  border-radius: 4px;
 }
 .contentContainer > .contentDesc {
   width:60%;

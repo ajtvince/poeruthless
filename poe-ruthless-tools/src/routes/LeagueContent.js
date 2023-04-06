@@ -10,7 +10,7 @@ export default function LeagueContent() {
       <div className='pageName'>Ruthless Specific League Content</div>
       <div id='leagueContentContainer'>
         <div className='contentContainer'>
-          <img className='contentImg' src='/media/phbg.jpg'></img><div className='contentDesc'>
+          <img className='contentImg' src='/media/abyss.png'></img><div className='contentDesc'>
             <div className='contentDescTitle'>Abysses</div>
             <div className='contentDescInfo'>
               <p>
@@ -21,7 +21,7 @@ export default function LeagueContent() {
             </div></div>
         </div>
         <div className='contentContainer'>
-          <img className='contentImg' src='/media/phbg.jpg'></img><div className='contentDesc'>
+          <img className='contentImg' src='/media/beast.png'></img><div className='contentDesc'>
           <div className='contentDescTitle'>Beastiary</div>
             <div className='contentDescInfo'>
               <p>
@@ -32,7 +32,7 @@ export default function LeagueContent() {
           </div>
         </div>
         <div className='contentContainer'>
-          <img className='contentImg' src='/media/phbg.jpg'></img><div className='contentDesc'>
+          <img className='contentImg' src='/media/betrayal.png'></img><div className='contentDesc'>
           <div className='contentDescTitle'>Betrayal</div>
             <div className='contentDescInfo'>
               <p>
@@ -44,7 +44,7 @@ export default function LeagueContent() {
           </div>
         </div>
         <div className='contentContainer'>
-          <img className='contentImg' src='/media/phbg.jpg'></img><div className='contentDesc'>
+          <img className='contentImg' src='/media/beyond.png'></img><div className='contentDesc'>
           <div className='contentDescTitle'>Beyond</div>
             <div className='contentDescInfo'>
               <p>
@@ -54,7 +54,7 @@ export default function LeagueContent() {
           </div>
         </div>
         <div className='contentContainer'>
-          <img className='contentImg' src='/media/phbg.jpg'></img><div className='contentDesc'>
+          <img className='contentImg' src='/media/blight.png'></img><div className='contentDesc'>
             <div className='contentDescTitle'>Blights</div>
             <div className='contentDescInfo'>
               <p>
@@ -66,7 +66,7 @@ export default function LeagueContent() {
           </div>
         </div>
         <div className='contentContainer'>
-          <img className='contentImg' src='/media/phbg.jpg'></img><div className='contentDesc'>
+          <img className='contentImg' src='/media/breaches.jpg'></img><div className='contentDesc'>
           <div className='contentDescTitle'>Breaches</div>
             <div className='contentDescInfo'>
               <p>
@@ -76,7 +76,7 @@ export default function LeagueContent() {
           </div>
         </div>
         <div className='contentContainer'>
-          <img className='contentImg' src='/media/phbg.jpg'></img><div className='contentDesc'>
+          <img className='contentImg' src='/media/del.jpg'></img><div className='contentDesc'>
           <div className='contentDescTitle'>Delirium</div>
             <div className='contentDescInfo'>
               <p>
@@ -86,7 +86,7 @@ export default function LeagueContent() {
           </div>
         </div>
         <div className='contentContainer'>
-          <img className='contentImg' src='/media/phbg.jpg'></img><div className='contentDesc'>
+          <img className='contentImg' src='/media/delve.jpg'></img><div className='contentDesc'>
           <div className='contentDescTitle'>Delve</div>
             <div className='contentDescInfo'>
               <p>
@@ -97,7 +97,7 @@ export default function LeagueContent() {
           </div>
         </div>
         <div className='contentContainer'>
-          <img className='contentImg' src='/media/phbg.jpg'></img><div className='contentDesc'>
+          <img className='contentImg' src='/media/essence.png'></img><div className='contentDesc'>
           <div className='contentDescTitle'>Essences</div>
             <div className='contentDescInfo'>
               <p>
@@ -107,7 +107,7 @@ export default function LeagueContent() {
           </div>
         </div>
         <div className='contentContainer'>
-          <img className='contentImg' src='/media/phbg.jpg'></img><div className='contentDesc'>
+          <img className='contentImg' src='/media/expedition.jpg'></img><div className='contentDesc'>
           <div className='contentDescTitle'>Expedition</div>
             <div className='contentDescInfo'>
               <p>
@@ -118,7 +118,7 @@ export default function LeagueContent() {
           </div>
         </div>
         <div className='contentContainer'>
-          <img className='contentImg' src='/media/phbg.jpg'></img><div className='contentDesc'>
+          <img className='contentImg' src='/media/harbing.png'></img><div className='contentDesc'>
           <div className='contentDescTitle'>Harbingers</div>
             <div className='contentDescInfo'>
               <p>
@@ -129,7 +129,7 @@ export default function LeagueContent() {
           </div>
         </div>
         <div className='contentContainer'>
-          <img className='contentImg' src='/media/phbg.jpg'></img><div className='contentDesc'>
+          <img className='contentImg' src='/media/harvest.png'></img><div className='contentDesc'>
           <div className='contentDescTitle'>Harvest</div>
             <div className='contentDescInfo'>
               <p>
@@ -139,7 +139,7 @@ export default function LeagueContent() {
           </div>
         </div>
         <div className='contentContainer'>
-          <img className='contentImg' src='/media/phbg.jpg'></img><div className='contentDesc'>
+          <img className='contentImg' src='/media/heist.png'></img><div className='contentDesc'>
           <div className='contentDescTitle'>Heist</div>
             <div className='contentDescInfo'>
               <p>
@@ -150,7 +150,7 @@ export default function LeagueContent() {
           </div>
         </div>
         <div className='contentContainer'>
-          <img className='contentImg' src='/media/phbg.jpg'></img><div className='contentDesc'>
+          <img className='contentImg' src='/media/temple.png'></img><div className='contentDesc'>
           <div className='contentDescTitle'>Incursions</div>
             <div className='contentDescInfo'>
               <p>
@@ -161,7 +161,7 @@ export default function LeagueContent() {
           </div>
         </div>
         <div className='contentContainer'>
-          <img className='contentImg' src='/media/phbg.jpg'></img><div className='contentDesc'>
+          <img className='contentImg' src='/media/legion.jpg'></img><div className='contentDesc'>
           <div className='contentDescTitle'>Legion</div>
             <div className='contentDescInfo'>
               <p>
@@ -171,7 +171,7 @@ export default function LeagueContent() {
           </div>
         </div>
         <div className='contentContainer'>
-          <img className='contentImg' src='/media/phbg.jpg'></img><div className='contentDesc'>
+          <img className='contentImg' src='/media/metamorph.png'></img><div className='contentDesc'>
           <div className='contentDescTitle'>Metamorph</div>
             <div className='contentDescInfo'>
               <p>
@@ -181,7 +181,7 @@ export default function LeagueContent() {
           </div>
         </div>
         <div className='contentContainer'>
-          <img className='contentImg' src='/media/phbg.jpg'></img><div className='contentDesc'>
+          <img className='contentImg' src='/media/ritual.png'></img><div className='contentDesc'>
           <div className='contentDescTitle'>Ritual</div>
             <div className='contentDescInfo'>
               <p>
@@ -191,7 +191,7 @@ export default function LeagueContent() {
           </div>
         </div>
         <div className='contentContainer'>
-          <img className='contentImg' src='/media/phbg.jpg'></img><div className='contentDesc'>
+          <img className='contentImg' src='/media/rogue.jpg'></img><div className='contentDesc'>
           <div className='contentDescTitle'>Rogue Exiles</div>
             <div className='contentDescInfo'>
               <p>
@@ -203,7 +203,7 @@ export default function LeagueContent() {
           </div>
         </div>
         <div className='contentContainer'>
-          <img className='contentImg' src='/media/phbg.jpg'></img><div className='contentDesc'>
+          <img className='contentImg' src='/media/shrine.jpg'></img><div className='contentDesc'>
           <div className='contentDescTitle'>Shrines</div>
             <div className='contentDescInfo'>
               <p>
@@ -214,7 +214,7 @@ export default function LeagueContent() {
           </div>
         </div>
         <div className='contentContainer'>
-          <img className='contentImg' src='/media/phbg.jpg'></img><div className='contentDesc'>
+          <img className='contentImg' src='/media/strongbox.png'></img><div className='contentDesc'>
           <div className='contentDescTitle'>Strongboxes</div>
             <div className='contentDescInfo'>
               <p>
@@ -225,7 +225,7 @@ export default function LeagueContent() {
           </div>
         </div>
         <div className='contentContainer'>
-          <img className='contentImg' src='/media/phbg.jpg'></img><div className='contentDesc'>
+          <img className='contentImg' src='/media/spirit.png'></img><div className='contentDesc'>
           <div className='contentDescTitle'>Tormented Spirits</div>
             <div className='contentDescInfo'>
               <p>
