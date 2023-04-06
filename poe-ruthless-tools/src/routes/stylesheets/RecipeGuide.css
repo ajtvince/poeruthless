@@ -1,25 +1,29 @@
 .recipeRow {
   width:100%;
   border: 2px black solid;
+  position: relative;
+  display:flex;
 }
 .recipeBox {
   width:50%;
   display:inline-block;
-  vertical-align: middle;
-  border-right:2px black solid;
+  align-self: center;
 }
-.resultBox {
+.recipeRow > .resultBox {
   width:50%;
   display:inline-block;
-  vertical-align: middle;
+  border-right:2px black solid;
+  height:100%;
+  align-self: center;
 }
 .recipeTable > * {
   color:black;
 }
 .recipeTable {
-  width:60%;
+  width:80%;
   display:block;
   margin:auto;
+  padding-top:2rem;
 }
 .tableItem {
   padding:2px;
@@ -36,10 +40,23 @@
   font-weight: bold;
   font-size:1.2rem;
 }
+#searchRecipeLabel {
+  text-align: center;
+}
+#searchInput {
+  text-align: center;
+  margin:auto;
+  display:block;
+  width:40%;
+  max-width: 300px;
+}
 
 @media only screen and (max-width: 1279px) {
   .recipeTable {
     width:80%;
+  }
+  #searchInput {
+    width:90%;
   }
 }
 

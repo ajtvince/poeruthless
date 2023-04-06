@@ -16,6 +16,7 @@ export default function GemGuide() {
   const [buildGemList, setGem, gemRef] = useState([]);
   const [muleGems, setMuleGems] = useState([]);
   const [muleGemsFiltered, setMuleGemsFiltered, muleGemsFilteredRef] = useState([]);
+  const [actCount, setActCount, actCountRef] = useState([]);
   const [allGems, setAllGems] = useState(questData.questSkills);
   const [buildGems, setBuildGems] = useState([]);
   const [charsNeeded, setCharsNeeded, charsNeededRef] = useState({});
@@ -326,11 +327,28 @@ export default function GemGuide() {
           }
         }
       }
-      console.log(buildGems);
-      console.log(muleGemsFiltered);
+      console.log(muleGemsFilteredRef.current);
       console.log(countClassNames(muleGemsFilteredRef.current));
+      
+      muleGemsFilteredRef.current.forEach( arr => {
+
+      });
+      //run through props on object, apply to shit
+      let classActArr = [];
       setCharsNeeded(countClassNames(muleGemsFilteredRef.current));
+      console.log(Object.keys(charsNeededRef.current));
+      Object.keys(charsNeededRef.current).forEach( cl => {
+        let x=0;
+        muleGemsFilteredRef.current.forEach( arr => {
+          if (arr.act > x && arr.class === cl) {
+            x = arr.act;
+          }
+        });
+        classActArr.push(x);
+      });
       console.log(charsNeededRef.current);
+      console.log(classActArr);
+      setActCount(classActArr);
     } else {
       setMuleGemsFiltered([]);
       setMuleGems([]);
@@ -374,35 +392,39 @@ export default function GemGuide() {
   return (
     <div className='pageContainer'>
       <div className='pageName'>Ruthless Skill Gem Mule Guide</div>
+      <p id='gemPageName'><em>(This tool contains a list of all skill gems that are available as quest rewards through the acts. It will calculate the optimal path for getting all the selected skill gems with the least amount of characters and total leveling)</em></p>
       <div id='searchGems'>
-        <div id='searchGemsLabel'>Search Gems:</div>
+        <div id='searchGemsLabel'>Search:</div>
         <input type='text' value={searchTerm} onChange={editSearchTerm} />
       </div>
       <div id='selectedGemContainer'><div id='sGemContainer'>{
-        buildGems.map(gem => <GemThumb gem={gem} selectGemFromList={selectGemFromList}/>)
+        buildGems.map(gem => <GemThumb gem={gem} buildList={muleGemsFilteredRef.current} selectGemFromList={selectGemFromList}/>)
       }</div></div>
       <div id='buildGems'>
         <button id='resetBtn' onClick={() => clearGemList()}>Reset</button>
         <div id='selectMainBtnHeader'>Select Primary Class<span><em>(If optimal path has multiple equivalent options, this will set the optimal path to the path with the highest count of the primary class)</em></span></div>
         <div id='selectMainBtns'>
-          <button onClick={() => selectMainClass('Templar')}><img src='/media/Absolution_skill_icon.png'></img><div id='templarMain'>Templar</div></button>
-          <button onClick={() => selectMainClass('Marauder')}><img src='/media/Absolution_skill_icon.png'></img><div id='marauderMain'>Marauder</div></button>
-          <button onClick={() => selectMainClass('Duelist')}><img src='/media/Absolution_skill_icon.png'></img><div id='duelistMain'>Duelist</div></button>
-          <button onClick={() => selectMainClass('Ranger')}><img src='/media/Absolution_skill_icon.png'></img><div id='rangerMain'>Ranger</div></button>
-          <button onClick={() => selectMainClass('Shadow')}><img src='/media/Absolution_skill_icon.png'></img><div id='shadowMain'>Shadow</div></button>
-          <button onClick={() => selectMainClass('Witch')}><img src='/media/Absolution_skill_icon.png'></img><div id='witchMain'>Witch</div></button>
-          <button onClick={() => selectMainClass('Scion')}><img src='/media/Absolution_skill_icon.png'></img><div id='scionMain'>Scion</div></button>
+          <button onClick={() => selectMainClass('Templar')}><img src='/media/Templar_character_class.png'></img><div id='templarMain'>Templar</div></button>
+          <button onClick={() => selectMainClass('Marauder')}><img src='/media/Marauder_character_class.png'></img><div id='marauderMain'>Marauder</div></button>
+          <button onClick={() => selectMainClass('Duelist')}><img src='/media/Duelist_character_class.png'></img><div id='duelistMain'>Duelist</div></button>
+          <button onClick={() => selectMainClass('Ranger')}><img src='/media/Ranger_character_class.png'></img><div id='rangerMain'>Ranger</div></button>
+          <button onClick={() => selectMainClass('Shadow')}><img src='/media/Shadow_character_class.png'></img><div id='shadowMain'>Shadow</div></button>
+          <button onClick={() => selectMainClass('Witch')}><img src='/media/Witch_character_class.png'></img><div id='witchMain'>Witch</div></button>
+          <button onClick={() => selectMainClass('Scion')}><img src='/media/Scion_character_class.png'></img><div id='scionMain'>Scion</div></button>
         </div>
-        <div className='buildPathHeader'>Optimal mule path</div>
-        <div>{Object.entries(charsNeeded).map( char => 
-          <div>{char[0]}</div>
-        )}</div>
         <div id='uniqueClassCount'></div>
         <div className='buildGemsContainer'>
+          <div className='buildPathHeader'>Optimal mule path</div>
+          <div>{Object.entries(charsNeeded).map( (char, index) => 
+          <div class='charNeededContainer'>
+            <div class='charNeededName'>{char[0]}</div>
+            <div class='charNeededAct'>Act: {actCountRef.current[index]}</div>
+          </div>
+          )}</div>
           {muleGemsFiltered.map(gem => <GemCard key={gem.class + '' + gem.name} gem={gem} optimal={true} removeGemFromList={removeGemFromList} />)}
         </div>
-        <div className='buildPathHeader'>All gem options</div>
         <div className='buildGemsContainer'>
+          <div className='buildPathHeader'>All gem options</div>
           {muleGems.map(gem => <GemCard gem={gem} optimal={false} removeGemFromList={removeGemFromList} />)} 
         </div>
       </div>

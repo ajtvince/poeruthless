@@ -126,8 +126,9 @@ function Navigation() {
 
   return (
     <div>
+      <div id='siteBG'><img src='/media/poebg.png'></img></div>
       <div id='navbar'>
-        <Link to='/' onClick={closeMobileNav}>Home</Link>
+        <Link to='/' onClick={closeMobileNav}>About</Link>
         <Link to='/skillgems' onClick={closeMobileNav}>Skill Gems</Link>
         <Link to='/leaguecontent' onClick={closeMobileNav}>League Content</Link>
         <Link to='/recipes' onClick={closeMobileNav}>Recipes</Link>
