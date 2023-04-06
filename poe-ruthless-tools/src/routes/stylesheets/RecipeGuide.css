@@ -49,6 +49,8 @@
   display:block;
   width:40%;
   max-width: 300px;
+  margin-top:4px;
+  padding:2px;
 }
 
 @media only screen and (max-width: 1279px) {

@@ -11,7 +11,7 @@ class GemCard extends React.Component {
     console.log('mounted');
     if (this.props.optimal === true) {
       this.setState({
-        styling: {transform: 'scale(1.05)', boxShadow: '#e8ba7f 0px 0px 20px'}
+        styling: {transform: 'scale(1.08)', boxShadow: 'green 0px 0px 20px'}
       });
       setTimeout(() => {
         this.setState({

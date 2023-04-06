@@ -46,10 +46,10 @@ export default function RecipeGuide() {
         <div className='recipeTableHeaders'>Result</div>
         {recipeMapSearch.map( recipe => <div className='recipeRow'>
         <div className='resultBox'>
-          <div className='itemContainer'>{recipe.result.map(res => <div className='tableItem'>{res}</div>)}</div>
+          <div className='itemContainer'>{recipe.recipe.map(res => <div className='tableItem'>{res}</div>)}</div>
         </div>
         <div className='recipeBox'>
-          <div className='itemContainer'>{recipe.recipe.map(rec => <div className='tableItem'>{rec}</div>)}</div>
+          <div className='itemContainer'>{recipe.result.map(rec => <div className='tableItem'>{rec}</div>)}</div>
         </div>
       </div>  
       )}

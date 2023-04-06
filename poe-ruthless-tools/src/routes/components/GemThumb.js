@@ -10,16 +10,18 @@ class GemThumb extends React.Component {
   }
   componentDidUpdate(prevProps, prevState) {
     if(this.props.buildList !== prevProps.buildList) {
+      if(prevState.styling === {border: '4px green solid', color: 'green'}) {
+        console.log('already selected');
+      }
       let tempStatus = false;
       this.props.buildList.forEach( gem => {
         if (gem.name === this.props.gem.name) {
-          console.log('same wow');
           tempStatus = true;
         }
       });
       if(tempStatus) {
         this.setState({
-          styling: {border: '4px green solid', color: 'green'}
+          styling: {border: '4px green solid', color: 'green', backgroundColor: 'rgba(0,0,0,.8)'}
         });
       } else {
         this.setState({

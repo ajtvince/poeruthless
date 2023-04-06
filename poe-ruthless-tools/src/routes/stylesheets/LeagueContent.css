@@ -27,11 +27,6 @@
 .contentDesc > .contentDescInfo p:nth-child(1){
   color:black;
   margin:0px;
-  text-decoration: underline;
-}
-.contentDesc > .contentDescInfo p:nth-child(2){
-  color:black;
-  margin:0px;
 }
 
 @media only screen and (max-width: 1279px) {

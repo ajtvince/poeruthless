@@ -58,43 +58,35 @@ export default function GemGuide() {
       console.log(gemRef.current.length);
       console.log(tempArr);
       tempArr.forEach(gem => {
-        if (gem.gemID === selectedGem.name) {
+        if (gem.name === selectedGem.name) {
           tempCond = false;
         }
-        if (buildGemList.length === 1 && gem.gemID !== selectedGem.name) {
+        if (buildGemList.length === 1 && gem.name !== selectedGem.name) {
           tempCond = true;
         }
       });
     }
 
     //if gem not found in current mule build list, add gem to state variable and push new gem to temp array
-    if (tempCond === true) {
+    if (tempCond) {
       setGem([
         ...buildGemList,
-        {
-          id: tempID,
-          gemID: selectedGem.name,
-          gemPic: 'gemPic1',
-          obtain: 'quest'
-        }
+        selectedGem
       ]);
 
-      tempArr.push({
-        id: tempID,
-        gemID: selectedGem.name,
-        gemPic: 'gemPic1',
-        obtain: 'quest'
-      });
+      tempArr.push(selectedGem);
 
       //update mule build list based on temp array
       getRequiredMules(tempArr);
+    } else if(!tempCond) {
+      removeGemFromList(selectedGem);
     }
   }
 
   //remove selected gem from mule build list
   function removeGemFromList(selectedGem) {
     console.log(selectedGem);
-    const tempArrRm = buildGemList.filter(gem => gem.gemID !== selectedGem.name);
+    const tempArrRm = buildGemList.filter(gem => gem.name !== selectedGem.name);
     setGem(tempArrRm);
     console.log(gemRef.current);
     getRequiredMules(gemRef.current);
@@ -154,7 +146,6 @@ export default function GemGuide() {
     const allCombinations = generateCombinations(input, countOfUnique);
     console.log(allCombinations);
     let returnArr = [];
-    console.log(returnArr);
     if (mainClassRef.current !== '') {
       let x = 0;
       allCombinations.forEach( arr => {
@@ -228,7 +219,7 @@ export default function GemGuide() {
 
       selectedGems.forEach(gem => {
         questGemArr.filter(qgem => {
-          if (qgem.name === gem.gemID) {
+          if (qgem.name === gem.name) {
             foundQuestGems.push(qgem);
           }
         });
@@ -328,8 +319,9 @@ export default function GemGuide() {
             let mainClassFound = false;
             highestSingleClassCountTotalArr.forEach( arr => {
               let checkClass = countClassNames(arr);
-              console.log(checkClass[mainClassRef.current]);
-              if (typeof checkClass[mainClassRef.current] !== undefined) {
+              console.log(typeof checkClass[mainClassRef.current]);
+              //code breaking here if removing gem with mainclass selected and it is last gem for mainclass and multiple possible options remain
+              if (typeof checkClass[mainClassRef.current] !== 'undefined') {
                 mainClassFound = true;
                 if(checkClass[mainClassRef.current] === highestClassCount) {
                   setMuleGemsFiltered(arr);
@@ -338,6 +330,8 @@ export default function GemGuide() {
                 }
               }
             });
+            console.log('next up while loop');
+            console.log(mainClassFound);
             while (!maxFound && mainClassFound) {
               for (let x=highestClassCount-1; x>0; x--) {
                 highestSingleClassCountTotalArr.forEach( arr => {
@@ -355,6 +349,8 @@ export default function GemGuide() {
               }
             }
             if (!mainClassFound) {
+              console.log('selected class not found in any array')
+              console.log(highestSingleClassCountTotalArr);
               setMuleGemsFiltered(highestSingleClassCountTotalArr[0]);
               setMuleGems(foundQuestGems);
             }
@@ -400,6 +396,7 @@ export default function GemGuide() {
         document.getElementById(`${idArr[x]}`).style.backgroundColor = 'rgba(0, 0, 0, .4)';
         document.getElementById(`${idArr[x]}`).style.fontWeight = '400';
         document.getElementById(`${idArr[x]}`).style.color = 'whitesmoke';
+        document.getElementById(`${idArr[x]}`).style.border = 'none';
       }
       getRequiredMules(gemRef.current);
     } else {
@@ -409,11 +406,13 @@ export default function GemGuide() {
           document.getElementById(`${idArr[x]}`).style.backgroundColor = 'rgba(0, 0, 0, .8)';
           document.getElementById(`${idArr[x]}`).style.fontWeight = 'bold';
           document.getElementById(`${idArr[x]}`).style.color = '#e8ba7f';
+          document.getElementById(`${idArr[x]}`).style.border = '2px solid green';
           getRequiredMules(gemRef.current);
         } else {
           document.getElementById(`${idArr[x]}`).style.backgroundColor = 'rgba(0, 0, 0, .4)';
           document.getElementById(`${idArr[x]}`).style.fontWeight = '400';
           document.getElementById(`${idArr[x]}`).style.color = 'whitesmoke';
+          document.getElementById(`${idArr[x]}`).style.border = 'none';
         }
       }
     }
