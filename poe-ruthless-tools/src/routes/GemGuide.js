@@ -238,6 +238,7 @@ export default function GemGuide() {
       console.log(foundQuestGems);
       console.log(uniques);
       let newFunc = uniqueNameCombinations(foundQuestGems);
+      let backupFunc = Object.assign([], newFunc);
       console.log(newFunc);
 
       let lowestCount = Infinity;
@@ -267,6 +268,13 @@ export default function GemGuide() {
         newFunc.splice(tempNum, 1);
       })
       console.log(newFunc);
+      //here breaks if need more than one of same class
+      let duplicateClass = false;
+      if(newFunc.length === 0) {
+        console.log('you will need duplicate of the same character');
+        newFunc = backupFunc;
+        duplicateClass = true;
+      }
       let lowestDiffClassArr = [];
       newFunc.forEach(arr => {
         if(countUniqueClasses(arr) === lowestCount) {
@@ -363,9 +371,6 @@ export default function GemGuide() {
       console.log(muleGemsFilteredRef.current);
       console.log(countClassNames(muleGemsFilteredRef.current));
       
-      muleGemsFilteredRef.current.forEach( arr => {
-
-      });
       //run through props on object, apply to shit
       let classActArr = [];
       setCharsNeeded(countClassNames(muleGemsFilteredRef.current));
@@ -381,6 +386,25 @@ export default function GemGuide() {
       });
       console.log(charsNeededRef.current);
       console.log(classActArr);
+      //add notification about duplicate class WIP WIP
+      if (duplicateClass) {
+        console.log(Object.entries(charsNeeded));
+        muleGemsFilteredRef.current.forEach( gem1 => {
+          muleGemsFilteredRef.current.forEach( gem2 => {
+            console.log(haveSameClassAndQuest2(gem1, gem2));
+            if (haveSameClassAndQuest2(gem1, gem2)) {
+              console.log(gem1.class);
+              let tempCharArr = Object.keys(charsNeededRef.current);
+              for (let x=0; x < Object.keys(charsNeededRef.current).length; x++) {
+                if (tempCharArr[x] === gem1.class) {
+                  console.log('duplicate found add extra class');
+                  //setCharsNeeded([...charsNeeded], {Duelist: 8})
+                }
+              }
+            }
+          });
+        });
+      }
       setActCount(classActArr);
     } else {
       setMuleGemsFiltered([]);
@@ -393,7 +417,7 @@ export default function GemGuide() {
     let idArr = ['templarMain', 'marauderMain', 'duelistMain', 'rangerMain', 'shadowMain', 'witchMain', 'scionMain'];
     if(mainClassRef.current === '') {
       for (let x=0; x<idArr.length; x++) {
-        document.getElementById(`${idArr[x]}`).style.backgroundColor = 'rgba(0, 0, 0, .4)';
+        document.getElementById(`${idArr[x]}`).style.backgroundColor = 'rgba(0, 0, 0, .2)';
         document.getElementById(`${idArr[x]}`).style.fontWeight = '400';
         document.getElementById(`${idArr[x]}`).style.color = 'whitesmoke';
         document.getElementById(`${idArr[x]}`).style.border = 'none';
@@ -409,7 +433,7 @@ export default function GemGuide() {
           document.getElementById(`${idArr[x]}`).style.border = '2px solid green';
           getRequiredMules(gemRef.current);
         } else {
-          document.getElementById(`${idArr[x]}`).style.backgroundColor = 'rgba(0, 0, 0, .4)';
+          document.getElementById(`${idArr[x]}`).style.backgroundColor = 'rgba(0, 0, 0, .2)';
           document.getElementById(`${idArr[x]}`).style.fontWeight = '400';
           document.getElementById(`${idArr[x]}`).style.color = 'whitesmoke';
           document.getElementById(`${idArr[x]}`).style.border = 'none';
