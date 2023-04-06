@@ -206,6 +206,7 @@
     color:black;
     font-weight: bold;
     text-align: center;
+    padding-bottom:.5rem;
 }
 
 #selectMainBtns {

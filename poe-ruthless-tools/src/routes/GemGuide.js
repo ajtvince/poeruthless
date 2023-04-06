@@ -127,7 +127,9 @@ export default function GemGuide() {
       
       function recur(idx, n) {
         if (comb.length === k) {
-          combinations.push([...comb]);
+          if (hasUniqueNames([...comb])) {
+            combinations.push([...comb]);
+          }
           return;
         }
         for (let i = idx; i < n; i++) {
@@ -148,10 +150,36 @@ export default function GemGuide() {
     }
   
     let countOfUnique = countUniqueNames(input);
+    console.log(countOfUnique);
     const allCombinations = generateCombinations(input, countOfUnique);
-    const uniqueNameCombinations = allCombinations.filter(hasUniqueNames);
-    
-    return uniqueNameCombinations;
+    console.log(allCombinations);
+    let returnArr = [];
+    console.log(returnArr);
+    if (mainClassRef.current !== '') {
+      let x = 0;
+      allCombinations.forEach( arr => {
+        let y = countClassNames(arr);
+        let z = y[mainClassRef.current];
+        if (z >= x) {
+          x = z;
+        }
+      });
+      allCombinations.forEach( arr => {
+        let y = countClassNames(arr);
+        let z = y[mainClassRef.current];
+        if (z === x) {
+          returnArr.push(arr);
+        }
+      });
+    }
+
+    if (returnArr.length === 0 ) {
+      returnArr = Object.assign([], allCombinations);
+    }
+    //const uniqueNameCombinations = allCombinations.filter(hasUniqueNames);
+    //console.log(uniqueNameCombinations);
+    console.log(returnArr);
+    return returnArr;
   }
 
   function countUniqueNames(arr) {
@@ -187,7 +215,7 @@ export default function GemGuide() {
     return obj1.class === obj2.class && obj1.quest === obj2.quest && obj1.name !== obj2.name;
   }
 
-  //count duplicates, check if class exists already with chosen gems
+  //process optimal path
   function getRequiredMules(data) {
     
     if (data.length !== 0) {
@@ -217,6 +245,7 @@ export default function GemGuide() {
       });
 
       console.log(foundQuestGems);
+      console.log(uniques);
       let newFunc = uniqueNameCombinations(foundQuestGems);
       console.log(newFunc);
 
@@ -296,16 +325,20 @@ export default function GemGuide() {
         } else {
           if (mainClassRef.current !== '') {
             let maxFound = false;
+            let mainClassFound = false;
             highestSingleClassCountTotalArr.forEach( arr => {
               let checkClass = countClassNames(arr);
               console.log(checkClass[mainClassRef.current]);
-              if(checkClass[mainClassRef.current] === highestClassCount) {
-                setMuleGemsFiltered(arr);
-                setMuleGems(foundQuestGems);
-                maxFound = true;
+              if (typeof checkClass[mainClassRef.current] !== undefined) {
+                mainClassFound = true;
+                if(checkClass[mainClassRef.current] === highestClassCount) {
+                  setMuleGemsFiltered(arr);
+                  setMuleGems(foundQuestGems);
+                  maxFound = true;
+                }
               }
             });
-            while (!maxFound) {
+            while (!maxFound && mainClassFound) {
               for (let x=highestClassCount-1; x>0; x--) {
                 highestSingleClassCountTotalArr.forEach( arr => {
                   let checkClass = countClassNames(arr);
@@ -320,6 +353,10 @@ export default function GemGuide() {
                   maxFound = true;
                 }
               }
+            }
+            if (!mainClassFound) {
+              setMuleGemsFiltered(highestSingleClassCountTotalArr[0]);
+              setMuleGems(foundQuestGems);
             }
           } else {
             setMuleGemsFiltered(highestSingleClassCountTotalArr[0]);
@@ -402,7 +439,7 @@ export default function GemGuide() {
       }</div></div>
       <div id='buildGems'>
         <button id='resetBtn' onClick={() => clearGemList()}>Reset</button>
-        <div id='selectMainBtnHeader'>Select Primary Class<span><em>(If optimal path has multiple equivalent options, this will set the optimal path to the path with the highest count of the primary class)</em></span></div>
+        <div id='selectMainBtnHeader'>Select Primary Class<span><em>(If a primary class is selected, this will set the optimal path to the path with the highest possible number of gem unlocks for that specific class, while optimizing the rest of the classes required)</em></span></div>
         <div id='selectMainBtns'>
           <button onClick={() => selectMainClass('Templar')}><img src='/media/Templar_character_class.png'></img><div id='templarMain'>Templar</div></button>
           <button onClick={() => selectMainClass('Marauder')}><img src='/media/Marauder_character_class.png'></img><div id='marauderMain'>Marauder</div></button>

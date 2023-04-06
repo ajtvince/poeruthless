@@ -2059,6 +2059,12 @@ const questData = {
     "quest": "Breaking the Seal(Open the Mines)"
 },
 {
+    "name": "Snipe",
+    "class": "Ranger",
+    "act": 4,
+    "quest": "Breaking the Seal(Open the Mines)"
+},
+{
     "name": "Summon Carrion Golem",
     "class": "Witch",
     "act": 4,

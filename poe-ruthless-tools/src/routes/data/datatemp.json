@@ -2023,6 +2023,12 @@
     "quest": "Sever the Right Hand(Kill Gravicius)"
 },
 {
+    "name": "Snipe",
+    "class": "Ranger",
+    "act": 4,
+    "quest": "Breaking the Seal(Open the Mines)"
+},
+{
     "name": "Soulrend",
     "class": "Witch",
     "act": 3,
@@ -2099,6 +2105,12 @@
     "class": "Witch",
     "act": 4,
     "quest": "Breaking the Seal(Open the Mines)"
+},
+{
+    "name": "SIOSA",
+    "class": "All",
+    "act": 3,
+    "quest": "A Fixture of Fate(Uncarved Gemstone)"
 }
 ]
 }

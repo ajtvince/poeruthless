@@ -6,7 +6,6 @@ import Home from './routes/Home';
 import LeagueContent from './routes/LeagueContent';
 import Navigation from './routes/Navigation';
 import RecipeGuide from './routes/RecipeGuide';
-import Streamers from './routes/Streamers';
 import { createBrowserRouter, createRoutesFromElements, RouterProvider } from "react-router-dom";
 //import reportWebVitals from './reportWebVitals';
 import { createRoot } from "react-dom/client";
@@ -44,10 +43,6 @@ const router = createBrowserRouter([
       {
         path: '/recipes',
         element: <RecipeGuide/>,
-      },
-      {
-        path: '/streamers',
-        element: <Streamers/>,
       }
     ]
   },

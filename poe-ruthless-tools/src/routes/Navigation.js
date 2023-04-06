@@ -132,7 +132,6 @@ function Navigation() {
         <Link to='/skillgems' onClick={closeMobileNav}>Skill Gems</Link>
         <Link to='/leaguecontent' onClick={closeMobileNav}>League Content</Link>
         <Link to='/recipes' onClick={closeMobileNav}>Recipes</Link>
-        <Link to='/streamers' onClick={closeMobileNav}>Ruthless Streamers</Link>
       </div>
       <div onClick={openMobileNav} id='navbarM'>
         <div></div>
