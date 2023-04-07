@@ -4,11 +4,11 @@ class GemCard extends React.Component {
   constructor(props) {
     super(props);
     this.state = { styling: {} };
-    console.log(this.state);
+    //console.log(this.state);
   }
 
   componentDidMount() {
-    console.log('mounted');
+    //console.log('mounted');
     if (this.props.optimal === true) {
       this.setState({
         styling: {transform: 'scale(1.08)', boxShadow: 'green 0px 0px 20px'}

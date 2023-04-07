@@ -12,13 +12,13 @@ export default function RecipeGuide() {
     
   function editSearchTerm(e) {
     setSearchTerm(e.target.value);
-    console.log(recipeMap);
-    console.log(searchTerm);
+    //console.log(recipeMap);
+    //console.log(searchTerm);
   }
 
   useEffect(() => {
-    console.log('before');
-    console.log(recipeMapRef);
+    //console.log('before');
+    //console.log(recipeMapRef);
       setRecipeMapSearch(recipeMap.filter(obj => {
         let temp = false;
         obj.recipe.forEach( rec => {
@@ -33,7 +33,7 @@ export default function RecipeGuide() {
         });
         return temp;
       }));
-      console.log('ref');
+      //console.log('ref');
   }, [searchTerm]);
 
   return (

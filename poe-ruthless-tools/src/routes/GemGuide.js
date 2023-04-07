@@ -29,7 +29,7 @@ export default function GemGuide() {
   //set searchTerm state to value in input box
   function editSearchTerm(e) {
     setSearchTerm(e.target.value);
-    console.log(searchTerm);
+    //console.log(searchTerm);
   }
 
   //trigger when clicking gem from selectable gem list
@@ -37,8 +37,8 @@ export default function GemGuide() {
     //set temp variables
     if (typeof selectedGem === 'string') {
       setMainClass(selectedGem);
-      console.log('main class updated');
-      console.log(selectedGem);
+      //console.log('main class updated');
+      //console.log(selectedGem);
       getRequiredMules(gemRef.current);
     }
 
@@ -55,8 +55,8 @@ export default function GemGuide() {
     if (gemRef.current.length <= 0) {
       tempCond = true;
     } else {
-      console.log(gemRef.current.length);
-      console.log(tempArr);
+      //console.log(gemRef.current.length);
+      //console.log(tempArr);
       tempArr.forEach(gem => {
         if (gem.name === selectedGem.name) {
           tempCond = false;
@@ -85,20 +85,20 @@ export default function GemGuide() {
 
   //remove selected gem from mule build list
   function removeGemFromList(selectedGem) {
-    console.log(selectedGem);
+    //console.log(selectedGem);
     const tempArrRm = buildGemList.filter(gem => gem.name !== selectedGem.name);
     setGem(tempArrRm);
-    console.log(gemRef.current);
+    //console.log(gemRef.current);
     getRequiredMules(gemRef.current);
   }
 
   //clear all gems from mule build list
   function clearGemList() {
     setGem([]);
-    console.log('before');
+    //console.log('before');
     setMainClass('');
-    console.log('after');
-    console.log(gemRef.current);
+    //console.log('after');
+    //console.log(gemRef.current);
     getRequiredMules(gemRef.current);
     setCharsNeeded({});
   }
@@ -142,9 +142,9 @@ export default function GemGuide() {
     }
   
     let countOfUnique = countUniqueNames(input);
-    console.log(countOfUnique);
+    //console.log(countOfUnique);
     const allCombinations = generateCombinations(input, countOfUnique);
-    console.log(allCombinations);
+    //console.log(allCombinations);
     let returnArr = [];
     if (mainClassRef.current !== '') {
       let x = 0;
@@ -168,8 +168,8 @@ export default function GemGuide() {
       returnArr = Object.assign([], allCombinations);
     }
     //const uniqueNameCombinations = allCombinations.filter(hasUniqueNames);
-    //console.log(uniqueNameCombinations);
-    console.log(returnArr);
+    ////console.log(uniqueNameCombinations);
+    //console.log(returnArr);
     return returnArr;
   }
 
@@ -213,8 +213,8 @@ export default function GemGuide() {
     
       let selectedGems = data;
       let foundQuestGems = [];
-      console.log('data passed to getRequiredMules:');
-      console.log(selectedGems);
+      //console.log('data passed to getRequiredMules:');
+      //console.log(selectedGems);
       setGem(selectedGems);
 
       selectedGems.forEach(gem => {
@@ -235,11 +235,11 @@ export default function GemGuide() {
         }
       });
 
-      console.log(foundQuestGems);
-      console.log(uniques);
+      //console.log(foundQuestGems);
+      //console.log(uniques);
       let newFunc = uniqueNameCombinations(foundQuestGems);
       let backupFunc = Object.assign([], newFunc);
-      console.log(backupFunc);
+      //console.log(backupFunc);
 
       let lowestCount = Infinity;
       newFunc.forEach( arr => {
@@ -248,7 +248,7 @@ export default function GemGuide() {
           lowestCount = tempCount;
         }
       });
-      console.log(lowestCount);
+      //console.log(lowestCount);
 
       let testArr = [];
       let arrCount = 0;
@@ -262,19 +262,19 @@ export default function GemGuide() {
         arrCount++;
       });
 
-      console.log(testArr);
+      //console.log(testArr);
       testArr.sort((a, b) => b - a);
       testArr.forEach( num => {
         let tempNum = num;
         newFunc.splice(tempNum, 1);
-        console.log(newFunc);
+        //console.log(newFunc);
       })
-      console.log(newFunc);
+      //console.log(newFunc);
       //here breaks if need more than one of same class
       let duplicateClass = false;
       if(newFunc.length === 0) {
-        console.log('you will need duplicate of the same character');
-        console.log(backupFunc);
+        //console.log('you will need duplicate of the same character');
+        //console.log(backupFunc);
         newFunc = backupFunc;
         duplicateClass = true;
       }
@@ -293,23 +293,23 @@ export default function GemGuide() {
         });
       }
 
-      console.log(lowestDiffClassArr);
+      //console.log(lowestDiffClassArr);
       let highestSingleClassCountTotalArr = [];
       let highestClassCount = 0;
 
       if (lowestDiffClassArr.length === 1) {
         for (let i=0; i<lowestDiffClassArr[0].length; i++) {
           if (lowestDiffClassArr[0].some(obj => haveSameClassAndQuest2(obj, lowestDiffClassArr[0][i]))) {
-            console.log('dupe found in single');
+            //console.log('dupe found in single');
             lowestDiffClassArr = Object.assign([], newFunc);
-            console.log(newFunc);
+            //console.log(newFunc);
             i = lowestDiffClassArr[0].length;
           }
         }
       }
 
       if (lowestDiffClassArr.length === 1) {
-        console.log('only one option');
+        //console.log('only one option');
         setMuleGemsFiltered(lowestDiffClassArr[0]);
         setMuleGems(foundQuestGems);
       } else {
@@ -322,7 +322,7 @@ export default function GemGuide() {
             highestClassCount = max;
           }
         });
-        console.log(highestClassCount);
+        //console.log(highestClassCount);
         lowestDiffClassArr.forEach(arr => {
           let x = countClassNames(arr);
           let z = Object.values(x);
@@ -331,16 +331,16 @@ export default function GemGuide() {
             highestSingleClassCountTotalArr.push(arr);
           }
         });
-        console.log(highestSingleClassCountTotalArr);
+        //console.log(highestSingleClassCountTotalArr);
         if(highestSingleClassCountTotalArr.length === 1) {
-          console.log('equals one');
+          //console.log('equals one');
           let tempCheckArr = [];
           let arrCount = 0;
-          console.log(highestSingleClassCountTotalArr);
+          //console.log(highestSingleClassCountTotalArr);
           highestSingleClassCountTotalArr.forEach( arr2 => {
             let tempArrCount = 0;
             for (let i=0; i<arr2.length; i++) {
-              console.log(arr2.some(obj => haveSameClassAndQuest2(obj, arr2[i])));
+              //console.log(arr2.some(obj => haveSameClassAndQuest2(obj, arr2[i])));
               if (arr2.some(obj => haveSameClassAndQuest2(obj, arr2[i]))) {
                 tempArrCount++;
                 if (tempArrCount > 1) {
@@ -352,7 +352,7 @@ export default function GemGuide() {
             arrCount++;
           });
     
-          console.log(tempCheckArr);
+          //console.log(tempCheckArr);
           tempCheckArr.sort((a, b) => b - a);
           tempCheckArr.forEach( num => {
             let tempNum = num;
@@ -369,7 +369,7 @@ export default function GemGuide() {
 
           /**
           if(highestSingleClassCountTotalArr.length === 0) {
-            console.log('0');
+            //console.log('0');
             let hscStatus = true;
             while (hscStatus) {
               lowestDiffClassArr.forEach(arr => {
@@ -407,7 +407,7 @@ export default function GemGuide() {
             let mainClassFound = false;
             highestSingleClassCountTotalArr.forEach( arr => {
               let checkClass = countClassNames(arr);
-              console.log(typeof checkClass[mainClassRef.current]);
+              //console.log(typeof checkClass[mainClassRef.current]);
               //code breaking here if removing gem with mainclass selected and it is last gem for mainclass and multiple possible options remain
               if (typeof checkClass[mainClassRef.current] !== 'undefined') {
                 mainClassFound = true;
@@ -418,13 +418,13 @@ export default function GemGuide() {
                 }
               }
             });
-            console.log('next up while loop');
-            console.log(mainClassFound);
+            //console.log('next up while loop');
+            //console.log(mainClassFound);
             while (!maxFound && mainClassFound) {
               for (let x=highestClassCount-1; x>0; x--) {
                 highestSingleClassCountTotalArr.forEach( arr => {
                   let checkClass = countClassNames(arr);
-                  console.log(checkClass[mainClassRef.current]);
+                  //console.log(checkClass[mainClassRef.current]);
                   if(checkClass[mainClassRef.current] === x) {
                     setMuleGemsFiltered(arr);
                     setMuleGems(foundQuestGems);
@@ -437,14 +437,14 @@ export default function GemGuide() {
               }
             }
             if (!mainClassFound) {
-              console.log('selected class not found in any array')
-              console.log(highestSingleClassCountTotalArr);
+              //console.log('selected class not found in any array')
+              //console.log(highestSingleClassCountTotalArr);
               let tempCheckArr = [];
               let arrCount = 0;
-              console.log(highestSingleClassCountTotalArr);
+              //console.log(highestSingleClassCountTotalArr);
               highestSingleClassCountTotalArr.forEach( arr2 => {
                 for (let i=0; i<arr2.length; i++) {
-                  console.log(arr2.some(obj => haveSameClassAndQuest2(obj, highestSingleClassCountTotalArr[arrCount][i])));
+                  //console.log(arr2.some(obj => haveSameClassAndQuest2(obj, highestSingleClassCountTotalArr[arrCount][i])));
                   if (arr2.some(obj => haveSameClassAndQuest2(obj, highestSingleClassCountTotalArr[arrCount][i]))) {
                     tempCheckArr.push(arrCount);
                     i = arr2.length;
@@ -453,7 +453,7 @@ export default function GemGuide() {
                 arrCount++;
               });
         
-              console.log(tempCheckArr);
+              //console.log(tempCheckArr);
               tempCheckArr.sort((a, b) => b - a);
               tempCheckArr.forEach( num => {
                 let tempNum = num;
@@ -465,46 +465,46 @@ export default function GemGuide() {
           } else {
             let tempCheckArr = [];
             let arrCount = 0;
-            console.log(highestSingleClassCountTotalArr);
+            //console.log(highestSingleClassCountTotalArr);
             highestSingleClassCountTotalArr.forEach( arr2 => {
               let tempCount1 = 0;
               for (let i=0; i<arr2.length; i++) {
-                console.log(arr2.some(obj => haveSameClassAndQuest2(obj, arr2[i])));
+                //console.log(arr2.some(obj => haveSameClassAndQuest2(obj, arr2[i])));
                 if (arr2.some(obj => haveSameClassAndQuest2(obj, arr2[i]))) {
-                  console.log(arr2[i]);
+                  //console.log(arr2[i]);
                   tempCount1++;
                   if (tempCount1 > 1) {
                     tempCheckArr.push(arrCount);
                     i = arr2.length;
-                    console.log('push ' + arrCount);
+                    //console.log('push ' + arrCount);
                   }
                 }
               }
               arrCount++;
             });
       
-            console.log(highestSingleClassCountTotalArr);
+            //console.log(highestSingleClassCountTotalArr);
             let tempHighSing = Object.assign([],highestSingleClassCountTotalArr);
-            console.log(tempCheckArr);
+            //console.log(tempCheckArr);
             tempCheckArr.sort((a, b) => b - a);
             tempCheckArr.forEach( num => {
               let tempNum = (num);
-              console.log(tempNum);
+              //console.log(tempNum);
               tempHighSing.splice(tempNum, 1);
             });
-            console.log(tempHighSing);
+            //console.log(tempHighSing);
             setMuleGemsFiltered(tempHighSing[0]);
             setMuleGems(foundQuestGems);
           }
         }
       }
-      console.log(muleGemsFilteredRef.current);
-      console.log(countClassNames(muleGemsFilteredRef.current));
+      //console.log(muleGemsFilteredRef.current);
+      //console.log(countClassNames(muleGemsFilteredRef.current));
       
       //run through props on object, apply to shit
       let classActArr = [];
       setCharsNeeded(countClassNames(muleGemsFilteredRef.current));
-      console.log(Object.keys(charsNeededRef.current));
+      //console.log(Object.keys(charsNeededRef.current));
       Object.keys(charsNeededRef.current).forEach( cl => {
         let x=0;
         muleGemsFilteredRef.current.forEach( arr => {
@@ -514,20 +514,20 @@ export default function GemGuide() {
         });
         classActArr.push(x);
       });
-      console.log(charsNeededRef.current);
-      console.log(classActArr);
+      //console.log(charsNeededRef.current);
+      //console.log(classActArr);
       //add notification about duplicate class WIP WIP
       if (duplicateClass) {
-        console.log(Object.entries(charsNeeded));
+        //console.log(Object.entries(charsNeeded));
         muleGemsFilteredRef.current.forEach( gem1 => {
           muleGemsFilteredRef.current.forEach( gem2 => {
-            console.log(haveSameClassAndQuest2(gem1, gem2));
+            //console.log(haveSameClassAndQuest2(gem1, gem2));
             if (haveSameClassAndQuest2(gem1, gem2)) {
-              console.log(gem1.class);
+              //console.log(gem1.class);
               let tempCharArr = Object.keys(charsNeededRef.current);
               for (let x=0; x < Object.keys(charsNeededRef.current).length; x++) {
                 if (tempCharArr[x] === gem1.class) {
-                  console.log('duplicate found add extra class');
+                  //console.log('duplicate found add extra class');
                   classActArr[x] += '*';
                 }
               }
@@ -555,7 +555,6 @@ export default function GemGuide() {
       getRequiredMules(gemRef.current);
     } else {
       for (let x=0; x<idArr.length; x++) {
-        console.log(idArr[x]);
         if (idArr[x].includes(mainClassRef.current.toLowerCase())) {
           document.getElementById(`${idArr[x]}`).style.backgroundColor = 'rgba(0, 0, 0, .8)';
           document.getElementById(`${idArr[x]}`).style.fontWeight = 'bold';
@@ -574,7 +573,8 @@ export default function GemGuide() {
 
   //fill initial selectable gems list, and update based on search query
   useEffect(() => {
-    let muleGemsFiltered = allGems.filter(gem => gem.name.toLowerCase().includes(searchTerm.toLowerCase()));
+    let muleGemsFiltered = allGems.filter(gem => (gem.name.toLowerCase().includes(searchTerm.toLowerCase()) || gem.types?.some(obj => obj.toLowerCase().includes(searchTerm.toLowerCase()))));
+    //console.log(allGems.filter( gem => gem.types?.some(obj => obj.toLowerCase().includes(searchTerm.toLowerCase()))));
     muleGemsFiltered = muleGemsFiltered.sort((a, b) => (a.name > b.name ? 1 : -1));
     setBuildGems(muleGemsFiltered.filter((value, index, self) => self.findIndex(v => v.name === value.name) === index));
   }, [searchTerm]);
