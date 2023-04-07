@@ -158,7 +158,7 @@ export default function GemGuide() {
       allCombinations.forEach( arr => {
         let y = countClassNames(arr);
         let z = y[mainClassRef.current];
-        if (z === x) {
+        if (z === x || z === x-1) {
           returnArr.push(arr);
         }
       });
@@ -239,7 +239,7 @@ export default function GemGuide() {
       console.log(uniques);
       let newFunc = uniqueNameCombinations(foundQuestGems);
       let backupFunc = Object.assign([], newFunc);
-      console.log(newFunc);
+      console.log(backupFunc);
 
       let lowestCount = Infinity;
       newFunc.forEach( arr => {
@@ -263,15 +263,18 @@ export default function GemGuide() {
       });
 
       console.log(testArr);
+      testArr.sort((a, b) => b - a);
       testArr.forEach( num => {
-        let tempNum = testArr.length - (num+1);
+        let tempNum = num;
         newFunc.splice(tempNum, 1);
+        console.log(newFunc);
       })
       console.log(newFunc);
       //here breaks if need more than one of same class
       let duplicateClass = false;
       if(newFunc.length === 0) {
         console.log('you will need duplicate of the same character');
+        console.log(backupFunc);
         newFunc = backupFunc;
         duplicateClass = true;
       }
@@ -293,6 +296,17 @@ export default function GemGuide() {
       console.log(lowestDiffClassArr);
       let highestSingleClassCountTotalArr = [];
       let highestClassCount = 0;
+
+      if (lowestDiffClassArr.length === 1) {
+        for (let i=0; i<lowestDiffClassArr[0].length; i++) {
+          if (lowestDiffClassArr[0].some(obj => haveSameClassAndQuest2(obj, lowestDiffClassArr[0][i]))) {
+            console.log('dupe found in single');
+            lowestDiffClassArr = Object.assign([], newFunc);
+            console.log(newFunc);
+            i = lowestDiffClassArr[0].length;
+          }
+        }
+      }
 
       if (lowestDiffClassArr.length === 1) {
         console.log('only one option');
@@ -319,8 +333,74 @@ export default function GemGuide() {
         });
         console.log(highestSingleClassCountTotalArr);
         if(highestSingleClassCountTotalArr.length === 1) {
-          setMuleGemsFiltered(highestSingleClassCountTotalArr[0]);
-          setMuleGems(foundQuestGems);
+          console.log('equals one');
+          let tempCheckArr = [];
+          let arrCount = 0;
+          console.log(highestSingleClassCountTotalArr);
+          highestSingleClassCountTotalArr.forEach( arr2 => {
+            let tempArrCount = 0;
+            for (let i=0; i<arr2.length; i++) {
+              console.log(arr2.some(obj => haveSameClassAndQuest2(obj, arr2[i])));
+              if (arr2.some(obj => haveSameClassAndQuest2(obj, arr2[i]))) {
+                tempArrCount++;
+                if (tempArrCount > 1) {
+                  tempCheckArr.push(arrCount);
+                  i = arr2.length;
+                }
+              }
+            }
+            arrCount++;
+          });
+    
+          console.log(tempCheckArr);
+          tempCheckArr.sort((a, b) => b - a);
+          tempCheckArr.forEach( num => {
+            let tempNum = num;
+            highestSingleClassCountTotalArr.splice(tempNum, 1);
+          });
+
+          if(highestSingleClassCountTotalArr.length === 0) {
+            setMuleGemsFiltered(lowestDiffClassArr[0]);
+            setMuleGems(foundQuestGems);
+          } else {
+            setMuleGemsFiltered(highestSingleClassCountTotalArr[0]);
+            setMuleGems(foundQuestGems);
+          }
+
+          /**
+          if(highestSingleClassCountTotalArr.length === 0) {
+            console.log('0');
+            let hscStatus = true;
+            while (hscStatus) {
+              lowestDiffClassArr.forEach(arr => {
+                let tempPC = 0;
+                let x = countClassNames(arr);
+                let z = Object.values(x);
+                let max = Math.max(...z);
+                if (max === highestClassCount) {
+                  for(let p=0;p<arr.length;p++) {
+                    if(arr.some( obj => haveSameClassAndQuest2(obj, arr[p]))){
+                      tempPC++;
+                      if (tempPC > 1) {
+                        highestClassCount--;
+                        p = arr.length;
+                      }
+                    }
+                  }
+                  if (tempPC === 1) {
+                    setMuleGemsFiltered(arr);
+                    setMuleGems(foundQuestGems);
+                    hscStatus = false;
+                  } else {
+                    highestClassCount--;
+                  }
+                }
+              });
+            }
+          } else {
+            setMuleGemsFiltered(highestSingleClassCountTotalArr[0]);
+            setMuleGems(foundQuestGems);
+          }**/
         } else {
           if (mainClassRef.current !== '') {
             let maxFound = false;
@@ -359,11 +439,61 @@ export default function GemGuide() {
             if (!mainClassFound) {
               console.log('selected class not found in any array')
               console.log(highestSingleClassCountTotalArr);
+              let tempCheckArr = [];
+              let arrCount = 0;
+              console.log(highestSingleClassCountTotalArr);
+              highestSingleClassCountTotalArr.forEach( arr2 => {
+                for (let i=0; i<arr2.length; i++) {
+                  console.log(arr2.some(obj => haveSameClassAndQuest2(obj, highestSingleClassCountTotalArr[arrCount][i])));
+                  if (arr2.some(obj => haveSameClassAndQuest2(obj, highestSingleClassCountTotalArr[arrCount][i]))) {
+                    tempCheckArr.push(arrCount);
+                    i = arr2.length;
+                  }
+                }
+                arrCount++;
+              });
+        
+              console.log(tempCheckArr);
+              tempCheckArr.sort((a, b) => b - a);
+              tempCheckArr.forEach( num => {
+                let tempNum = num;
+                highestSingleClassCountTotalArr.splice(tempNum, 1);
+              });
               setMuleGemsFiltered(highestSingleClassCountTotalArr[0]);
               setMuleGems(foundQuestGems);
             }
           } else {
-            setMuleGemsFiltered(highestSingleClassCountTotalArr[0]);
+            let tempCheckArr = [];
+            let arrCount = 0;
+            console.log(highestSingleClassCountTotalArr);
+            highestSingleClassCountTotalArr.forEach( arr2 => {
+              let tempCount1 = 0;
+              for (let i=0; i<arr2.length; i++) {
+                console.log(arr2.some(obj => haveSameClassAndQuest2(obj, arr2[i])));
+                if (arr2.some(obj => haveSameClassAndQuest2(obj, arr2[i]))) {
+                  console.log(arr2[i]);
+                  tempCount1++;
+                  if (tempCount1 > 1) {
+                    tempCheckArr.push(arrCount);
+                    i = arr2.length;
+                    console.log('push ' + arrCount);
+                  }
+                }
+              }
+              arrCount++;
+            });
+      
+            console.log(highestSingleClassCountTotalArr);
+            let tempHighSing = Object.assign([],highestSingleClassCountTotalArr);
+            console.log(tempCheckArr);
+            tempCheckArr.sort((a, b) => b - a);
+            tempCheckArr.forEach( num => {
+              let tempNum = (num);
+              console.log(tempNum);
+              tempHighSing.splice(tempNum, 1);
+            });
+            console.log(tempHighSing);
+            setMuleGemsFiltered(tempHighSing[0]);
             setMuleGems(foundQuestGems);
           }
         }
