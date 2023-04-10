@@ -26,7 +26,7 @@ export default function LeagueContent() {
             <div className='contentDescInfo'>
               <p>
                 - Beastcrafting rewards have been completely reworked<br/>
-                - Rewards now include Talismans, Flask Enchants, and other niche crafts: <a href='https://www.poewiki.net/wiki/Beastcrafting_(Ruthless)'>Wiki</a>
+                - Rewards now include Talismans, Flask Enchants, and other niche crafts: <a href='https://www.poewiki.net/wiki/Beastcrafting_(Ruthless)' target='_blank' rel='noopener noreferrer'>Wiki</a>
               </p>
             </div>
           </div>
@@ -133,7 +133,7 @@ export default function LeagueContent() {
           <div className='contentDescTitle'>Harvest</div>
             <div className='contentDescInfo'>
               <p>
-                - Harvest crafts have been reduced and changed. See more: <a href='https://www.poewiki.net/wiki/List_of_harvest_crafting_options#Ruthless_mode' >Wiki</a>
+                - Harvest crafts have been reduced and changed. See more: <a href='https://www.poewiki.net/wiki/List_of_harvest_crafting_options#Ruthless_mode' target='_blank' rel='noopener noreferrer'>Wiki</a>
               </p>
             </div>
           </div>

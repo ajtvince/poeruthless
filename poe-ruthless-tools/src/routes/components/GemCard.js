@@ -39,7 +39,7 @@ class GemCard extends React.Component {
           <div className='gemIconQuest'>Act {this.props.gem.act}: {this.props.gem.quest}</div>
         </div>
         <div className='gemIconDelete' onClick={() => this.props.removeGemFromList(this.props.gem)}>X</div>
-        <a href={'https://www.poewiki.net/wiki/' + this.props.gem.name} className='gemIconWiki'>wiki</a>
+        <a href={'https://www.poewiki.net/wiki/' + this.props.gem.name} target='_blank' rel='noopener noreferrer' className='gemIconWiki'>wiki</a>
       </div>
     );
   }
