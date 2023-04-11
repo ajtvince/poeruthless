@@ -82,6 +82,10 @@
     left:0px;
     padding:8px;
 }
+.gemIconContainer > .gemIconTags {
+    padding:4px;
+}
+
 #selectedClass {
     background-color:green;
 }
