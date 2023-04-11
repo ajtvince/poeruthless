@@ -126,7 +126,7 @@ function Navigation() {
 
   return (
     <div>
-      <div id='siteBG'><img src='/media/poebg.png'></img></div>
+      <div id='siteBG'><img src='/media/poebg.jpg'></img></div>
       <div id='navbar'>
         <Link to='/' onClick={closeMobileNav}>About</Link>
         <Link to='/skillgems' onClick={closeMobileNav}>Skill Gem Mule Tool</Link>
