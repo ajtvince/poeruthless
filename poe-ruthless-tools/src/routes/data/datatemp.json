@@ -1,6557 +1,2110 @@
 {
-"questSkills": [
+    "questSkills": [
+        {
+            "name": "Double Strike",
+            "class": "Duelist",
+            "act": 1,
+            "quest": "Starter Gem"
+        },
+        {
+            "name": "Cleave",
+            "class": "Duelist",
+            "act": 1,
+            "quest": "Enemy at the Gate (Kill Hillock)"
+        },
+        {
+            "name": "Galvanic Arrow",
+            "class": "Duelist",
+            "act": 1,
+            "quest": "Enemy at the Gate (Kill Hillock)"
+        },
+        {
+            "name": "Molten Strike",
+            "class": "Duelist",
+            "act": 1,
+            "quest": "Enemy at the Gate (Kill Hillock)"
+        },
+        {
+            "name": "Perforate",
+            "class": "Duelist",
+            "act": 1,
+            "quest": "Enemy at the Gate (Kill Hillock)"
+        },
+        {
+            "name": "Splitting Steel",
+            "class": "Duelist",
+            "act": 1,
+            "quest": "Enemy at the Gate (Kill Hillock)"
+        },
+        {
+            "name": "Ancestral Protector",
+            "class": "Duelist",
+            "act": 1,
+            "quest": "Breaking Some Eggs(Mud Flats)"
+        },
+        {
+            "name": "Blood and Sand",
+            "class": "Duelist",
+            "act": 1,
+            "quest": "Breaking Some Eggs(Mud Flats)"
+        },
+        {
+            "name": "Decoy Totem",
+            "class": "Duelist",
+            "act": 1,
+            "quest": "Breaking Some Eggs(Mud Flats)"
+        },
+        {
+            "name": "Puncture",
+            "class": "Duelist",
+            "act": 1,
+            "quest": "Breaking Some Eggs(Mud Flats)"
+        },
+        {
+            "name": "Vigilant Strike",
+            "class": "Duelist",
+            "act": 1,
+            "quest": "Breaking Some Eggs(Mud Flats)"
+        },
+        {
+            "name": "Enduring Cry",
+            "class": "Duelist",
+            "act": 1,
+            "quest": "The Caged Brute(Kill Brutus)"
+        },
+        {
+            "name": "Intimidating Cry",
+            "class": "Duelist",
+            "act": 1,
+            "quest": "The Caged Brute(Kill Brutus)"
+        },
+        {
+            "name": "Precision",
+            "class": "Duelist",
+            "act": 1,
+            "quest": "The Caged Brute(Kill Brutus)"
+        },
+        {
+            "name": "Vitality",
+            "class": "Duelist",
+            "act": 1,
+            "quest": "The Caged Brute(Kill Brutus)"
+        },
+        {
+            "name": "Earthshatter",
+            "class": "Duelist",
+            "act": 1,
+            "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+        },
+        {
+            "name": "Lacerate",
+            "class": "Duelist",
+            "act": 1,
+            "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+        },
+        {
+            "name": "Rain of Arrows",
+            "class": "Duelist",
+            "act": 1,
+            "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+        },
+        {
+            "name": "Shattering Steel",
+            "class": "Duelist",
+            "act": 1,
+            "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+        },
+        {
+            "name": "Sweep",
+            "class": "Duelist",
+            "act": 1,
+            "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+        },
+        {
+            "name": "Ancestral Cry",
+            "class": "Duelist",
+            "act": 2,
+            "quest": "Intruders in Black(Kill Fidelitas)"
+        },
+        {
+            "name": "Blood Rage",
+            "class": "Duelist",
+            "act": 2,
+            "quest": "Intruders in Black(Kill Fidelitas)"
+        },
+        {
+            "name": "Corrupting Fever",
+            "class": "Duelist",
+            "act": 2,
+            "quest": "Intruders in Black(Kill Fidelitas)"
+        },
+        {
+            "name": "Frenzy",
+            "class": "Duelist",
+            "act": 2,
+            "quest": "Intruders in Black(Kill Fidelitas)"
+        },
+        {
+            "name": "Seismic Cry",
+            "class": "Duelist",
+            "act": 2,
+            "quest": "Intruders in Black(Kill Fidelitas)"
+        },
+        {
+            "name": "Poacher's Mark",
+            "class": "Duelist",
+            "act": 2,
+            "quest": "Intruders in Black(Kill Fidelitas)"
+        },
+        {
+            "name": "Rallying Cry",
+            "class": "Duelist",
+            "act": 3,
+            "quest": "Lost in Love(Find Tolman)Maramoa"
+        },
+        {
+            "name": "Sniper's Mark",
+            "class": "Duelist",
+            "act": 3,
+            "quest": "Lost in Love(Find Tolman)Maramoa"
+        },
+        {
+            "name": "Warlord's Mark",
+            "class": "Duelist",
+            "act": 2,
+            "quest": "Intruders in Black(Kill Fidelitas)"
+        },
+        {
+            "name": "Bladestorm",
+            "class": "Duelist",
+            "act": 3,
+            "quest": "Sever the Right Hand(Kill Gravicius)"
+        },
+        {
+            "name": "Blast Rain",
+            "class": "Duelist",
+            "act": 3,
+            "quest": "Sever the Right Hand(Kill Gravicius)"
+        },
+        {
+            "name": "Cyclone",
+            "class": "Duelist",
+            "act": 3,
+            "quest": "Sever the Right Hand(Kill Gravicius)"
+        },
+        {
+            "name": "Ice Crash",
+            "class": "Duelist",
+            "act": 3,
+            "quest": "Sever the Right Hand(Kill Gravicius)"
+        },
+        {
+            "name": "Lancing Steel",
+            "class": "Duelist",
+            "act": 3,
+            "quest": "Sever the Right Hand(Kill Gravicius)"
+        },
+        {
+            "name": "Spectral Shield Throw",
+            "class": "Duelist",
+            "act": 3,
+            "quest": "Sever the Right Hand(Kill Gravicius)"
+        },
+        {
+            "name": "Summon Chaos Golem",
+            "class": "Duelist",
+            "act": 4,
+            "quest": "Breaking the Seal(Open the Mines)"
+        },
+        {
+            "name": "Summon Flame Golem",
+            "class": "Duelist",
+            "act": 4,
+            "quest": "Breaking the Seal(Open the Mines)"
+        },
+        {
+            "name": "Summon Ice Golem",
+            "class": "Duelist",
+            "act": 4,
+            "quest": "Breaking the Seal(Open the Mines)"
+        },
+        {
+            "name": "Summon Lightning Golem",
+            "class": "Duelist",
+            "act": 4,
+            "quest": "Breaking the Seal(Open the Mines)"
+        },
+        {
+            "name": "Summon Stone Golem",
+            "class": "Duelist",
+            "act": 4,
+            "quest": "Breaking the Seal(Open the Mines)"
+        },
     {
-        "name": "Double Strike",
-        "class": "Duelist",
+        "name": "Heavy Strike",
+        "class": "Marauder",
         "act": 1,
-        "quest": "Starter Gem",
-        "types": [
-            "Attack",
-            "Strike",
-            
-            "Melee",
-            "Physical"
-          ]
+        "quest": "Starter Gem"
     },
     {
-        "name": "Cleave",
-        "class": "Duelist",
+        "name": "Ground Slam",
+        "class": "Marauder",
         "act": 1,
-        "quest": "Enemy at the Gate (Kill Hillock)",
-        "types": [
-            "Attack",
-            "Area",
-            
-            "Melee",
-            
-            "Physical"
-        ]
-    },
-    {
-        "name": "Galvanic Arrow",
-        "class": "Duelist",
-        "act": 1,
-        "quest": "Enemy at the Gate (Kill Hillock)",
-        "types": [
-            "Attack",
-            "Projectile",
-            
-            "Area",
-            
-            
-            
-            "Lightning",
-            "RangedAttack"
-            
-            
-          ]
+        "quest": "Enemy at the Gate (Kill Hillock)"
     },
     {
         "name": "Molten Strike",
-        "class": "Duelist",
+        "class": "Marauder",
         "act": 1,
-        "quest": "Enemy at the Gate (Kill Hillock)",
-        "types": [
-            "Attack",
-            "Projectile",
-            "Area",
-            "Melee",
-            "Strike",
-            
-            "Fire",
-            "RangedAttack"
-            
-            
-          ]
+        "quest": "Enemy at the Gate (Kill Hillock)"
     },
     {
-        "name": "Perforate",
-        "class": "Duelist",
+        "name": "Shield Crush",
+        "class": "Marauder",
         "act": 1,
-        "quest": "Enemy at the Gate (Kill Hillock)",
-        "types": [
-            "Attack",
-            "Area",
-            
-            "Melee",
-            
-            "Slam"
-            
-          ]
-    },
-    {
-        "name": "Splitting Steel",
-        "class": "Duelist",
-        "act": 1,
-        "quest": "Enemy at the Gate (Kill Hillock)",
-        "types": [
-            "Attack",
-            "RangedAttack",
-            "Projectile",
-            
-            "Steel",
-            "Area",
-            "Physical"
-          ]
+        "quest": "Enemy at the Gate (Kill Hillock)"
     },
     {
         "name": "Ancestral Protector",
-        "class": "Duelist",
+        "class": "Marauder",
         "act": 1,
-        "quest": "Breaking Some Eggs(Mud Flats)",
-        "types": [
-            "Attack",
-            "Totem",
-            "Strike",
-            "Melee"
-            
-          ]
-    },
-    {
-        "name": "Blood and Sand",
-        "class": "Duelist",
-        "act": 1,
-        "quest": "Breaking Some Eggs(Mud Flats)",
-        "types": [
-            "Spell",
-            "Buff",
-            
-            
-            
-            
-            
-            
-            "Stance"
-          ]
+        "quest": "Breaking Some Eggs(Mud Flats)"
     },
     {
         "name": "Decoy Totem",
-        "class": "Duelist",
+        "class": "Marauder",
         "act": 1,
-        "quest": "Breaking Some Eggs(Mud Flats)",
-        "types": [
-            "Spell",
-            
-            
-            "Area",
-            "Totem",
-            
-            "AoE"
-            
-          ]
+        "quest": "Breaking Some Eggs(Mud Flats)"
     },
     {
-        "name": "Puncture",
-        "class": "Duelist",
+        "name": "Molten Shell",
+        "class": "Marauder",
         "act": 1,
-        "quest": "Breaking Some Eggs(Mud Flats)",
-        "types": [
-            "Attack",
-            "RangedAttack",
-            
-            "Projectile",
-            
-            "Duration",
-            
-            
-            
-            "Strike",
-            
-            "Melee",
-            "DoT",
-            
-            "Physical"
-          ]
+        "quest": "Breaking Some Eggs(Mud Flats)"
     },
     {
         "name": "Vigilant Strike",
-        "class": "Duelist",
+        "class": "Marauder",
         "act": 1,
-        "quest": "Breaking Some Eggs(Mud Flats)",
-        "types": [
-            "Attack",
-            "Buff",
-            "Melee",
-            
-            "Strike"
-            
-            
-          ]
+        "quest": "Breaking Some Eggs(Mud Flats)"
     },
     {
         "name": "Enduring Cry",
-        "class": "Duelist",
+        "class": "Marauder",
         "act": 1,
-        "quest": "The Caged Brute(Kill Brutus)",
-        "types": [
-            "Buff",
-            "Area",
-            "Duration",
-            "Warcry"
-            
-          ]
+        "quest": "The Caged Brute(Kill Brutus)"
     },
     {
         "name": "Intimidating Cry",
-        "class": "Duelist",
+        "class": "Marauder",
         "act": 1,
-        "quest": "The Caged Brute(Kill Brutus)",
-        "types": [
-            "Area",
-            "Buff",
-            "Duration",
-            "Warcry",
-            
-            "Physical"
-          ]
-    },
-    {
-        "name": "Precision",
-        "class": "Duelist",
-        "act": 1,
-        "quest": "The Caged Brute(Kill Brutus)",
-        "types": [
-            "Spell",
-            "Area",
-            "Buff",
-            
-            
-            
-            "Aura",
-            
-            "AoE"
-            
-            
-            
-            
-          ]
+        "quest": "The Caged Brute(Kill Brutus)"
     },
     {
         "name": "Vitality",
-        "class": "Duelist",
+        "class": "Marauder",
         "act": 1,
-        "quest": "The Caged Brute(Kill Brutus)",
-        "types": [
-            "Spell",
-            "Area",
-            "Buff",
-            
-            
-            
-            "Aura",
-            
-            "AoE"
-            
-            
-            
-            
-          ]
+        "quest": "The Caged Brute(Kill Brutus)"
+    },
+    {
+        "name": "Chain Hook",
+        "class": "Marauder",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
     },
     {
         "name": "Earthshatter",
-        "class": "Duelist",
+        "class": "Marauder",
         "act": 1,
-        "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-        "types": [
-            "Attack",
-            "Area",
-            "Melee",
-            "Slam",
-            
-            "Duration"
-            
-          ]
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
     },
     {
-        "name": "Lacerate",
-        "class": "Duelist",
+        "name": "Infernal Blow",
+        "class": "Marauder",
         "act": 1,
-        "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-        "types": [
-            "Attack",
-            "Area",
-            
-            "Melee",
-            "Physical"
-          ]
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
     },
     {
-        "name": "Rain of Arrows",
-        "class": "Duelist",
+        "name": "Static Strike",
+        "class": "Marauder",
         "act": 1,
-        "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-        "types": [
-            "Attack",
-            "RangedAttack",
-            
-            "Area",
-            
-            
-            
-            
-            
-            
-            "Rain"
-          ]
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
     },
     {
-        "name": "Shattering Steel",
-        "class": "Duelist",
+        "name": "Sunder",
+        "class": "Marauder",
         "act": 1,
-        "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-        "types": [
-            "Attack",
-            "Projectile",
-            
-            
-            "RangedAttack",
-            "Area",
-            "Physical",
-            
-            "Steel"
-          ]
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
     },
     {
         "name": "Sweep",
-        "class": "Duelist",
+        "class": "Marauder",
         "act": 1,
-        "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-        "types": [
-            "Attack",
-            "Area",
-            
-            "Melee",
-            "Physical"
-          ]
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Volcanic Fissure",
+        "class": "Marauder",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
     },
     {
         "name": "Ancestral Cry",
-        "class": "Duelist",
+        "class": "Marauder",
         "act": 2,
-        "quest": "Intruders in Black(Kill Fidelitas)",
-        "types": [
-            "Buff",
-            "Area",
-            "Duration",
-            "Warcry"
-            
-          ]
-    },
-    {
-        "name": "Blood Rage",
-        "class": "Duelist",
-        "act": 2,
-        "quest": "Intruders in Black(Kill Fidelitas)",
-        "types": [
-            "Spell",
-            "Buff",
-            "Duration",
-            
-            
-            
-            "Physical"
-            
-          ]
+        "quest": "Intruders in Black(Kill Fidelitas)"
     },
     {
         "name": "Corrupting Fever",
-        "class": "Duelist",
+        "class": "Marauder",
         "act": 2,
-        "quest": "Intruders in Black(Kill Fidelitas)",
-        "types": [
-            "Spell",
-            "Buff",
-            "Duration",
-            
-            
-            "Physical",
-            
-            "DoT"
-            
-          ]
-    },
-    {
-        "name": "Frenzy",
-        "class": "Duelist",
-        "act": 2,
-        "quest": "Intruders in Black(Kill Fidelitas)",
-        "types": [
-            "Attack",
-            "RangedAttack",
-            
-            "Projectile",
-            
-            
-            
-            
-            "Strike",
-            
-            "Melee"
-            
-          ]
+        "quest": "Intruders in Black(Kill Fidelitas)"
     },
     {
         "name": "Seismic Cry",
-        "class": "Duelist",
+        "class": "Marauder",
         "act": 2,
-        "quest": "Intruders in Black(Kill Fidelitas)",
-        "types": [
-            "Buff",
-            "Area",
-            "Duration",
-            "Warcry"
-            
-          ]
+        "quest": "Intruders in Black(Kill Fidelitas)"
     },
     {
-        "name": "Poacher's Mark",
-        "class": "Duelist",
+        "name": "General's Cry",
+        "class": "Marauder",
         "act": 3,
-        "quest": "Lost in Love(Find Tolman)Maramoa",
-        "types": [
-            "Spell",
-            
-            
-            
-            
-            
-            "AppliesCurse",
-            
-            
-            
-            "Mark"
-          ]
+        "quest": "Lost in Love(Find Tolman)Maramoa"
     },
     {
-        "name": "Rallying Cry",
-        "class": "Duelist",
+        "name": "Infernal Cry",
+        "class": "Marauder",
         "act": 3,
-        "quest": "Lost in Love(Find Tolman)Maramoa",
-        "types": [
-            "Buff",
-            "Area",
-            "Duration",
-            "Warcry"
-            
-          ]
+        "quest": "Lost in Love(Find Tolman)Maramoa"
     },
     {
-        "name": "Sniper's Mark",
-        "class": "Duelist",
+        "name": "Punishment",
+        "class": "Marauder",
         "act": 3,
-        "quest": "Lost in Love(Find Tolman)Maramoa",
-        "types": [
-            "Spell",
-            
-            
-            
-            
-            
-            "AppliesCurse",
-            
-            
-            
-            "Mark"
-          ]
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Vengeance",
+        "class": "Marauder",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Vulnerability",
+        "class": "Marauder",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
     },
     {
         "name": "Warlord's Mark",
-        "class": "Duelist",
-        "act": 3,
-        "quest": "Lost in Love(Find Tolman)Maramoa",
-        "types": [
-            "Spell",
-            
-            
-            
-            
-            
-            "AppliesCurse",
-            
-            
-            
-            "Mark"
-          ]
+        "class": "Marauder",
+        "act": 2,
+        "quest": "Intruders in Black(Kill Fidelitas)"
     },
     {
-        "name": "Bladestorm",
-        "class": "Duelist",
+        "name": "Ancestral Warchief",
+        "class": "Marauder",
         "act": 3,
-        "quest": "Sever the Right Hand(Kill Gravicius)",
-        "types": [
-            "Attack",
-            "Melee",
-            "Area",
-            "Duration"
-            
-          ]
-    },
-    {
-        "name": "Blast Rain",
-        "class": "Duelist",
-        "act": 3,
-        "quest": "Sever the Right Hand(Kill Gravicius)",
-        "types": [
-            "Attack",
-            "RangedAttack",
-            "Fire",
-            
-            "Area",
-            
-            
-            
-            
-            
-            
-            "Rain"
-          ]
+        "quest": "Sever the Right Hand(Kill Gravicius)"
     },
     {
         "name": "Cyclone",
-        "class": "Duelist",
+        "class": "Marauder",
         "act": 3,
-        "quest": "Sever the Right Hand(Kill Gravicius)",
-        "types": [
-            "Attack",
-            "Area",
-            "Melee",
-            "Movement",
-            "Channel",
-            "Physical"
-          ]
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Earthquake",
+        "class": "Marauder",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
     },
     {
         "name": "Ice Crash",
-        "class": "Duelist",
+        "class": "Marauder",
         "act": 3,
-        "quest": "Sever the Right Hand(Kill Gravicius)",
-        "types": [
-            "Attack",
-            "Area",
-            "Melee",
-            "Cold",
-            
-            "Slam"
-            
-          ]
+        "quest": "Sever the Right Hand(Kill Gravicius)"
     },
     {
-        "name": "Lancing Steel",
-        "class": "Duelist",
+        "name": "Rage Vortex",
+        "class": "Marauder",
         "act": 3,
-        "quest": "Sever the Right Hand(Kill Gravicius)",
-        "types": [
-            "Attack",
-            "Projectile",
-            
-            
-            "RangedAttack",
-            "Physical",
-            
-            "Steel"
-          ]
+        "quest": "Sever the Right Hand(Kill Gravicius)"
     },
     {
-        "name": "Spectral Shield Throw",
-        "class": "Duelist",
+        "name": "Tectonic Slam",
+        "class": "Marauder",
         "act": 3,
-        "quest": "Sever the Right Hand(Kill Gravicius)",
-        "types": [
-            "Attack",
-            "RangedAttack",
-            "Projectile",
-            
-            "SingleMainProjectile",
-            "Physical"
-          ]
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Berserk",
+        "class": "Marauder",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
     },
     {
         "name": "Summon Chaos Golem",
-        "class": "Duelist",
+        "class": "Marauder",
         "act": 4,
-        "quest": "Breaking the Seal(Open the Mines)",
-        "types": [
-            
-            "Chaos",
-            
-            "Minion",
-            
-            
-            "Spell",
-            
-            
-            "Golem"
-            
-            
-          ]
+        "quest": "Breaking the Seal(Open the Mines)"
     },
     {
         "name": "Summon Flame Golem",
-        "class": "Duelist",
+        "class": "Marauder",
         "act": 4,
-        "quest": "Breaking the Seal(Open the Mines)",
-        "types": [
-            
-            "Fire",
-            
-            "Minion",
-            
-            
-            "Spell",
-            
-        
-            "Golem"
-            
-            
-          ]
+        "quest": "Breaking the Seal(Open the Mines)"
     },
     {
         "name": "Summon Ice Golem",
-        "class": "Duelist",
+        "class": "Marauder",
         "act": 4,
-        "quest": "Breaking the Seal(Open the Mines)",
-        "types": [
-            
-            "Cold",
-            
-            "Minion",
-            
-            
-            "Spell",
-            
-            
-            "Golem"
-            
-            
-          ]
+        "quest": "Breaking the Seal(Open the Mines)"
     },
     {
         "name": "Summon Lightning Golem",
-        "class": "Duelist",
+        "class": "Marauder",
         "act": 4,
-        "quest": "Breaking the Seal(Open the Mines)",
-        "types": [
-            
-            "Lightning",
-            
-            "Minion",
-            
-            
-            "Spell",
-            
-            
-            "Golem"
-            
-            
-          ]
+        "quest": "Breaking the Seal(Open the Mines)"
     },
     {
         "name": "Summon Stone Golem",
-        "class": "Duelist",
+        "class": "Marauder",
         "act": 4,
-        "quest": "Breaking the Seal(Open the Mines)",
-        "types": [
-            
-            
-            "Minion",
-            
-            
-            "Spell",
-            
-            
-            "Golem",
-            "Physical"
-            
-            
-            
-          ]
+        "quest": "Breaking the Seal(Open the Mines)"
     },
-{
-    "name": "Heavy Strike",
-    "class": "Marauder",
-    "act": 1,
-    "quest": "Starter Gem",
-    "types": [
-        "Attack",
-        "Strike",
-        
-        "Melee"
-      ]
-},
-{
-    "name": "Ground Slam",
-    "class": "Marauder",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Attack",
-        "Area",
-        
-        "Melee",
-        "Slam"
-        
-      ]
-},
-{
-    "name": "Molten Strike",
-    "class": "Marauder",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Attack",
-        "Projectile",
-        "Area",
-        "Melee",
-        "Strike",
-        
-        "Fire",
-        "RangedAttack"
-        
-        
-      ]
-},
-{
-    "name": "Shield Crush",
-    "class": "Marauder",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Attack",
-        "RequiresShield",
-        "Melee",
-        "Area",
-        
-        "Physical"
-      ]
-},
-{
-    "name": "Ancestral Protector",
-    "class": "Marauder",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        "Attack",
-        "Totem",
-        "Strike",
-        "Melee"
-        
-      ]
-},
-{
-    "name": "Decoy Totem",
-    "class": "Marauder",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        "Spell",
-        
-        
-        "Area",
-        "Totem",
-        
-        "AoE"
-        
-      ]
-    
-},
-{
-    "name": "Molten Shell",
-    "class": "Marauder",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        "Fire",
-        
-        "AoE",
-        "Physical",
-        
-        "Guard"
-        
-      ]
-},
-{
-    "name": "Vigilant Strike",
-    "class": "Marauder",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        "Attack",
-        "Buff",
-        "Melee",
-        
-        "Strike"
-        
-        
-      ]
-},
-{
-    "name": "Enduring Cry",
-    "class": "Marauder",
-    "act": 1,
-    "quest": "The Caged Brute(Kill Brutus)",
-    "types": [
-        "Buff",
-        "Area",
-        "Duration",
-        "Warcry"
-        
-      ]
-},
-{
-    "name": "Intimidating Cry",
-    "class": "Marauder",
-    "act": 1,
-    "quest": "The Caged Brute(Kill Brutus)",
-    "types": [
-        "Area",
-        "Buff",
-        "Duration",
-        "Warcry",
-        
-        "Physical"
-      ]
-},
-{
-    "name": "Vitality",
-    "class": "Marauder",
-    "act": 1,
-    "quest": "The Caged Brute(Kill Brutus)",
-    "types": [
-        "Spell",
-        "Area",
-        "Buff",
-        
-        
-        
-        "Aura",
-        
-        "AoE"
-        
-        
-        
-        
-      ]
-},
-{
-    "name": "Chain Hook",
-    "class": "Marauder",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Attack",
-        "Area",
-        
-        "Movement",
-        "Melee"
-        
-      ]
-},
-{
-    "name": "Earthshatter",
-    "class": "Marauder",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Attack",
-        "Area",
-        "Melee",
-        "Slam",
-        
-        "Duration"
-        
-      ]
-},
-{
-    "name": "Infernal Blow",
-    "class": "Marauder",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Attack",
-        "Area",
-        "Strike",
-        
-        "Melee",
-        "Fire",
-        "Duration"
-      ]
-},
-{
-    "name": "Static Strike",
-    "class": "Marauder",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Attack",
-        "Strike",
-        
-        "Melee",
-        "Area",
-        "Duration",
-        "Lightning",
-        "Chains"
-      ]
-},
-{
-    "name": "Sunder",
-    "class": "Marauder",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Attack",
-        "Area",
-        
-        "Melee",
-        "Slam"
-        
-      ]
-},
-{
-    "name": "Sweep",
-    "class": "Marauder",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Attack",
-        "Area",
-        
-        "Melee",
-        "Physical"
-      ]
-},
-{
-    "name": "Volcanic Fissure",
-    "class": "Marauder",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        "Area",
-        "Fire",
-        "Duration",
-        "Projectile",
-        
-        
-        
-        
-        
-        
-        
-        "Projectile",
-        
-        "AoE"
-      ]
-},
-{
-    "name": "Ancestral Cry",
-    "class": "Marauder",
-    "act": 2,
-    "quest": "Intruders in Black(Kill Fidelitas)",
-    "types": [
-        "Buff",
-        "Area",
-        "Duration",
-        "Warcry"
-        
-      ]
-},
-{
-    "name": "Corrupting Fever",
-    "class": "Marauder",
-    "act": 2,
-    "quest": "Intruders in Black(Kill Fidelitas)",
-    "types": [
-        "Spell",
-        "Buff",
-        "Duration",
-        
-        
-        "Physical",
-        
-        "DoT"
-        
-      ]
-},
-{
-    "name": "Seismic Cry",
-    "class": "Marauder",
-    "act": 2,
-    "quest": "Intruders in Black(Kill Fidelitas)",
-    "types": [
-        "Buff",
-        "Area",
-        "Duration",
-        "Warcry"
-        
-      ]
-},
-{
-    "name": "General's Cry",
-    "class": "Marauder",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Buff",
-        "Area",
-        "Duration",
-        "Warcry"
-        
-      ]
-},
-{
-    "name": "Infernal Cry",
-    "class": "Marauder",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Area",
-        "Duration",
-        "Fire",
-        
-        "Warcry"
-        
-      ]
-},
-{
-    "name": "Punishment",
-    "class": "Marauder",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        
-        "AppliesCurse",
-        
-        "AoE",
-        "Physical",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Vengeance",
-    "class": "Marauder",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Attack",
-        "Area",
-        "Melee",
-        "Triggered",
-        
-        
-        "Physical"
-        
-      ]
-},
-{
-    "name": "Vulnerability",
-    "class": "Marauder",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        
-        "AppliesCurse",
-        
-        "AoE",
-        "Physical",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Warlord's Mark",
-    "class": "Marauder",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        
-        
-        
-        
-        
-        "AppliesCurse",
-        
-        
-        
-        "Mark"
-      ]
-},
-{
-    "name": "Ancestral Warchief",
-    "class": "Marauder",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Attack",
-        "Totem",
-        "Melee",
-        "Area",
-        "Slam"
-        
-      ]
-},
-{
-    "name": "Cyclone",
-    "class": "Marauder",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Attack",
-        "Area",
-        "Melee",
-        "Movement",
-        "Channel",
-        "Physical"
-      ]
-},
-{
-    "name": "Earthquake",
-    "class": "Marauder",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Attack",
-        "Area",
-        "Melee",
-        
-        "Duration",
-        "Slam"
-        
-        
-      ]
-},
-{
-    "name": "Ice Crash",
-    "class": "Marauder",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Attack",
-        "Area",
-        "Melee",
-        "Cold",
-        
-        "Slam"
-        
-      ]
-},
-{
-    "name": "Rage Vortex",
-    "class": "Marauder",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Attack",
-        "Melee",
-        "Area",
-        "Duration"
-        
-      ]
-},
-{
-    "name": "Tectonic Slam",
-    "class": "Marauder",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Attack",
-        "Area",
-        
-        "Melee",
-        "Fire",
-        "Slam"
-        
-      ]
-},
-{
-    "name": "Berserk",
-    "class": "Marauder",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        "Spell",
-        "Buff"
-        
-        
-        
-        
-      ]
-},
-{
-    "name": "Summon Chaos Golem",
-    "class": "Marauder",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        "Chaos",
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem"
-        
-        
-      ]
-},
-{
-    "name": "Summon Flame Golem",
-    "class": "Marauder",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        "Fire",
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem"
-        
-        
-      ]
-},
-{
-    "name": "Summon Ice Golem",
-    "class": "Marauder",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        "Cold",
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem"
-        
-        
-      ]
-},
-{
-    "name": "Summon Lightning Golem",
-    "class": "Marauder",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        "Lightning",
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem"
-        
-        
-      ]
-},
-{
-    "name": "Summon Stone Golem",
-    "class": "Marauder",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem",
-        "Physical"
-        
-        
-        
-      ]
-},
-{
-    "name": "Burning Arrow",
-    "class": "Ranger",
-    "act": 1,
-    "quest": "Starter Gem",
-    "types": [
-        "Attack",
-        "RangedAttack",
-        
-        "Projectile",
-        
-        
-        
-        
-        "Fire"
-        
-        
-      ]
-},
-{
-    "name": "Caustic Arrow",
-    "class": "Ranger",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Attack",
-        "RangedAttack",
-        
-        "Projectile",
-        
-        "Area",
-        "Duration",
-        
-        
-        
-        "DoT",
-        "Chaos"
-        
-      ]
-},
-{
-    "name": "Frost Blades",
-    "class": "Ranger",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Attack",
-        "Projectile",
-        "Strike",
-        
-        "Melee",
-        "Cold",
-        "RangedAttack"
-        
-      ]
-},
-{
-    "name": "Galvanic Arrow",
-    "class": "Ranger",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Attack",
-        "Projectile",
-        
-        "Area",
-        
-        
-        
-        "Lightning",
-        "RangedAttack"
-        
-        
-      ]
-},
-{
-    "name": "Ice Shot",
-    "class": "Ranger",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Attack",
-        "RangedAttack",
-        
-        "Projectile",
-        
-        "Area",
-        
-        
-        
-        "Cold"
-        
-      ]
-},
-{
-    "name": "Split Arrow",
-    "class": "Ranger",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Attack",
-        "RangedAttack",
-        
-        "Projectile",
-        
-        
-        
-        
-        
-        "Physical"
-      ]
-},
-{
-    "name": "Bear Trap",
-    "class": "Ranger",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        "Spell",
-        "Duration",
-        
-        "Trapped",
-        
-        "Physical"
-        
-      ]
-},
-{
-    "name": "Puncture",
-    "class": "Ranger",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        "Attack",
-        "RangedAttack",
-        
-        "Projectile",
-        
-        "Duration",
-        
-        
-        
-        "Strike",
-        
-        "Melee",
-        "DoT",
-        
-        "Physical"
-      ]
-},
-{
-    "name": "Riposte",
-    "class": "Ranger",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        "Attack",
-        "Melee",
-        "Strike",
-        "Triggered",
-        
-        
-        "Physical"
-        
-      ]
-},
-{
-    "name": "Shrapnel Ballista",
-    "class": "Ranger",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        "Attack",
-        "Projectile",
-        
-        "RangedAttack",
-        
-        
-        "Totem",
-        "AttackInPlaceIsDefault",
-        "Physical"
-      ]
-},
-{
-    "name": "Precision",
-    "class": "Ranger",
-    "act": 1,
-    "quest": "The Caged Brute(Kill Brutus)",
-    "types": [
-        "Spell",
-        "Area",
-        "Buff",
-        
-        
-        
-        "Aura",
-        
-        "AoE"
-        
-        
-        
-        
-      ]
-},
-{
-    "name": "Mirror Arrow",
-    "class": "Ranger",
-    "act": 1,
-    "quest": "The Caged Brute(Kill Brutus)",
-    "types": [
-        
-        "Attack",
-        "Minion",
-        "RangedAttack",
-        
-        "Duration",
-        
-        
-        
-        "Movement",
-        
-        
-        "Travel",
-        
-        "Rain"
-      ]
-},
-{
-    "name": "Elemental Hit",
-    "class": "Ranger",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Attack",
-        "Projectile",
-        
-        
-        
-        
-        "Strike",
-        
-        "Melee",
-        "Fire",
-        "Cold",
-        "Lightning",
-        "RangedAttack",
-        
-        "Area",
-        
-        "RandomElement"
-      ]
-},
-{
-    "name": "Lightning Arrow",
-    "class": "Ranger",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Attack",
-        "RangedAttack",
-        
-        "Area",
-        "Projectile",
-        
-        
-        
-        
-        "Lightning"
-        
-      ]
-},
-{
-    "name": "Lightning Strike",
-    "class": "Ranger",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        
-        
-        
-        
-        
-        "Lightning",
-        "AoE",
-        "Dynamic"
-      ]
-},
-{
-    "name": "Poisonous Concoction",
-    "class": "Ranger",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Attack",
-        "RangedAttack",
-        "Area",
-        
-        "Chaos",
-        
-        "Projectile",
-        
-        "RequiresOffHandNotWeapon"
-      ]
-},
-{
-    "name": "Rain of Arrows",
-    "class": "Ranger",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Attack",
-        "RangedAttack",
-        
-        "Area",
-        
-        
-        
-        
-        
-        
-        "Rain"
-      ]
-},
-{
-    "name": "Reave",
-    "class": "Ranger",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Attack",
-        "Area",
-        
-        "Melee"
-      ]
-},
-{
-    "name": "Siege Ballista",
-    "class": "Ranger",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Attack",
-        "Projectile",
-        
-        "RangedAttack",
-        
-        
-        "Totem",
-        "AttackInPlaceIsDefault"
-      ]
-},
-{
-    "name": "Toxic Rain",
-    "class": "Ranger",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Attack",
-        "RangedAttack",
-        
-        "Area",
-        
-        
-        
-        
-        
-        "Chaos",
-        "Duration",
-        "DoT",
-        
-        "Chaos",
-        
-        "Rain"
-      ]
-},
-{
-    "name": "Blood Rage",
-    "class": "Ranger",
-    "act": 2,
-    "quest": "Intruders in Black(Kill Fidelitas)",
-    "types": [
-        "Spell",
-        "Buff",
-        "Duration",
-        
-        
-        
-        "Physical"
-        
-      ]
-},
-{
-    "name": "Ensnaring Arrow",
-    "class": "Ranger",
-    "act": 2,
-    "quest": "Intruders in Black(Kill Fidelitas)",
-    "types": [
-        "Attack",
-        "RangedAttack",
-        
-        "Projectile",
-        
-        
-        
-        
-        
-        "Area"
-      ]
-},
-{
-    "name": "Frenzy",
-    "class": "Ranger",
-    "act": 2,
-    "quest": "Intruders in Black(Kill Fidelitas)",
-    "types": [
-        "Attack",
-        "RangedAttack",
-        
-        "Projectile",
-        
-        
-        
-        
-        "Strike",
-        
-        "Melee"
-        
-      ]
-},
-{
-    "name": "Alchemist's Mark",
-    "class": "Ranger",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        
-        
-        
-        
-        
-        "AppliesCurse",
-        
-        
-        
-        "Mark",
-        "Area",
-        "Duration",
-        "AoE",
-        "Fire",
-        "Chaos"
-      ]
-},
-{
-    "name": "Assassin's Mark",
-    "class": "Ranger",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        
-        
-        
-        
-        
-        "AppliesCurse",
-        
-        
-        
-        "Mark"
-      ]
-},
-{
-    "name": "Despair",
-    "class": "Ranger",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        
-        "Chaos",
-        "AppliesCurse",
-        
-        "AoE",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Poacher's Mark",
-    "class": "Ranger",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        
-        
-        
-        
-        
-        "AppliesCurse",
-        
-        
-        
-        "Mark"
-      ]
-},
-{
-    "name": "Sniper's Mark",
-    "class": "Ranger",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        
-        
-        
-        
-        
-        "AppliesCurse",
-        
-        
-        
-        "Mark"
-      ]
-},
-{
-    "name": "Artillery Ballista",
-    "class": "Ranger",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Attack",
-        "RangedAttack",
-        
-        
-        "Totem",
-        "Area",
-        "Fire",
-        
-        
-        "AttackInPlaceIsDefault"
-      ]
-},
-{
-    "name": "Blade Flurry",
-    "class": "Ranger",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Attack",
-        "Area",
-        "Channel",
-        "Melee",
-        "Physical"
-      ]
-},
-{
-    "name": "Blast Rain",
-    "class": "Ranger",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Attack",
-        "RangedAttack",
-        "Fire",
-        
-        "Area",
-        
-        
-        
-        
-        
-        
-        "Rain"
-      ]
-},
-{
-    "name": "Explosive Concoction",
-    "class": "Ranger",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Attack",
-        "RangedAttack",
-        "Area",
-        
-        "Fire",
-        "Cold",
-        "Lightning",
-        
-        "Projectile",
-        
-        "RequiresOffHandNotWeapon"
-      ]
-},
-{
-    "name": "Scourge Arrow",
-    "class": "Ranger",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Attack",
-        "RangedAttack",
-        
-        "Projectile",
-        
-        
-        
-        "Channel",
-        "Chaos"
-      ]
-},
-{
-    "name": "Storm Rain",
-    "class": "Ranger",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Attack",
-        "RangedAttack",
-        
-        "Area",
-        
-        
-        
-        
-        
-        "Rain",
-        "Lightning",
-        
-        ""
-      ]
-},
-{
-    "name": "Tornado Shot",
-    "class": "Ranger",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Attack",
-        "Projectile",
-        
-        
-        
-        
-        "RangedAttack"
-        
-        
-      ]
-},
-{
-    "name": "Wild Strike",
-    "class": "Ranger",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Attack",
-        "Strike",
-        
-        "Melee",
-        "Lightning",
-        "Cold",
-        "Fire",
-        "Projectile",
-        "Area",
-        "Chains",
-        "RangedAttack",
-        
-        "RandomElement"
-      ]
-},
-{
-    "name": "Summon Chaos Golem",
-    "class": "Ranger",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        "Chaos",
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem"
-        
-        
-      ]
-},
-{
-    "name": "Summon Flame Golem",
-    "class": "Ranger",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        "Fire",
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem"
-        
-        
-      ]
-},
-{
-    "name": "Summon Ice Golem",
-    "class": "Ranger",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        "Cold",
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem"
-        
-        
-      ]
-},
-{
-    "name": "Summon Lightning Golem",
-    "class": "Ranger",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        "Lightning",
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem"
-        
-        
-      ]
-},
-{
-    "name": "Summon Stone Golem",
-    "class": "Ranger",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem",
-        "Physical"
-        
-        
-        
-      ]
-},
-{
-    "name": "Tornado",
-    "class": "Ranger",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        "Spell",
-        "Duration",
-        
-        
-        
-        
-        
-        "Physical",
-        "Area",
-        "Orb",
-        "AoE"
-      ]
-},
-{
-    "name": "Spectral Throw",
-    "class": "Scion",
-    "act": 1,
-    "quest": "Starter Gem",
-    "types": [
-        "Spell",
-        "Minion",
-        
-        "Triggered",
-        ""
-        
-      ]
-},
-{
-    "name": "Lightning Tendrils",
-    "class": "Scion",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        
-        "Lightning",
-        "Channel",
-        "AoE"
-      ]
-},
-{
-    "name": "Molten Strike",
-    "class": "Scion",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Attack",
-        "Projectile",
-        "Area",
-        "Melee",
-        "Strike",
-        
-        "Fire",
-        "RangedAttack"
-        
-        
-      ]
-},
-{
-    "name": "Split Arrow",
-    "class": "Scion",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Attack",
-        "RangedAttack",
-        
-        "Projectile",
-        
-        
-        
-        
-        
-        "Physical"
-      ]
-},
-{
-    "name": "Splitting Steel",
-    "class": "Scion",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Attack",
-        "RangedAttack",
-        "Projectile",
-        
-        "Steel",
-        "Area",
-        "Physical"
-      ]
-},
-{
-    "name": "Bear Trap",
-    "class": "Scion",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        "Spell",
-        "Duration",
-        
-        "Trapped",
-        
-        "Physical"
-        
-      ]
-},
-{
-    "name": "Decoy Totem",
-    "class": "Scion",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        "Spell",
-        
-        
-        "Area",
-        "Totem",
-        
-        "AoE"
-        
-      ]
-},
-{
-    "name": "Frost Bomb",
-    "class": "Scion",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        "Cold",
-        
-        
-        
-        
-        
-        
-        
-        "AoE",
-        
-        "Orb"
-      ]
-},
-{
-    "name": "Vigilant Strike",
-    "class": "Scion",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        "Attack",
-        "Buff",
-        "Melee",
-        
-        "Strike"
-        
-        
-      ]
-},
-{
-    "name": "Clarity",
-    "class": "Scion",
-    "act": 1,
-    "quest": "The Caged Brute(Kill Brutus)",
-    "types": [
-        "Spell",
-        "Area",
-        "Buff",
-        
-        
-        
-        "Aura",
-        
-        "AoE"
-        
-        
-        
-        
-      ]
-},
-{
-    "name": "Precision",
-    "class": "Scion",
-    "act": 1,
-    "quest": "The Caged Brute(Kill Brutus)",
-    "types": [
-        "Spell",
-        "Area",
-        "Buff",
-        
-        
-        
-        "Aura",
-        
-        "AoE"
-        
-        
-        
-        
-      ]
-},
-{
-    "name": "Vitality",
-    "class": "Scion",
-    "act": 1,
-    "quest": "The Caged Brute(Kill Brutus)",
-    "types": [
-        "Spell",
-        "Area",
-        "Buff",
-        
-        
-        
-        "Aura",
-        
-        "AoE"
-        
-        
-        
-        
-      ]
-},
-{
-    "name": "Blade Vortex",
-    "class": "Scion",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        "AoE",
-        "Physical"
-      ]
-},
-{
-    "name": "Exsanguinate",
-    "class": "Scion",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        
-        
-        
-        
-        "Chains",
-        
-        
-        "Physical",
-        
-        "DoT",
-        "Duration"
-      ]
-},
-{
-    "name": "Ice Nova",
-    "class": "Scion",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        
-        
-        
-        
-        
-        "Cold",
-        
-        "AoE",
-        "Nova"
-      ]
-},
-{
-    "name": "Rain of Arrows",
-    "class": "Scion",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Attack",
-        "RangedAttack",
-        
-        "Area",
-        
-        
-        
-        
-        
-        
-        "Rain"
-      ]
-},
-{
-    "name": "Scorching Ray",
-    "class": "Scion",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        
-        "DoT",
-        "Fire",
-        "Burning",
-        "Duration",
-        "Channel"
-        
-      ]
-},
-{
-    "name": "Static Strike",
-    "class": "Scion",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Attack",
-        "Strike",
-        
-        "Melee",
-        "Area",
-        "Duration",
-        "Lightning",
-        "Chains"
-      ]
-},
-{
-    "name": "Storm Burst",
-    "class": "Scion",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        
-        
-        "Lightning",
-        "Channel",
-        "Area",
-        "Duration",
-        "AoE",
-        "Physical"
-      ]
-},
-{
-    "name": "Spectral Helix",
-    "class": "Scion",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Attack",
-        "RangedAttack",
-        "Projectile"
-        
-      ]
-},
-{
-    "name": "Corrupting Fever",
-    "class": "Scion",
-    "act": 2,
-    "quest": "Intruders in Black(Kill Fidelitas)",
-    "types": [
-        "Spell",
-        "Buff",
-        "Duration",
-        
-        
-        "Physical",
-        
-        "DoT"
-        
-      ]
-},
-{
-    "name": "Frenzy",
-    "class": "Scion",
-    "act": 2,
-    "quest": "Intruders in Black(Kill Fidelitas)",
-    "types": [
-        "Attack",
-        "RangedAttack",
-        
-        "Projectile",
-        
-        
-        
-        
-        "Strike",
-        
-        "Melee"
-        
-      ]
-},
-{
-    "name": "Bane",
-    "class": "Scion",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        "DoT",
-        "Chaos",
-        
-        
-        
-        
-        
-        "AoE",
-        "Hex"
-      ]
-},
-{
-    "name": "Conductivity",
-    "class": "Scion",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        "Lightning",
-        
-        "AppliesCurse",
-        
-        "AoE",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Elemental Weakness",
-    "class": "Scion",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        
-        "AppliesCurse",
-        
-        "AoE",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Flammability",
-    "class": "Scion",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        "Fire",
-        
-        "AppliesCurse",
-        
-        "AoE",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Frostbite",
-    "class": "Scion",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        "Cold",
-        
-        "AppliesCurse",
-        
-        "AoE",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Punishment",
-    "class": "Scion",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        
-        "AppliesCurse",
-        
-        "AoE",
-        "Physical",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Temporal Chains",
-    "class": "Scion",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        
-        "AppliesCurse",
-        
-        "AoE",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Vulnerability",
-    "class": "Scion",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        
-        "AppliesCurse",
-        
-        "AoE",
-        "Physical",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Blade Flurry",
-    "class": "Scion",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Attack",
-        "Area",
-        "Channel",
-        "Melee",
-        "Physical"
-      ]
-},
-{
-    "name": "Bladefall",
-    "class": "Scion",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        "Area",
-        
-        
-        
-        
-        
-        
-        
-        
-        "AoE",
-        "Physical",
-        "Duration"
-      ]
-},
-{
-    "name": "Cyclone",
-    "class": "Scion",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Attack",
-        "Area",
-        "Melee",
-        "Movement",
-        "Channel",
-        "Physical"
-      ]
-},
-{
-    "name": "Divine Ire",
-    "class": "Scion",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        "Area",
-        
-        "Channel",
-        "Lightning",
-        
-        "AoE",
-        "Physical"
-      ]
-},
-{
-    "name": "Flameblast",
-    "class": "Scion",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        
-        "Fire",
-        "Channel",
-        "AoE"
-      ]
-},
-{
-    "name": "Hexblast",
-    "class": "Scion",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        "Chaos",
-        
-        
-        
-        
-        
-        
-        "Hex",
-        "AoE"
-      ]
-},
-{
-    "name": "Reap",
-    "class": "Scion",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        
-        
-        
-        
-        
-        
-        "Physical",
-        
-        "DoT",
-        "Area",
-        "AoE",
-        "Duration"
-        
-      ]
-},
-{
-    "name": "Soulrend",
-    "class": "Scion",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        "Projectile",
-        "DoT",
-        
-        "Chaos",
-        
-        
-        
-        
-        
-        
-        "AoE"
-        
-      ]
-},
-{
-    "name": "Tectonic Slam",
-    "class": "Scion",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Attack",
-        "Area",
-        
-        "Melee",
-        "Fire",
-        "Slam"
-        
-      ]
-},
-{
-    "name": "Tornado Shot",
-    "class": "Scion",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Attack",
-        "Projectile",
-        
-        
-        
-        
-        "RangedAttack"
-        
-        
-      ]
-},
-{
-    "name": "Flame Link",
-    "class": "Scion",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        "Spell",
-        "Buff",
-        "Duration",
-        "Link",
-        "Fire"
-      ]
-},
-{
-    "name": "Frost Shield",
-    "class": "Scion",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        "AoE",
-        
-        "Cold",
-        
-        "ChillingArea",
-        "NonHitChill",
-        "ElementalStatus"
-        
-      ]
-},
-{
-    "name": "Intuitive Link",
-    "class": "Scion",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        "Spell",
-        "Buff",
-        "Duration",
-        "Link"
-      ]
-},
-{
-    "name": "Soul Link",
-    "class": "Scion",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        "Spell",
-        "Buff",
-        "Duration",
-        "Link"
-      ]
-},
-{
-    "name": "Summon Chaos Golem",
-    "class": "Scion",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        "Chaos",
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem"
-        
-        
-      ]
-},
-{
-    "name": "Summon Flame Golem",
-    "class": "Scion",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        "Fire",
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem"
-        
-        
-      ]
-},
-{
-    "name": "Summon Ice Golem",
-    "class": "Scion",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        "Cold",
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem"
-        
-        
-      ]
-},
-{
-    "name": "Summon Lightning Golem",
-    "class": "Scion",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        "Lightning",
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem"
-        
-        
-      ]
-},
-{
-    "name": "Summon Stone Golem",
-    "class": "Scion",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem",
-        "Physical"
-        
-        
-        
-      ]
-},
-{
-    "name": "Void Sphere",
-    "class": "Scion",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        "Spell",
-        "Area",
-        
-        
-        
-        "Duration",
-        "AoE",
-        
-        
-        "Physical",
-        
-        "Chaos",
-        "Orb"
-      ]
-},
-{
-    "name": "Viper Strike",
-    "class": "Shadow",
-    "act": 1,
-    "quest": "Starter Gem",
-    "types": [
-        "Attack",
-        "Duration",
-        
-        "Melee",
-        "Strike",
-        "DoT",
-        "Chaos"
-      ]
-},
-{
-    "name": "Blight",
-    "class": "Shadow",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Spell",
-        "Chaos",
-        "Area",
-        
-        "Channel",
-        "Duration",
-        "DoT",
-        
-        "AoE"
-      ]
-},
-{
-    "name": "Cobra Lash",
-    "class": "Shadow",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Attack",
-        "RangedAttack",
-        "Projectile",
-        
-        
-        
-        "Chaos"
-      ]
-},
-{
-    "name": "Ethereal Knives",
-    "class": "Shadow",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Spell",
-        
-        "Projectile",
-        
-        
-        
-        
-        
-        
-        
-        "Physical",
-        "Duration"
-      ]
-},
-{
-    "name": "Explosive Trap",
-    "class": "Shadow",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Spell",
-        
-        
-        "Area",
-        "Trapped",
-        "Fire",
-        "AoE",
-        "Physical"
-      ]
-},
-{
-    "name": "Freezing Pulse",
-    "class": "Shadow",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Spell",
-        "Projectile",
-        
-        
-        
-        
-        
-        
-        
-        "Cold"
-        
-      ]
-},
-{
-    "name": "Stormblast Mine",
-    "class": "Shadow",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        
-        "Lightning",
-        "AoE",
-        
-        "Aura",
-        
-        "Nova"
-        
-      ]
-},
-{
-    "name": "Bear Trap",
-    "class": "Shadow",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        "Spell",
-        "Duration",
-        
-        "Trapped",
-        
-        "Physical"
-        
-      ]
-},
-{
-    "name": "Contagion",
-    "class": "Shadow",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        "DoT",
-        "Chaos",
-        
-        
-        
-        
-        
-        
-        "AoE"
-      ]
-},
-{
-    "name": "Detonate Dead",
-    "class": "Shadow",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        
-        
-        
-        
-        
-        "Fire",
-        
-        "DestroysCorpse",
-        
-        "AoE"
-      ]
-},
-{
-    "name": "Orb of Storms",
-    "class": "Shadow",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        "Spell",
-        
-        "Lightning",
-        "Area",
-        "Chains",
-        
-        
-        
-        
-        "AoE",
-        
-        "Orb"
-      ]
-},
-{
-    "name": "Riposte",
-    "class": "Shadow",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        "Attack",
-        "Melee",
-        "Strike",
-        "Triggered",
-        
-        
-        "Physical"
-        
-      ]
-},
-{
-    "name": "Clarity",
-    "class": "Shadow",
-    "act": 1,
-    "quest": "The Caged Brute(Kill Brutus)",
-    "types": [
-        "Spell",
-        "Area",
-        "Buff",
-        
-        
-        
-        "Aura",
-        
-        "AoE"
-        
-        
-        
-        
-      ]
-},
-{
-    "name": "Precision",
-    "class": "Shadow",
-    "act": 1,
-    "quest": "The Caged Brute(Kill Brutus)",
-    "types": [
-        "Spell",
-        "Area",
-        "Buff",
-        
-        
-        
-        "Aura",
-        
-        "AoE"
-        
-        
-        
-        
-      ]
-},
-{
-    "name": "Siphoning Trap",
-    "class": "Shadow",
-    "act": 1,
-    "quest": "The Caged Brute(Kill Brutus)",
-    "types": [
-        "Spell",
-        "Duration",
-        
-        "Area",
-        "Trapped",
-        "Cold",
-        "DoT",
-        
-        "NonHitChill",
-        "ElementalStatus",
-        "AoE"
-        
-      ]
-},
-{
-    "name": "Unearth",
-    "class": "Shadow",
-    "act": 1,
-    "quest": "The Caged Brute(Kill Brutus)",
-    "types": [
-        "Spell",
-        "Projectile",
-        
-        
-        
-        
-        
-        
-        
-        
-        "Area",
-        "AoE",
-        "Physical"
-      ]
-},
-{
-    "name": "Blade Vortex",
-    "class": "Shadow",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        "AoE",
-        "Physical"
-      ]
-},
-{
-    "name": "Essence Drain",
-    "class": "Shadow",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        "Projectile",
-        
-        "Duration",
-        
-        
-        "DoT",
-        "Chaos",
-        
-        
-        
-        "Area",
-        "AoE"
-        
-        
-      ]
-},
-{
-    "name": "Fire Trap",
-    "class": "Shadow",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        "Duration",
-        
-        
-        "Area",
-        "Burning",
-        "Trapped",
-        "DoT",
-        "Fire",
-        "AoE"
-      ]
-},
-{
-    "name": "Icicle Mine",
-    "class": "Shadow",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        
-        "Projectile",
-        
-        "Cold",
-        
-        
-        "Aura",
-        "Area"
-        
-        
-      ]
-},
-{
-    "name": "Lightning Trap",
-    "class": "Shadow",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        
-        "Projectile",
-        
-        "Trapped",
-        
-        "Lightning"
-      ]
-},
-{
-    "name": "Reave",
-    "class": "Shadow",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Attack",
-        "Area",
-        
-        "Melee"
-      ]
-},
-{
-    "name": "Volatile Dead",
-    "class": "Shadow",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        
-        
-        
-        
-        
-        "Fire",
-        
-        
-        "AoE"
-      ]
-},
-{
-    "name": "Voltaxic Burst",
-    "class": "Shadow",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        
-        
-        
-        
-        
-        "Chaos",
-        "Lightning",
-        
-        "AoE",
-        "Nova",
-        "Duration"
-      ]
-},
-{
-    "name": "Arcane Cloak",
-    "class": "Shadow",
-    "act": 2,
-    "quest": "Intruders in Black(Kill Fidelitas)",
-    "types": [
-        "Spell",
-        "Buff",
-        
-        "Duration",
-        
-        "Guard",
-        "Lightning",
-        
-        "Arcane"
-      ]
-},
-{
-    "name": "Blade Blast",
-    "class": "Shadow",
-    "act": 2,
-    "quest": "Intruders in Black(Kill Fidelitas)",
-    "types": [
-        "Spell",
-        "Area",
-        
-        
-        
-        
-        
-        
-        
-        
-        "AoE",
-        "Physical"
-      ]
-},
-{
-    "name": "Blood Rage",
-    "class": "Shadow",
-    "act": 2,
-    "quest": "Intruders in Black(Kill Fidelitas)",
-    "types": [
-        "Spell",
-        "Buff",
-        "Duration",
-        
-        
-        
-        "Physical"
-        
-      ]
-},
-{
-    "name": "Cold Snap",
-    "class": "Shadow",
-    "act": 2,
-    "quest": "Intruders in Black(Kill Fidelitas)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        
-        
-        
-        
-        
-        "Cold",
-        
-        "Duration",
-        "ChillingArea",
-        "AoE"
-        
-      ]
-},
-{
-    "name": "Assassin's Mark",
-    "class": "Shadow",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        
-        
-        
-        
-        
-        "AppliesCurse",
-        
-        
-        
-        "Mark"
-      ]
-},
-{
-    "name": "Bane",
-    "class": "Shadow",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        "DoT",
-        "Chaos",
-        
-        
-        
-        
-        
-        "AoE",
-        "Hex"
-      ]
-},
-{
-    "name": "Conductivity",
-    "class": "Shadow",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        "Lightning",
-        
-        "AppliesCurse",
-        
-        "AoE",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Despair",
-    "class": "Shadow",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        
-        "Chaos",
-        "AppliesCurse",
-        
-        "AoE",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Elemental Weakness",
-    "class": "Shadow",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        
-        "AppliesCurse",
-        
-        "AoE",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Enfeeble",
-    "class": "Shadow",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        
-        "AppliesCurse",
-        
-        "AoE",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Flammability",
-    "class": "Shadow",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        "Fire",
-        
-        "AppliesCurse",
-        
-        "AoE",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Frostbite",
-    "class": "Shadow",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        "Cold",
-        
-        "AppliesCurse",
-        
-        "AoE",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Plague Bearer",
-    "class": "Shadow",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Buff",
-        "Chaos",
-        "Area",
-        
-        
-        
-        
-        "KillNoModifiers"
-      ]
-},
-{
-    "name": "Temporal Chains",
-    "class": "Shadow",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        
-        "AppliesCurse",
-        
-        "AoE",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Ball Lightning",
-    "class": "Shadow",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        
-        "Projectile",
-        
-        "Area",
-        
-        
-        
-        
-        
-        "Lightning",
-        
-        "AoE"
-      ]
-},
-{
-    "name": "Blade Flurry",
-    "class": "Shadow",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Attack",
-        "Area",
-        "Channel",
-        "Melee",
-        "Physical"
-      ]
-},
-{
-    "name": "Bladefall",
-    "class": "Shadow",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        "Area",
-        
-        
-        
-        
-        
-        
-        
-        
-        "AoE",
-        "Physical",
-        "Duration"
-      ]
-},
-{
-    "name": "Cremation",
-    "class": "Shadow",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        "Area",
-        "Fire",
-        "Duration",
-        "Projectile",
-        
-        
-        
-        
-        
-        
-        
-        "Projectile",
-        
-        "AoE"
-      ]
-},
-{
-    "name": "Flamethrower Trap",
-    "class": "Shadow",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        "Duration",
-        
-        
-        "Area",
-        "Trapped",
-        "Fire",
-        "AoE"
-        
-      ]
-},
-{
-    "name": "Hexblast",
-    "class": "Shadow",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        "Chaos",
-        
-        
-        
-        
-        
-        
-        "Hex",
-        "AoE"
-      ]
-},
-{
-    "name": "Lightning Spire Trap",
-    "class": "Shadow",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        "Duration",
-        
-        
-        "Area",
-        "Trapped",
-        "Lightning",
-        "AoE"
-        
-      ]
-},
-{
-    "name": "Pestilent Strike",
-    "class": "Shadow",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Attack",
-        "Melee",
-        "Strike",
-        
-        "Area",
-        "Duration",
-        "Chaos"
-      ]
-},
-{
-    "name": "Pyroclast Mine",
-    "class": "Shadow",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        
-        "Projectile",
-        "Fire",
-        
-        "Area",
-        
-        "Aura",
-        
-        
-        "Nova"
-        
-      ]
-},
-{
-    "name": "Seismic Trap",
-    "class": "Shadow",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Buff",
-        "Area",
-        "Duration",
-        "Warcry"
-        
-      ]
-},
-{
-    "name": "Soulrend",
-    "class": "Shadow",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        "Projectile",
-        "DoT",
-        
-        "Chaos",
-        
-        
-        
-        
-        
-        
-        "AoE"
-        
-      ]
-},
-{
-    "name": "Ambush",
-    "class": "Shadow",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        "Spell",
-        "Movement",
-        "Duration",
-        "Travel"
-        
-        
-        
-      ]
-},
-{
-    "name": "Frost Shield",
-    "class": "Shadow",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        "AoE",
-        
-        "Cold",
-        
-        "ChillingArea",
-        "NonHitChill",
-        "ElementalStatus"
-        
-      ]
-},
-{
-    "name": "Summon Chaos Golem",
-    "class": "Shadow",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        "Chaos",
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem"
-        
-        
-      ]
-},
-{
-    "name": "Summon Flame Golem",
-    "class": "Shadow",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        "Fire",
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem"
-        
-        
-      ]
-},
-{
-    "name": "Summon Ice Golem",
-    "class": "Shadow",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        "Cold",
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem"
-        
-        
-      ]
-},
-{
-    "name": "Summon Lightning Golem",
-    "class": "Shadow",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        "Lightning",
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem"
-        
-        
-      ]
-},
-{
-    "name": "Summon Stone Golem",
-    "class": "Shadow",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem",
-        "Physical"
-        
-        
-        
-      ]
-},
-{
-    "name": "Tornado",
-    "class": "Shadow",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        "Spell",
-        "Duration",
-        
-        
-        
-        
-        
-        "Physical",
-        "Area",
-        "Orb",
-        "AoE"
-      ]
-},
-{
-    "name": "Void Sphere",
-    "class": "Shadow",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        "Spell",
-        "Area",
-        
-        
-        
-        "Duration",
-        "AoE",
-        
-        
-        "Physical",
-        
-        "Chaos",
-        "Orb"
-      ]
-},
-{
-    "name": "Glacial Hammer",
-    "class": "Templar",
-    "act": 1,
-    "quest": "Starter Gem",
-    "types": [
-        "Attack",
-        "Strike",
-        
-        "Melee",
-        "Cold"
-        
-      ]
-},
-{
-    "name": "Frostbolt",
-    "class": "Templar",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        
-        
-        
-        
-        
-        "Cold",
-        
-        "AoE",
-        "Nova"
-      ]
-},
-{
-    "name": "Lightning Tendrils",
-    "class": "Templar",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        
-        "Lightning",
-        "Channel",
-        "AoE"
-      ]
-},
-{
-    "name": "Molten Strike",
-    "class": "Templar",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Attack",
-        "Projectile",
-        "Area",
-        "Melee",
-        "Strike",
-        
-        "Fire",
-        "RangedAttack"
-        
-        
-      ]
-},
-{
-    "name": "Purifying Flame",
-    "class": "Templar",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Spell",
-        "Area",
-        
-        "Duration",
-        
-        
-        
-        
-        
-        "Fire",
-        
-        "AoE",
-        "Physical"
-      ]
-},
-{
-    "name": "Rolling Magma",
-    "class": "Templar",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        
-        
-        
-        
-        "Fire",
-        "Projectile",
-        
-        
-        "Chains",
-        
-        "AoE"
-      ]
-},
-{
-    "name": "Smite",
-    "class": "Templar",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Melee",
-        "Attack",
-        "Area",
-        "Duration",
-        
-        
-        "Strike",
-        "Aura",
-        "Buff",
-        "Lightning"
-      ]
-},
-{
-    "name": "Ancestral Protector",
-    "class": "Templar",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        "Attack",
-        "Totem",
-        "Strike",
-        "Melee"
-        
-      ]
-},
-{
-    "name": "Flame Wall",
-    "class": "Templar",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        "Spell",
-        "DoT",
-        "Area",
-        "Duration",
-        
-        
-        
-        "AoE",
-        
-        "Fire",
-        
-        
-        
-        
-        "Burning"
-      ]
-},
-{
-    "name": "Frost Bomb",
-    "class": "Templar",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        "Cold",
-        
-        
-        
-        
-        
-        
-        
-        "AoE",
-        
-        "Orb"
-      ]
-},
-{
-    "name": "Holy Flame Totem",
-    "class": "Templar",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        "Spell",
-        "Projectile",
-        
-        
-        
-        
-        "Totem",
-        "Fire",
-        "Channel",
-        "Physical"
-      ]
-},
-{
-    "name": "Summon Holy Relic",
-    "class": "Templar",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        
-        
-        "Minion",
-        
-        
-        "Spell"
-        
-        
-        
-        
-      ]
-},
-{
-    "name": "Vigilant Strike",
-    "class": "Templar",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        "Attack",
-        "Buff",
-        "Melee",
-        
-        "Strike"
-        
-        
-      ]
-},
-{
-    "name": "Clarity",
-    "class": "Templar",
-    "act": 1,
-    "quest": "The Caged Brute(Kill Brutus)",
-    "types": [
-        "Spell",
-        "Area",
-        "Buff",
-        
-        
-        
-        "Aura",
-        
-        "AoE"
-        
-        
-        
-        
-      ]
-},
-{
-    "name": "Vitality",
-    "class": "Templar",
-    "act": 1,
-    "quest": "The Caged Brute(Kill Brutus)",
-    "types": [
-        "Spell",
-        "Area",
-        "Buff",
-        
-        
-        
-        "Aura",
-        
-        "AoE"
-        
-        
-        
-        
-      ]
-},
-{
-    "name": "Absolution",
-    "class": "Templar",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        "Minion",
-        "Duration",
-        
-        
-        
-        "Area",
-        
-        
-        "Physical",
-        "Lightning"
-        
-        
-        
-        
-        
-      ]
-},
-{
-    "name": "Blazing Salvo",
-    "class": "Templar",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        
-        
-        
-        
-        "Fire",
-        "Projectile",
-        
-        
-        
-        "AoE"
-      ]
-},
-{
-    "name": "Ice Nova",
-    "class": "Templar",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        
-        
-        
-        
-        
-        "Cold",
-        
-        "AoE",
-        "Nova"
-      ]
-},
-{
-    "name": "Manabond",
-    "class": "Templar",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        "Area",
-        
-        "AoE",
-        "Lightning",
-        
-        
-        
-        
-        
-        
-        
-        "Arcane"
-      ]
-},
-{
-    "name": "Scorching Ray",
-    "class": "Templar",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        
-        "DoT",
-        "Fire",
-        "Burning",
-        "Duration",
-        "Channel"
-        
-      ]
-},
-{
-    "name": "Searing Bond",
-    "class": "Templar",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        "DoT",
-        
-        
-        
-        "Burning",
-        "Totem",
-        
-        "Fire"
-        
-      ]
-},
-{
-    "name": "Static Strike",
-    "class": "Templar",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Attack",
-        "Strike",
-        
-        "Melee",
-        "Area",
-        "Duration",
-        "Lightning",
-        "Chains"
-      ]
-},
-{
-    "name": "Storm Burst",
-    "class": "Templar",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        
-        
-        "Lightning",
-        "Channel",
-        "Area",
-        "Duration",
-        "AoE",
-        "Physical"
-      ]
-},
-{
-    "name": "Storm Brand",
-    "class": "Templar",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        "Lightning",
-        "Chains",
-        "Duration",
-        
-        
-        
-        
-        
-        "Brand",
-        "AoE"
-      ]
-},
-{
-    "name": "Storm Call",
-    "class": "Templar",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        "Lightning",
-        
-        
-        "AoE"
-      ]
-},
-{
-    "name": "Wintertide Brand",
-    "class": "Templar",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        "Area",
-        "Cold",
-        "Duration",
-        
-        
-        
-        
-        
-        "Brand",
-        "AoE",
-        "DoT",
-        "NonHitChill",
-        "ElementalStatus"
-        
-      ]
-},
-{
-    "name": "Arcane Cloak",
-    "class": "Templar",
-    "act": 2,
-    "quest": "Intruders in Black(Kill Fidelitas)",
-    "types": [
-        "Spell",
-        "Buff",
-        
-        "Duration",
-        
-        "Guard",
-        "Lightning",
-        
-        "Arcane"
-      ]
-},
-{
-    "name": "Brand Recall",
-    "class": "Templar",
-    "act": 2,
-    "quest": "Intruders in Black(Kill Fidelitas)",
-    "types": [
-        "Spell"
-        
-        
-        
-      ]
-},
-{
-    "name": "Wave of Conviction",
-    "class": "Templar",
-    "act": 2,
-    "quest": "Intruders in Black(Kill Fidelitas)",
-    "types": [
-        "Spell",
-        "Area",
-        
-        "Duration",
-        
-        
-        
-        
-        "Fire",
-        "Lightning",
-        
-        
-        "AoE",
-        "Physical"
-      ]
-},
-{
-    "name": "Battlemage's Cry",
-    "class": "Templar",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Buff",
-        "Area",
-        "Duration",
-        "Warcry"
-        
-      ]
-},
-{
-    "name": "Conductivity",
-    "class": "Templar",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        "Lightning",
-        
-        "AppliesCurse",
-        
-        "AoE",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Elemental Weakness",
-    "class": "Templar",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        
-        "AppliesCurse",
-        
-        "AoE",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Enfeeble",
-    "class": "Templar",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        
-        "AppliesCurse",
-        
-        "AoE",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Flammability",
-    "class": "Templar",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        "Fire",
-        
-        "AppliesCurse",
-        
-        "AoE",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Frostbite",
-    "class": "Templar",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        "Cold",
-        
-        "AppliesCurse",
-        
-        "AoE",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Punishment",
-    "class": "Templar",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        
-        "AppliesCurse",
-        
-        "AoE",
-        "Physical",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Vulnerability",
-    "class": "Templar",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        
-        "AppliesCurse",
-        
-        "AoE",
-        "Physical",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Armageddon Brand",
-    "class": "Templar",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        "Fire",
-        "Duration",
-        
-        
-        
-        
-        
-        "Brand",
-        "AoE"
-      ]
-},
-{
-    "name": "Consecrated Path",
-    "class": "Templar",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Melee",
-        "Attack",
-        "Area",
-        "Movement",
-        
-        
-        "Duration",
-        "Fire",
-        "Slam"
-        
-      ]
-},
-{
-    "name": "Divine Ire",
-    "class": "Templar",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        "Area",
-        
-        "Channel",
-        "Lightning",
-        
-        "AoE",
-        "Physical"
-      ]
-},
-{
-    "name": "Dominating Blow",
-    "class": "Templar",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Attack",
-        "Minion",
-        "Duration",
-        
-        "Strike",
-        
-        "Melee"
-        
-      ]
-},
-{
-    "name": "Firestorm",
-    "class": "Templar",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        "Fire",
-        
-        
-        "AoE"
-      ]
-},
-{
-    "name": "Flameblast",
-    "class": "Templar",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        
-        "Fire",
-        "Channel",
-        "AoE"
-      ]
-},
-{
-    "name": "Ice Crash",
-    "class": "Templar",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Attack",
-        "Area",
-        "Melee",
-        "Cold",
-        
-        "Slam"
-        
-      ]
-},
-{
-    "name": "Penance Brand",
-    "class": "Templar",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        "Physical",
-        "Lightning",
-        "Duration",
-        
-        
-        
-        
-        
-        "Brand",
-        "AoE"
-      ]
-},
-{
-    "name": "Shock Nova",
-    "class": "Templar",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        
-        
-        
-        
-        
-        "Lightning",
-        
-        "AoE",
-        "Nova"
-      ]
-},
-{
-    "name": "Shockwave Totem",
-    "class": "Templar",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        
-        
-        "Totem",
-        
-        "AoE",
-        "Physical",
-        "Nova"
-      ]
-},
-{
-    "name": "Stormbind",
-    "class": "Templar",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        "Area",
-        
-        "AoE",
-        "Channel",
-        "Lightning",
-        
-        "Duration"
-      ]
-},
-{
-    "name": "Frost Shield",
-    "class": "Templar",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        "AoE",
-        
-        "Cold",
-        
-        "ChillingArea",
-        "NonHitChill",
-        "ElementalStatus"
-        
-      ]
-},
-{
-    "name": "Frozen Legion",
-    "class": "Templar",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        "Spell",
-        "Cold",
-        "Attack",
-        "AoE",
-        "Melee"
-      ]
-},
-{
-    "name": "Hydrosphere",
-    "class": "Templar",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        "AoE",
-        "Cold",
-        
-        "Orb",
-        
-        
-        "Lightning",
-        "Physical"
-      ]
-},
-{
-    "name": "Sigil of Power",
-    "class": "Templar",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        "AoE",
-        
-        
-        "Lightning",
-        "Arcane"
-      ]
-},
-{
-    "name": "Summon Carrion Golem",
-    "class": "Templar",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        "Physical",
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem"
-        
-        
-      ]
-},
-{
-    "name": "Summon Chaos Golem",
-    "class": "Templar",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        "Chaos",
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem"
-        
-        
-      ]
-},
-{
-    "name": "Summon Flame Golem",
-    "class": "Templar",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        "Fire",
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem"
-        
-        
-      ]
-},
-{
-    "name": "Summon Ice Golem",
-    "class": "Templar",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        "Cold",
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem"
-        
-        
-      ]
-},
-{
-    "name": "Summon Lightning Golem",
-    "class": "Templar",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        "Lightning",
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem"
-        
-        
-      ]
-},
-{
-    "name": "Summon Stone Golem",
-    "class": "Templar",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem",
-        "Physical"
-        
-        
-        
-      ]
-},
-{
-    "name": "Void Sphere",
-    "class": "Templar",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        "Spell",
-        "Area",
-        
-        
-        
-        "Duration",
-        "AoE",
-        
-        
-        "Physical",
-        
-        "Chaos",
-        "Orb"
-      ]
-},
-{
-    "name": "Fireball",
-    "class": "Witch",
-    "act": 1,
-    "quest": "Starter Gem",
-    "types": [
-        "Projectile",
-        
-        "Spell",
-        
-        "Area",
-        
-        
-        
-        
-        
-        "Fire",
-        
-        "AoE"
-      ]
-},
-{
-    "name": "Blight",
-    "class": "Witch",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Spell",
-        "Chaos",
-        "Area",
-        
-        "Channel",
-        "Duration",
-        "DoT",
-        
-        "AoE"
-      ]
-},
-{
-    "name": "Freezing Pulse",
-    "class": "Witch",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Spell",
-        "Projectile",
-        
-        
-        
-        
-        
-        
-        
-        "Cold"
-        
-      ]
-},
-{
-    "name": "Kinetic Bolt",
-    "class": "Witch",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Attack",
-        "Projectile",
-        
-        
-        
-        
-        "RangedAttack"
-        
-      ]
-},
-{
-    "name": "Lightning Tendrils",
-    "class": "Witch",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        
-        "Lightning",
-        "Channel",
-        "AoE"
-      ]
-},
-{
-    "name": "Raise Zombie",
-    "class": "Witch",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Spell",
-        "Minion"
-    
-        
-        
-        
-        
-        
-        
-        
-      ]
-},
-{
-    "name": "Rolling Magma",
-    "class": "Witch",
-    "act": 1,
-    "quest": "Enemy at the Gate (Kill Hillock)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        
-        
-        
-        
-        "Fire",
-        "Projectile",
-        
-        
-        "Chains",
-        
-        "AoE"
-      ]
-},
-{
-    "name": "Contagion",
-    "class": "Witch",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        "DoT",
-        "Chaos",
-        
-        
-        
-        
-        
-        
-        "AoE"
-      ]
-},
-{
-    "name": "Detonate Dead",
-    "class": "Witch",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        
-        
-        
-        
-        
-        "Fire",
-        
-        "DestroysCorpse",
-        
-        "AoE"
-      ]
-},
-{
-    "name": "Flame Wall",
-    "class": "Witch",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        "Spell",
-        "DoT",
-        "Area",
-        "Duration",
-        
-        
-        
-        "AoE",
-        
-        "Fire",
-        
-        
-        
-        
-        "Burning"
-      ]
-},
-{
-    "name": "Frost Bomb",
-    "class": "Witch",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        "Cold",
-        
-        
-        
-        
-        
-        
-        
-        "AoE",
-        
-        "Orb"
-      ]
-},
-{
-    "name": "Orb of Storms",
-    "class": "Witch",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        "Spell",
-        
-        "Lightning",
-        "Area",
-        "Chains",
-        
-        
-        
-        
-        "AoE",
-        
-        "Orb"
-      ]
-},
-{
-    "name": "Summon Raging Spirit",
-    "class": "Witch",
-    "act": 1,
-    "quest": "Breaking Some Eggs(Mud Flats)",
-    "types": [
-        "Spell",
-        "Minion",
-        "Duration",
-        
-        
-        
-        
-        
-        
-        "Fire"
-        
-        
-      ]
-},
-{
-    "name": "Clarity",
-    "class": "Witch",
-    "act": 1,
-    "quest": "The Caged Brute(Kill Brutus)",
-    "types": [
-        "Spell",
-        "Area",
-        "Buff",
-        
-        
-        
-        "Aura",
-        
-        "AoE"
-        
-        
-        
-        
-      ]
-},
-{
-    "name": "Summon Skeletons",
-    "class": "Witch",
-    "act": 1,
-    "quest": "The Caged Brute(Kill Brutus)",
-    "types": [
-        "Spell",
-        "Minion",
-        "Duration"
-        
-        
-        
-        
-        
-        
-        
-        
-        
-      ]
-},
-{
-    "name": "Wither",
-    "class": "Witch",
-    "act": 1,
-    "quest": "The Caged Brute(Kill Brutus)",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        "Chaos",
-        "Channel",
-        "AoE"
-      ]
-},
-{
-    "name": "Arc",
-    "class": "Witch",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        
-        
-        
-        
-        "Chains",
-        
-        
-        "Lightning"
-        
-      ]
-},
-{
-    "name": "Blazing Salvo",
-    "class": "Witch",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        
-        
-        
-        
-        "Fire",
-        "Projectile",
-        
-        
-        
-        "AoE"
-      ]
-},
-{
-    "name": "Creeping Frost",
-    "class": "Witch",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        "Projectile",
-        
-        
-        
-        
-        
-        "Duration",
-        "Area",
-        
-        
-        "Cold",
-        "ChillingArea",
-        
-        "AoE"
-      ]
-},
-{
-    "name": "Essence Drain",
-    "class": "Witch",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        "Projectile",
-        
-        "Duration",
-        
-        
-        "DoT",
-        "Chaos",
-        
-        
-        
-        "Area",
-        "AoE"
-        
-        
-      ]
-},
-{
-    "name": "Flesh Offering",
-    "class": "Witch",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        "Buff",
-        "Duration",
-        
-        "Minion"
-        
-        
-        
-      ]
-},
-{
-    "name": "Ice Nova",
-    "class": "Witch",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        
-        
-        
-        
-        
-        "Cold",
-        
-        "AoE",
-        "Nova"
-      ]
-},
-{
-    "name": "Manabond",
-    "class": "Witch",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        "Area",
-        
-        "AoE",
-        "Lightning",
-        
-        
-        
-        
-        
-        
-        
-        "Arcane"
-      ]
-},
-{
-    "name": "Scorching Ray",
-    "class": "Witch",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        
-        "DoT",
-        "Fire",
-        "Burning",
-        "Duration",
-        "Channel"
-        
-      ]
-},
-{
-    "name": "Volatile Dead",
-    "class": "Witch",
-    "act": 1,
-    "quest": "The Siren's Cadence(Cavern of Wrath WP)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        
-        
-        
-        
-        
-        "Fire",
-        
-        
-        "AoE"
-      ]
-},
-{
-    "name": "Arcane Cloak",
-    "class": "Witch",
-    "act": 2,
-    "quest": "Intruders in Black(Kill Fidelitas)",
-    "types": [
-        "Spell",
-        "Buff",
-        
-        "Duration",
-        
-        "Guard",
-        "Lightning",
-        
-        "Arcane"
-      ]
-},
-{
-    "name": "Cold Snap",
-    "class": "Witch",
-    "act": 2,
-    "quest": "Intruders in Black(Kill Fidelitas)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        
-        
-        
-        
-        
-        "Cold",
-        
-        "Duration",
-        "ChillingArea",
-        "AoE"
-        
-      ]
-},
-{
-    "name": "Desecrate",
-    "class": "Witch",
-    "act": 2,
-    "quest": "Intruders in Black(Kill Fidelitas)",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        "DoT",
-        
-        "Chaos",
-        
-        "AoE"
-      ]
-},
-{
-    "name": "Galvanic Field",
-    "class": "Witch",
-    "act": 2,
-    "quest": "Intruders in Black(Kill Fidelitas)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        "Buff",
-        "Duration",
-        "Lightning",
-        "Chains",
-        "Orb"
-        
-      ]
-},
-{
-    "name": "Bane",
-    "class": "Witch",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        "DoT",
-        "Chaos",
-        
-        
-        
-        
-        
-        "AoE",
-        "Hex"
-      ]
-},
-{
-    "name": "Conductivity",
-    "class": "Witch",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        "Lightning",
-        
-        "AppliesCurse",
-        
-        "AoE",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Convocation",
-    "class": "Witch",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Buff",
-        "Duration",
-        
-        "Minion"
-        
-        
-      ]
-},
-{
-    "name": "Despair",
-    "class": "Witch",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        
-        "Chaos",
-        "AppliesCurse",
-        
-        "AoE",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Elemental Weakness",
-    "class": "Witch",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        
-        "AppliesCurse",
-        
-        "AoE",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Enfeeble",
-    "class": "Witch",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        
-        "AppliesCurse",
-        
-        "AoE",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Flammability",
-    "class": "Witch",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        "Fire",
-        
-        "AppliesCurse",
-        
-        "AoE",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Frostbite",
-    "class": "Witch",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        "Cold",
-        
-        "AppliesCurse",
-        
-        "AoE",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Temporal Chains",
-    "class": "Witch",
-    "act": 3,
-    "quest": "Lost in Love(Find Tolman)Maramoa",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        
-        "AppliesCurse",
-        
-        "AoE",
-        
-        
-        "Hex"
-      ]
-},
-{
-    "name": "Ball Lightning",
-    "class": "Witch",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        
-        "Projectile",
-        
-        "Area",
-        
-        
-        
-        
-        
-        "Lightning",
-        
-        "AoE"
-      ]
-},
-{
-    "name": "Crackling Lance",
-    "class": "Witch",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        "Area",
-        
-        "Lightning",
-        
-        
-        
-        
-        "AoE"
-        
-        
-      ]
-},
-{
-    "name": "Cremation",
-    "class": "Witch",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        "Area",
-        "Fire",
-        "Duration",
-        "Projectile",
-        
-        
-        
-        
-        
-        
-        
-        "Projectile",
-        
-        "AoE"
-      ]
-},
-{
-    "name": "Eye of Winter",
-    "class": "Witch",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        
-        "Projectile",
-        "ProjectileSpiral",
-        
-        "SingleMainProjectile",
-        "Cold"
-        
-        
-        
-        
-        
-        
-      ]
-},
-{
-    "name": "Firestorm",
-    "class": "Witch",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        "Duration",
-        
-        
-        
-        
-        
-        "Fire",
-        
-        
-        "AoE"
-      ]
-},
-{
-    "name": "Flameblast",
-    "class": "Witch",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        
-        "Fire",
-        "Channel",
-        "AoE"
-      ]
-},
-{
-    "name": "Glacial Cascade",
-    "class": "Witch",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        
-        
-        
-        
-        
-        "Cold",
-        "Physical",
-        
-        "AoE"
-      ]
-},
-{
-    "name": "Hexblast",
-    "class": "Witch",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        "Chaos",
-        
-        
-        
-        
-        
-        
-        "Hex",
-        "AoE"
-      ]
-},
-{
-    "name": "Kinetic Blast",
-    "class": "Witch",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Attack",
-        "RangedAttack",
-        "Projectile",
-        
-        "Area"
-        
-        
-        
-      ]
-},
-{
-    "name": "Lightning Conduit",
-    "class": "Witch",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        
-        "Area",
-        
-        
-        
-        
-        
-        "Lightning",
-        "AoE",
-        "Dynamic"
-      ]
-},
-{
-    "name": "Raise Spectre",
-    "class": "Witch",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        "Minion"
-        
-        
-        
-        
-        
-        
-        
-        
-      ]
-},
-{
-    "name": "Snipe",
-    "class": "Ranger",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        "Attack",
-        "Projectile",
-        "Channel"
-      ]
-},
-{
-    "name": "Soulrend",
-    "class": "Witch",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        "Projectile",
-        "DoT",
-        
-        "Chaos",
-        
-        
-        
-        
-        
-        
-        "AoE"
-        
-      ]
-},
-{
-    "name": "Stormbind",
-    "class": "Witch",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        "Spell",
-        "Area",
-        
-        "AoE",
-        "Channel",
-        "Lightning",
-        
-        "Duration"
-      ]
-},
-{
-    "name": "Summon Reaper",
-    "class": "Witch",
-    "act": 3,
-    "quest": "Sever the Right Hand(Kill Gravicius)",
-    "types": [
-        
-        "Physical",
-        
-        "Minion",
-        
-        "Spell"
-        
-        
-        
-        
-      ]
-},
-{
-    "name": "Frost Shield",
-    "class": "Witch",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        "AoE",
-        
-        "Cold",
-        
-        "ChillingArea",
-        "NonHitChill",
-        "ElementalStatus"
-        
-      ]
-},
-{
-    "name": "Hydrosphere",
-    "class": "Witch",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        "AoE",
-        "Cold",
-        
-        "Orb",
-        
-        
-        "Lightning",
-        "Physical"
-      ]
-},
-{
-    "name": "Sigil of Power",
-    "class": "Witch",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        "Spell",
-        "Area",
-        "Duration",
-        
-        
-        
-        "AoE",
-        
-        
-        "Lightning",
-        "Arcane"
-      ]
-},
-{
-    "name": "Summon Carrion Golem",
-    "class": "Witch",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        "Physical",
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem"
-        
-        
-      ]
-},
-{
-    "name": "Summon Chaos Golem",
-    "class": "Witch",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        "Chaos",
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem"
-        
-        
-      ]
-},
-{
-    "name": "Summon Flame Golem",
-    "class": "Witch",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        "Fire",
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem"
-        
-        
-      ]
-},
-{
-    "name": "Summon Ice Golem",
-    "class": "Witch",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        "Cold",
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem"
-    
-        
-      ]
-},
-{
-    "name": "Summon Lightning Golem",
-    "class": "Witch",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        "Lightning",
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem"
-        
-        
-      ]
-},
-{
-    "name": "Summon Stone Golem",
-    "class": "Witch",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        
-        
-        "Minion",
-        
-        
-        "Spell",
-        
-        
-        "Golem",
-        "Physical"
-        
-        
-        
-      ]
-},
-{
-    "name": "Void Sphere",
-    "class": "Witch",
-    "act": 4,
-    "quest": "Breaking the Seal(Open the Mines)",
-    "types": [
-        "Spell",
-        "Area",
-        
-        
-        
-        "Duration",
-        "AoE",
-        
-        
-        "Physical",
-        
-        "Chaos",
-        "Orb"
-      ]
-}
-]
-}
+    {
+        "name": "Burning Arrow",
+        "class": "Ranger",
+        "act": 1,
+        "quest": "Starter Gem"
+    },
+    {
+        "name": "Caustic Arrow",
+        "class": "Ranger",
+        "act": 1,
+        "quest": "Enemy at the Gate (Kill Hillock)"
+    },
+    {
+        "name": "Frost Blades",
+        "class": "Ranger",
+        "act": 1,
+        "quest": "Enemy at the Gate (Kill Hillock)"
+    },
+    {
+        "name": "Galvanic Arrow",
+        "class": "Ranger",
+        "act": 1,
+        "quest": "Enemy at the Gate (Kill Hillock)"
+    },
+    {
+        "name": "Ice Shot",
+        "class": "Ranger",
+        "act": 1,
+        "quest": "Enemy at the Gate (Kill Hillock)"
+    },
+    {
+        "name": "Split Arrow",
+        "class": "Ranger",
+        "act": 1,
+        "quest": "Enemy at the Gate (Kill Hillock)"
+    },
+    {
+        "name": "Bear Trap",
+        "class": "Ranger",
+        "act": 1,
+        "quest": "Breaking Some Eggs(Mud Flats)"
+    },
+    {
+        "name": "Puncture",
+        "class": "Ranger",
+        "act": 1,
+        "quest": "Breaking Some Eggs(Mud Flats)"
+    },
+    {
+        "name": "Riposte",
+        "class": "Ranger",
+        "act": 1,
+        "quest": "Breaking Some Eggs(Mud Flats)"
+    },
+    {
+        "name": "Shrapnel Ballista",
+        "class": "Ranger",
+        "act": 1,
+        "quest": "Breaking Some Eggs(Mud Flats)"
+    },
+    {
+        "name": "Precision",
+        "class": "Ranger",
+        "act": 1,
+        "quest": "The Caged Brute(Kill Brutus)"
+    },
+    {
+        "name": "Mirror Arrow",
+        "class": "Ranger",
+        "act": 1,
+        "quest": "The Caged Brute(Kill Brutus)"
+    },
+    {
+        "name": "Elemental Hit",
+        "class": "Ranger",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Lightning Arrow",
+        "class": "Ranger",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Lightning Strike",
+        "class": "Ranger",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Poisonous Concoction",
+        "class": "Ranger",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Rain of Arrows",
+        "class": "Ranger",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Reave",
+        "class": "Ranger",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Siege Ballista",
+        "class": "Ranger",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Toxic Rain",
+        "class": "Ranger",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Blood Rage",
+        "class": "Ranger",
+        "act": 2,
+        "quest": "Intruders in Black(Kill Fidelitas)"
+    },
+    {
+        "name": "Ensnaring Arrow",
+        "class": "Ranger",
+        "act": 2,
+        "quest": "Intruders in Black(Kill Fidelitas)"
+    },
+    {
+        "name": "Frenzy",
+        "class": "Ranger",
+        "act": 2,
+        "quest": "Intruders in Black(Kill Fidelitas)"
+    },
+    {
+        "name": "Alchemist's Mark",
+        "class": "Ranger",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Assassin's Mark",
+        "class": "Ranger",
+        "act": 2,
+        "quest": "Intruders in Black(Kill Fidelitas)"
+    },
+    {
+        "name": "Despair",
+        "class": "Ranger",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Poacher's Mark",
+        "class": "Ranger",
+        "act": 2,
+        "quest": "Intruders in Black(Kill Fidelitas)"
+    },
+    {
+        "name": "Sniper's Mark",
+        "class": "Ranger",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Artillery Ballista",
+        "class": "Ranger",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Blade Flurry",
+        "class": "Ranger",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Blast Rain",
+        "class": "Ranger",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Explosive Concoction",
+        "class": "Ranger",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Scourge Arrow",
+        "class": "Ranger",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Storm Rain",
+        "class": "Ranger",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Tornado Shot",
+        "class": "Ranger",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Wild Strike",
+        "class": "Ranger",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Summon Chaos Golem",
+        "class": "Ranger",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Summon Flame Golem",
+        "class": "Ranger",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Summon Ice Golem",
+        "class": "Ranger",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Summon Lightning Golem",
+        "class": "Ranger",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Summon Stone Golem",
+        "class": "Ranger",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Tornado",
+        "class": "Ranger",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Spectral Throw",
+        "class": "Scion",
+        "act": 1,
+        "quest": "Starter Gem"
+    },
+    {
+        "name": "Lightning Tendrils",
+        "class": "Scion",
+        "act": 1,
+        "quest": "Enemy at the Gate (Kill Hillock)"
+    },
+    {
+        "name": "Molten Strike",
+        "class": "Scion",
+        "act": 1,
+        "quest": "Enemy at the Gate (Kill Hillock)"
+    },
+    {
+        "name": "Split Arrow",
+        "class": "Scion",
+        "act": 1,
+        "quest": "Enemy at the Gate (Kill Hillock)"
+    },
+    {
+        "name": "Splitting Steel",
+        "class": "Scion",
+        "act": 1,
+        "quest": "Enemy at the Gate (Kill Hillock)"
+    },
+    {
+        "name": "Bear Trap",
+        "class": "Scion",
+        "act": 1,
+        "quest": "Breaking Some Eggs(Mud Flats)"
+    },
+    {
+        "name": "Decoy Totem",
+        "class": "Scion",
+        "act": 1,
+        "quest": "Breaking Some Eggs(Mud Flats)"
+    },
+    {
+        "name": "Frost Bomb",
+        "class": "Scion",
+        "act": 1,
+        "quest": "Breaking Some Eggs(Mud Flats)"
+    },
+    {
+        "name": "Vigilant Strike",
+        "class": "Scion",
+        "act": 1,
+        "quest": "Breaking Some Eggs(Mud Flats)"
+    },
+    {
+        "name": "Clarity",
+        "class": "Scion",
+        "act": 1,
+        "quest": "The Caged Brute(Kill Brutus)"
+    },
+    {
+        "name": "Precision",
+        "class": "Scion",
+        "act": 1,
+        "quest": "The Caged Brute(Kill Brutus)"
+    },
+    {
+        "name": "Vitality",
+        "class": "Scion",
+        "act": 1,
+        "quest": "The Caged Brute(Kill Brutus)"
+    },
+    {
+        "name": "Blade Vortex",
+        "class": "Scion",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Exsanguinate",
+        "class": "Scion",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Ice Nova",
+        "class": "Scion",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Rain of Arrows",
+        "class": "Scion",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Scorching Ray",
+        "class": "Scion",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Static Strike",
+        "class": "Scion",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Storm Burst",
+        "class": "Scion",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Spectral Helix",
+        "class": "Scion",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Corrupting Fever",
+        "class": "Scion",
+        "act": 2,
+        "quest": "Intruders in Black(Kill Fidelitas)"
+    },
+    {
+        "name": "Frenzy",
+        "class": "Scion",
+        "act": 2,
+        "quest": "Intruders in Black(Kill Fidelitas)"
+    },
+    {
+        "name": "Bane",
+        "class": "Scion",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Conductivity",
+        "class": "Scion",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Elemental Weakness",
+        "class": "Scion",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Flammability",
+        "class": "Scion",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Frostbite",
+        "class": "Scion",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Punishment",
+        "class": "Scion",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Temporal Chains",
+        "class": "Scion",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Vulnerability",
+        "class": "Scion",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Blade Flurry",
+        "class": "Scion",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Bladefall",
+        "class": "Scion",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Cyclone",
+        "class": "Scion",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Divine Ire",
+        "class": "Scion",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Flameblast",
+        "class": "Scion",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Hexblast",
+        "class": "Scion",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Reap",
+        "class": "Scion",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Soulrend",
+        "class": "Scion",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Tectonic Slam",
+        "class": "Scion",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Tornado Shot",
+        "class": "Scion",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Flame Link",
+        "class": "Scion",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Frost Shield",
+        "class": "Scion",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Intuitive Link",
+        "class": "Scion",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Soul Link",
+        "class": "Scion",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Summon Chaos Golem",
+        "class": "Scion",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Summon Flame Golem",
+        "class": "Scion",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Summon Ice Golem",
+        "class": "Scion",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Summon Lightning Golem",
+        "class": "Scion",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Summon Stone Golem",
+        "class": "Scion",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Void Sphere",
+        "class": "Scion",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Viper Strike",
+        "class": "Shadow",
+        "act": 1,
+        "quest": "Starter Gem"
+    },
+    {
+        "name": "Blight",
+        "class": "Shadow",
+        "act": 1,
+        "quest": "Enemy at the Gate (Kill Hillock)"
+    },
+    {
+        "name": "Cobra Lash",
+        "class": "Shadow",
+        "act": 1,
+        "quest": "Enemy at the Gate (Kill Hillock)"
+    },
+    {
+        "name": "Ethereal Knives",
+        "class": "Shadow",
+        "act": 1,
+        "quest": "Enemy at the Gate (Kill Hillock)"
+    },
+    {
+        "name": "Explosive Trap",
+        "class": "Shadow",
+        "act": 1,
+        "quest": "Enemy at the Gate (Kill Hillock)"
+    },
+    {
+        "name": "Freezing Pulse",
+        "class": "Shadow",
+        "act": 1,
+        "quest": "Enemy at the Gate (Kill Hillock)"
+    },
+    {
+        "name": "Stormblast Mine",
+        "class": "Shadow",
+        "act": 1,
+        "quest": "Enemy at the Gate (Kill Hillock)"
+    },
+    {
+        "name": "Bear Trap",
+        "class": "Shadow",
+        "act": 1,
+        "quest": "Breaking Some Eggs(Mud Flats)"
+    },
+    {
+        "name": "Contagion",
+        "class": "Shadow",
+        "act": 1,
+        "quest": "Breaking Some Eggs(Mud Flats)"
+    },
+    {
+        "name": "Detonate Dead",
+        "class": "Shadow",
+        "act": 1,
+        "quest": "Breaking Some Eggs(Mud Flats)"
+    },
+    {
+        "name": "Orb of Storms",
+        "class": "Shadow",
+        "act": 1,
+        "quest": "Breaking Some Eggs(Mud Flats)"
+    },
+    {
+        "name": "Riposte",
+        "class": "Shadow",
+        "act": 1,
+        "quest": "Breaking Some Eggs(Mud Flats)"
+    },
+    {
+        "name": "Clarity",
+        "class": "Shadow",
+        "act": 1,
+        "quest": "The Caged Brute(Kill Brutus)"
+    },
+    {
+        "name": "Precision",
+        "class": "Shadow",
+        "act": 1,
+        "quest": "The Caged Brute(Kill Brutus)"
+    },
+    {
+        "name": "Siphoning Trap",
+        "class": "Shadow",
+        "act": 1,
+        "quest": "The Caged Brute(Kill Brutus)"
+    },
+    {
+        "name": "Unearth",
+        "class": "Shadow",
+        "act": 1,
+        "quest": "The Caged Brute(Kill Brutus)"
+    },
+    {
+        "name": "Blade Vortex",
+        "class": "Shadow",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Essence Drain",
+        "class": "Shadow",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Fire Trap",
+        "class": "Shadow",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Icicle Mine",
+        "class": "Shadow",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Lightning Trap",
+        "class": "Shadow",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Reave",
+        "class": "Shadow",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Volatile Dead",
+        "class": "Shadow",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Voltaxic Burst",
+        "class": "Shadow",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Arcane Cloak",
+        "class": "Shadow",
+        "act": 2,
+        "quest": "Intruders in Black(Kill Fidelitas)"
+    },
+    {
+        "name": "Blade Blast",
+        "class": "Shadow",
+        "act": 2,
+        "quest": "Intruders in Black(Kill Fidelitas)"
+    },
+    {
+        "name": "Blood Rage",
+        "class": "Shadow",
+        "act": 2,
+        "quest": "Intruders in Black(Kill Fidelitas)"
+    },
+    {
+        "name": "Cold Snap",
+        "class": "Shadow",
+        "act": 2,
+        "quest": "Intruders in Black(Kill Fidelitas)"
+    },
+    {
+        "name": "Assassin's Mark",
+        "class": "Shadow",
+        "act": 2,
+        "quest": "Intruders in Black(Kill Fidelitas)"
+    },
+    {
+        "name": "Bane",
+        "class": "Shadow",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Conductivity",
+        "class": "Shadow",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Despair",
+        "class": "Shadow",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Elemental Weakness",
+        "class": "Shadow",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Enfeeble",
+        "class": "Shadow",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Flammability",
+        "class": "Shadow",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Frostbite",
+        "class": "Shadow",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Plague Bearer",
+        "class": "Shadow",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Temporal Chains",
+        "class": "Shadow",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Ball Lightning",
+        "class": "Shadow",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Blade Flurry",
+        "class": "Shadow",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Bladefall",
+        "class": "Shadow",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Cremation",
+        "class": "Shadow",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Flamethrower Trap",
+        "class": "Shadow",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Hexblast",
+        "class": "Shadow",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Lightning Spire Trap",
+        "class": "Shadow",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Pestilent Strike",
+        "class": "Shadow",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Pyroclast Mine",
+        "class": "Shadow",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Seismic Trap",
+        "class": "Shadow",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Soulrend",
+        "class": "Shadow",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Ambush",
+        "class": "Shadow",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Frost Shield",
+        "class": "Shadow",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Summon Chaos Golem",
+        "class": "Shadow",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Summon Flame Golem",
+        "class": "Shadow",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Summon Ice Golem",
+        "class": "Shadow",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Summon Lightning Golem",
+        "class": "Shadow",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Summon Stone Golem",
+        "class": "Shadow",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Tornado",
+        "class": "Shadow",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Void Sphere",
+        "class": "Shadow",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Glacial Hammer",
+        "class": "Templar",
+        "act": 1,
+        "quest": "Starter Gem"
+    },
+    {
+        "name": "Frostbolt",
+        "class": "Templar",
+        "act": 1,
+        "quest": "Enemy at the Gate (Kill Hillock)"
+    },
+    {
+        "name": "Lightning Tendrils",
+        "class": "Templar",
+        "act": 1,
+        "quest": "Enemy at the Gate (Kill Hillock)"
+    },
+    {
+        "name": "Molten Strike",
+        "class": "Templar",
+        "act": 1,
+        "quest": "Enemy at the Gate (Kill Hillock)"
+    },
+    {
+        "name": "Purifying Flame",
+        "class": "Templar",
+        "act": 1,
+        "quest": "Enemy at the Gate (Kill Hillock)"
+    },
+    {
+        "name": "Rolling Magma",
+        "class": "Templar",
+        "act": 1,
+        "quest": "Enemy at the Gate (Kill Hillock)"
+    },
+    {
+        "name": "Smite",
+        "class": "Templar",
+        "act": 1,
+        "quest": "Enemy at the Gate (Kill Hillock)"
+    },
+    {
+        "name": "Ancestral Protector",
+        "class": "Templar",
+        "act": 1,
+        "quest": "Breaking Some Eggs(Mud Flats)"
+    },
+    {
+        "name": "Flame Wall",
+        "class": "Templar",
+        "act": 1,
+        "quest": "Breaking Some Eggs(Mud Flats)"
+    },
+    {
+        "name": "Frost Bomb",
+        "class": "Templar",
+        "act": 1,
+        "quest": "Breaking Some Eggs(Mud Flats)"
+    },
+    {
+        "name": "Holy Flame Totem",
+        "class": "Templar",
+        "act": 1,
+        "quest": "Breaking Some Eggs(Mud Flats)"
+    },
+    {
+        "name": "Summon Holy Relic",
+        "class": "Templar",
+        "act": 1,
+        "quest": "Breaking Some Eggs(Mud Flats)"
+    },
+    {
+        "name": "Vigilant Strike",
+        "class": "Templar",
+        "act": 1,
+        "quest": "Breaking Some Eggs(Mud Flats)"
+    },
+    {
+        "name": "Clarity",
+        "class": "Templar",
+        "act": 1,
+        "quest": "The Caged Brute(Kill Brutus)"
+    },
+    {
+        "name": "Vitality",
+        "class": "Templar",
+        "act": 1,
+        "quest": "The Caged Brute(Kill Brutus)"
+    },
+    {
+        "name": "Absolution",
+        "class": "Templar",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Blazing Salvo",
+        "class": "Templar",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Ice Nova",
+        "class": "Templar",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Manabond",
+        "class": "Templar",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Scorching Ray",
+        "class": "Templar",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Searing Bond",
+        "class": "Templar",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Static Strike",
+        "class": "Templar",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Storm Burst",
+        "class": "Templar",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Storm Brand",
+        "class": "Templar",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Storm Call",
+        "class": "Templar",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Wintertide Brand",
+        "class": "Templar",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Arcane Cloak",
+        "class": "Templar",
+        "act": 2,
+        "quest": "Intruders in Black(Kill Fidelitas)"
+    },
+    {
+        "name": "Brand Recall",
+        "class": "Templar",
+        "act": 2,
+        "quest": "Intruders in Black(Kill Fidelitas)"
+    },
+    {
+        "name": "Wave of Conviction",
+        "class": "Templar",
+        "act": 2,
+        "quest": "Intruders in Black(Kill Fidelitas)"
+    },
+    {
+        "name": "Battlemage's Cry",
+        "class": "Templar",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Conductivity",
+        "class": "Templar",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Elemental Weakness",
+        "class": "Templar",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Enfeeble",
+        "class": "Templar",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Flammability",
+        "class": "Templar",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Frostbite",
+        "class": "Templar",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Punishment",
+        "class": "Templar",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Vulnerability",
+        "class": "Templar",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Armageddon Brand",
+        "class": "Templar",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Consecrated Path",
+        "class": "Templar",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Divine Ire",
+        "class": "Templar",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Dominating Blow",
+        "class": "Templar",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Firestorm",
+        "class": "Templar",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Flameblast",
+        "class": "Templar",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Ice Crash",
+        "class": "Templar",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Penance Brand",
+        "class": "Templar",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Shock Nova",
+        "class": "Templar",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Shockwave Totem",
+        "class": "Templar",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Stormbind",
+        "class": "Templar",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Frost Shield",
+        "class": "Templar",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Frozen Legion",
+        "class": "Templar",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Hydrosphere",
+        "class": "Templar",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Sigil of Power",
+        "class": "Templar",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Summon Carrion Golem",
+        "class": "Templar",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Summon Chaos Golem",
+        "class": "Templar",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Summon Flame Golem",
+        "class": "Templar",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Summon Ice Golem",
+        "class": "Templar",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Summon Lightning Golem",
+        "class": "Templar",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Summon Stone Golem",
+        "class": "Templar",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Void Sphere",
+        "class": "Templar",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Fireball",
+        "class": "Witch",
+        "act": 1,
+        "quest": "Starter Gem"
+    },
+    {
+        "name": "Blight",
+        "class": "Witch",
+        "act": 1,
+        "quest": "Enemy at the Gate (Kill Hillock)"
+    },
+    {
+        "name": "Freezing Pulse",
+        "class": "Witch",
+        "act": 1,
+        "quest": "Enemy at the Gate (Kill Hillock)"
+    },
+    {
+        "name": "Kinetic Bolt",
+        "class": "Witch",
+        "act": 1,
+        "quest": "Enemy at the Gate (Kill Hillock)"
+    },
+    {
+        "name": "Lightning Tendrils",
+        "class": "Witch",
+        "act": 1,
+        "quest": "Enemy at the Gate (Kill Hillock)"
+    },
+    {
+        "name": "Raise Zombie",
+        "class": "Witch",
+        "act": 1,
+        "quest": "Enemy at the Gate (Kill Hillock)"
+    },
+    {
+        "name": "Rolling Magma",
+        "class": "Witch",
+        "act": 1,
+        "quest": "Enemy at the Gate (Kill Hillock)"
+    },
+    {
+        "name": "Contagion",
+        "class": "Witch",
+        "act": 1,
+        "quest": "Breaking Some Eggs(Mud Flats)"
+    },
+    {
+        "name": "Detonate Dead",
+        "class": "Witch",
+        "act": 1,
+        "quest": "Breaking Some Eggs(Mud Flats)"
+    },
+    {
+        "name": "Flame Wall",
+        "class": "Witch",
+        "act": 1,
+        "quest": "Breaking Some Eggs(Mud Flats)"
+    },
+    {
+        "name": "Frost Bomb",
+        "class": "Witch",
+        "act": 1,
+        "quest": "Breaking Some Eggs(Mud Flats)"
+    },
+    {
+        "name": "Orb of Storms",
+        "class": "Witch",
+        "act": 1,
+        "quest": "Breaking Some Eggs(Mud Flats)"
+    },
+    {
+        "name": "Summon Raging Spirit",
+        "class": "Witch",
+        "act": 1,
+        "quest": "Breaking Some Eggs(Mud Flats)"
+    },
+    {
+        "name": "Clarity",
+        "class": "Witch",
+        "act": 1,
+        "quest": "The Caged Brute(Kill Brutus)"
+    },
+    {
+        "name": "Summon Skeletons",
+        "class": "Witch",
+        "act": 1,
+        "quest": "The Caged Brute(Kill Brutus)"
+    },
+    {
+        "name": "Wither",
+        "class": "Witch",
+        "act": 1,
+        "quest": "The Caged Brute(Kill Brutus)"
+    },
+    {
+        "name": "Arc",
+        "class": "Witch",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Blazing Salvo",
+        "class": "Witch",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Creeping Frost",
+        "class": "Witch",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Essence Drain",
+        "class": "Witch",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Flesh Offering",
+        "class": "Witch",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Ice Nova",
+        "class": "Witch",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Manabond",
+        "class": "Witch",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Scorching Ray",
+        "class": "Witch",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Volatile Dead",
+        "class": "Witch",
+        "act": 1,
+        "quest": "The Siren's Cadence(Cavern of Wrath WP)"
+    },
+    {
+        "name": "Arcane Cloak",
+        "class": "Witch",
+        "act": 2,
+        "quest": "Intruders in Black(Kill Fidelitas)"
+    },
+    {
+        "name": "Cold Snap",
+        "class": "Witch",
+        "act": 2,
+        "quest": "Intruders in Black(Kill Fidelitas)"
+    },
+    {
+        "name": "Desecrate",
+        "class": "Witch",
+        "act": 2,
+        "quest": "Intruders in Black(Kill Fidelitas)"
+    },
+    {
+        "name": "Galvanic Field",
+        "class": "Witch",
+        "act": 2,
+        "quest": "Intruders in Black(Kill Fidelitas)"
+    },
+    {
+        "name": "Bane",
+        "class": "Witch",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Conductivity",
+        "class": "Witch",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Convocation",
+        "class": "Witch",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Despair",
+        "class": "Witch",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Elemental Weakness",
+        "class": "Witch",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Enfeeble",
+        "class": "Witch",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Flammability",
+        "class": "Witch",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Frostbite",
+        "class": "Witch",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Temporal Chains",
+        "class": "Witch",
+        "act": 3,
+        "quest": "Lost in Love(Find Tolman)Maramoa"
+    },
+    {
+        "name": "Ball Lightning",
+        "class": "Witch",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Crackling Lance",
+        "class": "Witch",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Cremation",
+        "class": "Witch",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Eye of Winter",
+        "class": "Witch",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Firestorm",
+        "class": "Witch",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Flameblast",
+        "class": "Witch",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Glacial Cascade",
+        "class": "Witch",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Hexblast",
+        "class": "Witch",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Kinetic Blast",
+        "class": "Witch",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Lightning Conduit",
+        "class": "Witch",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Raise Spectre",
+        "class": "Witch",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Snipe",
+        "class": "Ranger",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Soulrend",
+        "class": "Witch",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Stormbind",
+        "class": "Witch",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Summon Reaper",
+        "class": "Witch",
+        "act": 3,
+        "quest": "Sever the Right Hand(Kill Gravicius)"
+    },
+    {
+        "name": "Frost Shield",
+        "class": "Witch",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Hydrosphere",
+        "class": "Witch",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Sigil of Power",
+        "class": "Witch",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Summon Carrion Golem",
+        "class": "Witch",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Summon Chaos Golem",
+        "class": "Witch",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Summon Flame Golem",
+        "class": "Witch",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Summon Ice Golem",
+        "class": "Witch",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Summon Lightning Golem",
+        "class": "Witch",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Summon Stone Golem",
+        "class": "Witch",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    },
+    {
+        "name": "Void Sphere",
+        "class": "Witch",
+        "act": 4,
+        "quest": "Breaking the Seal(Open the Mines)"
+    }
+    ]
+    }

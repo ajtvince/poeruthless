@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react';
 import useState from 'react-usestateref';
 import './stylesheets/GemGuide.css';
 import questData from './data/datatemp.json';
+import gemData from './data/gemData.json';
 import GemCard from './components/GemCard';
 import GemThumb from './components/GemThumb';
 //show how to get the skills available from quests
@@ -18,6 +19,7 @@ export default function GemGuide() {
   const [muleGemsFiltered, setMuleGemsFiltered, muleGemsFilteredRef] = useState([]);
   const [actCount, setActCount, actCountRef] = useState([]);
   const [allGems, setAllGems] = useState(questData.questSkills);
+  const [allGemData, setGemData] = useState(gemData);
   const [buildGems, setBuildGems] = useState([]);
   const [charsNeeded, setCharsNeeded, charsNeededRef] = useState({});
   const [searchTerm, setSearchTerm] = useState('');
@@ -25,6 +27,17 @@ export default function GemGuide() {
 
   //set constant to hold gem json data
   const questGemArr = questData.questSkills;
+
+  allGems.forEach( gem => {
+    allGemData.forEach( gem2 => {
+      if (gem.name === gem2.name) {
+        gem.types = gem2.gemTags;
+        //console.log(gem);
+      }
+    });
+  });
+
+
 
   //set searchTerm state to value in input box
   function editSearchTerm(e) {
@@ -514,12 +527,14 @@ export default function GemGuide() {
         });
         classActArr.push(x);
       });
+      const allClassActArr = classActArr;
       //console.log(charsNeededRef.current);
       //console.log(classActArr);
       //add notification about duplicate class WIP WIP
       if (duplicateClass) {
-        //console.log(Object.entries(charsNeeded));
+        let tempDupCount = 0;
         muleGemsFilteredRef.current.forEach( gem1 => {
+          //console.log('resetFirstArr');
           muleGemsFilteredRef.current.forEach( gem2 => {
             //console.log(haveSameClassAndQuest2(gem1, gem2));
             if (haveSameClassAndQuest2(gem1, gem2)) {
@@ -527,14 +542,19 @@ export default function GemGuide() {
               let tempCharArr = Object.keys(charsNeededRef.current);
               for (let x=0; x < Object.keys(charsNeededRef.current).length; x++) {
                 if (tempCharArr[x] === gem1.class) {
-                  //console.log('duplicate found add extra class');
-                  classActArr[x] += '*';
+                  tempDupCount++;
+                  //console.log('duplicate found');  
+                  if (tempDupCount % 2 === 0) {      
+                    //console.log(tempDupCount);
+                    classActArr[x] = allClassActArr[x] + ' (x' + (tempDupCount / 2 + 1) + ')';
+                  }
                 }
               }
             }
           });
         });
       }
+      //console.log(classActArr);
       setActCount(classActArr);
     } else {
       setMuleGemsFiltered([]);
@@ -573,6 +593,7 @@ export default function GemGuide() {
 
   //fill initial selectable gems list, and update based on search query
   useEffect(() => {
+    //console.log(allGems);
     let muleGemsFiltered = allGems.filter(gem => (gem.name.toLowerCase().includes(searchTerm.toLowerCase()) || gem.types?.some(obj => obj.toLowerCase().includes(searchTerm.toLowerCase()))));
     //console.log(allGems.filter( gem => gem.types?.some(obj => obj.toLowerCase().includes(searchTerm.toLowerCase()))));
     muleGemsFiltered = muleGemsFiltered.sort((a, b) => (a.name > b.name ? 1 : -1));
@@ -582,12 +603,21 @@ export default function GemGuide() {
   return (
     <div className='pageContainer'>
       <div className='pageName'>Ruthless Skill Gem Mule Guide</div>
-      <p id='gemPageName'><em>(This tool contains a list of all skill gems that are available as quest rewards through the acts. It will calculate the optimal path for getting all the selected skill gems with the least amount of characters and total leveling)</em></p>
+      <p id='gemPageName'><em>(This tool contains a list of all skill gems that are available as quest rewards through the acts in ruthless. You can search by gem name or type.)</em></p>
       <div id='searchGems'>
         <div id='searchGemsLabel'>Search:</div>
         <input type='text' value={searchTerm} onChange={editSearchTerm} />
       </div>
-      <div id='selectedGemContainer'><div id='sGemContainer'>{
+      <div id='selectGemTypeBtns'>
+          <button onClick={() => { if(searchTerm.toLowerCase() === 'melee') {setSearchTerm('')} else {setSearchTerm('melee')}}}>Melee</button>
+          <button onClick={() => { if(searchTerm.toLowerCase() === 'bow') {setSearchTerm('')} else {setSearchTerm('bow')}}}>Bow</button>
+          <button onClick={() => { if(searchTerm.toLowerCase() === 'attack') {setSearchTerm('')} else {setSearchTerm('attack')}}}>Attack</button>
+          <button onClick={() => { if(searchTerm.toLowerCase() === 'spell') {setSearchTerm('')} else {setSearchTerm('spell')}}}>Spell</button>
+          <button onClick={() => { if(searchTerm.toLowerCase() === 'aoe') {setSearchTerm('')} else {setSearchTerm('aoe')}}}>AoE</button>
+          <button onClick={() => { if(searchTerm.toLowerCase() === 'minion') {setSearchTerm('')} else {setSearchTerm('minion')}}}>Minion</button>
+      </div>
+      <div id='selectedGemContainer'>
+        <div id='sGemContainer'>{
         buildGems.map(gem => <GemThumb gem={gem} buildList={muleGemsFilteredRef.current} selectGemFromList={selectGemFromList}/>)
       }</div></div>
       <div id='buildGems'>
@@ -604,7 +634,7 @@ export default function GemGuide() {
         </div>
         <div id='uniqueClassCount'></div>
         <div className='buildGemsContainer'>
-          <div className='buildPathHeader'>Optimal mule path <span style={{fontSize:'.6rem', fontWeight:'400', display:'block'}}>(** after the number of an act indicates a duplicate character is required)</span></div>
+          <div className='buildPathHeader'>Optimal mule path <span style={{fontSize:'.6rem', fontWeight:'400', display:'block'}}>(x# after the act number indicates the # of duplicate characters needed)</span></div>
           <div>{Object.entries(charsNeeded).map( (char, index) => 
           <div class='charNeededContainer'>
             <div class='charNeededName'>{char[0]}</div>
