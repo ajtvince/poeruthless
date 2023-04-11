@@ -220,6 +220,36 @@ export default function GemGuide() {
     return obj1.class === obj2.class && obj1.quest === obj2.quest && obj1.name !== obj2.name;
   }
 
+  function getArrayWithoutQuestDupe(currArr) {
+    let tempCheckArr = [];
+    let arrCount = 0;
+    //console.log(highestSingleClassCountTotalArr);
+    currArr.forEach( arr2 => {
+      let tempCount1 = 0;
+      for (let i=0; i<arr2.length; i++) {
+        //console.log(arr2.some(obj => haveSameClassAndQuest2(obj, arr2[i])));
+        if (arr2.some(obj => haveSameClassAndQuest2(obj, arr2[i]))) {
+          //console.log(arr2[i]);
+          tempCount1++;
+          if (tempCount1 > 1) {
+            tempCheckArr.push(arrCount);
+            i = arr2.length;
+            //console.log('push ' + arrCount);
+          }
+        }
+      }
+      arrCount++;
+    });
+
+    tempCheckArr.sort((a, b) => b - a);
+    tempCheckArr.forEach( num => {
+      let tempNum = num;
+      currArr.splice(tempNum, 1);
+    });
+
+    return currArr;
+  }
+
   //process optimal path
   function getRequiredMules(data) {
     
@@ -227,8 +257,6 @@ export default function GemGuide() {
     
       let selectedGems = data;
       let foundQuestGems = [];
-      //console.log('data passed to getRequiredMules:');
-      //console.log(selectedGems);
       setGem(selectedGems);
 
       selectedGems.forEach(gem => {
@@ -239,24 +267,23 @@ export default function GemGuide() {
         });
       });
 
-      //create list of non-duplicate gems
+      //create copy list of gems
       let gemListCopy = Object.assign([], foundQuestGems);
-      let uniques = [];
-      gemListCopy.forEach(ungem => {
-        let x = gemListCopy.filter(ugem => ugem.name === ungem.name).length;
-        if (x === 1) {
-          uniques.push(ungem);
-        }
-      });
-
-      //console.log(foundQuestGems);
-      //console.log(uniques);
       let newFunc = uniqueNameCombinations(foundQuestGems);
       let backupFunc = Object.assign([], newFunc);
-      //console.log(backupFunc);
+
+      //console.log(newFunc);
+      let noDupeArr = getArrayWithoutQuestDupe(newFunc);
+      //console.log(noDupeArr);
+      let duplicateClass = false;
+      //check if noDupeArr returned empty or not
+      if(noDupeArr.length === 0) {
+        noDupeArr = Object.assign([], backupFunc);
+        duplicateClass = true;
+      }
 
       let lowestCount = Infinity;
-      newFunc.forEach( arr => {
+      noDupeArr.forEach( arr => {
         let tempCount = countUniqueClasses(arr);
         if (tempCount < lowestCount) {
           lowestCount = tempCount;
@@ -264,71 +291,62 @@ export default function GemGuide() {
       });
       //console.log(lowestCount);
 
-      let testArr = [];
-      let arrCount = 0;
-      newFunc.forEach( arr => {
-        for (let i=0; i<arr.length; i++) {
-          if (arr.some(obj => haveSameClassAndQuest2(obj, arr[i]))) {
-            testArr.push(arrCount);
-            i = arr.length;
-          }
-        }
-        arrCount++;
-      });
-
-      //console.log(testArr);
-      testArr.sort((a, b) => b - a);
-      testArr.forEach( num => {
-        let tempNum = num;
-        newFunc.splice(tempNum, 1);
-        //console.log(newFunc);
-      })
-      //console.log(newFunc);
-      //here breaks if need more than one of same class
-      let duplicateClass = false;
-      if(newFunc.length === 0) {
-        //console.log('you will need duplicate of the same character');
-        //console.log(backupFunc);
-        newFunc = backupFunc;
-        duplicateClass = true;
-      }
+      //create new arr with lowest count of unique classes
       let lowestDiffClassArr = [];
-      newFunc.forEach(arr => {
+      noDupeArr.forEach(arr => {
         if(countUniqueClasses(arr) === lowestCount) {
           lowestDiffClassArr.push(arr);
         }
       });
-      if (lowestDiffClassArr.length === 0) {
-        lowestCount += 1;
-        newFunc.forEach(arr => {
-          if(countUniqueClasses(arr) === lowestCount) {
-            lowestDiffClassArr.push(arr);
-          }
-        });
-      }
 
+      //console.log(noDupeArr);
       //console.log(lowestDiffClassArr);
-      let highestSingleClassCountTotalArr = [];
-      let highestClassCount = 0;
-
-      if (lowestDiffClassArr.length === 1) {
-        for (let i=0; i<lowestDiffClassArr[0].length; i++) {
-          if (lowestDiffClassArr[0].some(obj => haveSameClassAndQuest2(obj, lowestDiffClassArr[0][i]))) {
-            //console.log('dupe found in single');
-            lowestDiffClassArr = Object.assign([], newFunc);
-            //console.log(newFunc);
-            i = lowestDiffClassArr[0].length;
+      let optimalPathFound = false;
+      //if no arrays with unique classes at lowest count, increase number of unique classes by 1 until count found
+      if (lowestDiffClassArr.length === 0) {
+        let foundUniqueStatus = false;
+        while(!foundUniqueStatus) {
+          lowestCount += 1;
+          let tempUStatus = false;
+          if (lowestCount > noDupeArr[0].length) {
+            //console.log('could not determine path/requires duplicates');
+            setMuleGemsFiltered(noDupeArr[0]);
+            setMuleGems(foundQuestGems);
+            optimalPathFound = true;
           }
+          noDupeArr.forEach(arr => {
+            if(countUniqueClasses(arr) === lowestCount) {
+              lowestDiffClassArr.push(arr);
+              tempUStatus = true;
+            }
+          });
+          if (tempUStatus) {
+            foundUniqueStatus = true;
+          }
+        }
+      //if arrays with unique classes is only 1, double check
+      } else if(lowestDiffClassArr.length === 1) {
+        
+        //console.log(lowestDiffClassArr);
+        let tempLowestDiffClassArr = getArrayWithoutQuestDupe(lowestDiffClassArr);
+        
+        if (tempLowestDiffClassArr.length === 1) {
+          //console.log('only one option');
+          setMuleGemsFiltered(lowestDiffClassArr[0]);
+          setMuleGems(foundQuestGems);
+          optimalPathFound = true;
+        } else {
+          lowestDiffClassArr = Object.assign([], noDupeArr);
         }
       }
 
-      if (lowestDiffClassArr.length === 1) {
-        //console.log('only one option');
-        setMuleGemsFiltered(lowestDiffClassArr[0]);
-        setMuleGems(foundQuestGems);
-      } else {
+      //run through logic if path not found
+      if (!optimalPathFound) {
+
+        let highestSingleClassCountTotalArr = [];
+        let highestClassCount = 0;
+        //get the total count of the most common class
         lowestDiffClassArr.forEach(arr => {
-          //get the total count of the most common class
           let x = countClassNames(arr);
           let z = Object.values(x);
           let max = Math.max(...z);
@@ -336,7 +354,7 @@ export default function GemGuide() {
             highestClassCount = max;
           }
         });
-        //console.log(highestClassCount);
+        //get array filled with paths with highest single class count
         lowestDiffClassArr.forEach(arr => {
           let x = countClassNames(arr);
           let z = Object.values(x);
@@ -346,177 +364,96 @@ export default function GemGuide() {
           }
         });
         //console.log(highestSingleClassCountTotalArr);
+        //console.log(highestSingleClassCountTotalArr);
+        //if only one class, set path
         if(highestSingleClassCountTotalArr.length === 1) {
-          //console.log('equals one');
-          let tempCheckArr = [];
-          let arrCount = 0;
+          //console.log('highest class count is only 1 path');
           //console.log(highestSingleClassCountTotalArr);
-          highestSingleClassCountTotalArr.forEach( arr2 => {
-            let tempArrCount = 0;
-            for (let i=0; i<arr2.length; i++) {
-              //console.log(arr2.some(obj => haveSameClassAndQuest2(obj, arr2[i])));
-              if (arr2.some(obj => haveSameClassAndQuest2(obj, arr2[i]))) {
-                tempArrCount++;
-                if (tempArrCount > 1) {
-                  tempCheckArr.push(arrCount);
-                  i = arr2.length;
-                }
-              }
-            }
-            arrCount++;
-          });
-    
+          let tempCheckArr = getArrayWithoutQuestDupe(highestSingleClassCountTotalArr);
           //console.log(tempCheckArr);
-          tempCheckArr.sort((a, b) => b - a);
-          tempCheckArr.forEach( num => {
-            let tempNum = num;
-            highestSingleClassCountTotalArr.splice(tempNum, 1);
-          });
-
-          if(highestSingleClassCountTotalArr.length === 0) {
-            setMuleGemsFiltered(lowestDiffClassArr[0]);
-            setMuleGems(foundQuestGems);
-          } else {
+          if(tempCheckArr.length !== 0) {
             setMuleGemsFiltered(highestSingleClassCountTotalArr[0]);
             setMuleGems(foundQuestGems);
-          }
-
-          /**
-          if(highestSingleClassCountTotalArr.length === 0) {
-            //console.log('0');
-            let hscStatus = true;
-            while (hscStatus) {
-              lowestDiffClassArr.forEach(arr => {
-                let tempPC = 0;
-                let x = countClassNames(arr);
-                let z = Object.values(x);
-                let max = Math.max(...z);
-                if (max === highestClassCount) {
-                  for(let p=0;p<arr.length;p++) {
-                    if(arr.some( obj => haveSameClassAndQuest2(obj, arr[p]))){
-                      tempPC++;
-                      if (tempPC > 1) {
-                        highestClassCount--;
-                        p = arr.length;
-                      }
-                    }
-                  }
-                  if (tempPC === 1) {
-                    setMuleGemsFiltered(arr);
-                    setMuleGems(foundQuestGems);
-                    hscStatus = false;
-                  } else {
-                    highestClassCount--;
-                  }
-                }
-              });
-            }
+            optimalPathFound = true;
           } else {
-            setMuleGemsFiltered(highestSingleClassCountTotalArr[0]);
-            setMuleGems(foundQuestGems);
-          }**/
-        } else {
-          if (mainClassRef.current !== '') {
-            let maxFound = false;
-            let mainClassFound = false;
-            highestSingleClassCountTotalArr.forEach( arr => {
-              let checkClass = countClassNames(arr);
-              //console.log(typeof checkClass[mainClassRef.current]);
-              //code breaking here if removing gem with mainclass selected and it is last gem for mainclass and multiple possible options remain
-              if (typeof checkClass[mainClassRef.current] !== 'undefined') {
-                mainClassFound = true;
-                if(checkClass[mainClassRef.current] === highestClassCount) {
-                  setMuleGemsFiltered(arr);
-                  setMuleGems(foundQuestGems);
-                  maxFound = true;
-                }
-              }
-            });
-            //console.log('next up while loop');
-            //console.log(mainClassFound);
-            while (!maxFound && mainClassFound) {
-              for (let x=highestClassCount-1; x>0; x--) {
-                highestSingleClassCountTotalArr.forEach( arr => {
-                  let checkClass = countClassNames(arr);
-                  //console.log(checkClass[mainClassRef.current]);
-                  if(checkClass[mainClassRef.current] === x) {
-                    setMuleGemsFiltered(arr);
-                    setMuleGems(foundQuestGems);
-                    maxFound = true;
-                  }
-                });
-                if(!maxFound && x===1) {
-                  maxFound = true;
-                }
-              }
-            }
-            if (!mainClassFound) {
-              //console.log('selected class not found in any array')
-              //console.log(highestSingleClassCountTotalArr);
-              let tempCheckArr = [];
-              let arrCount = 0;
-              //console.log(highestSingleClassCountTotalArr);
-              highestSingleClassCountTotalArr.forEach( arr2 => {
-                for (let i=0; i<arr2.length; i++) {
-                  //console.log(arr2.some(obj => haveSameClassAndQuest2(obj, highestSingleClassCountTotalArr[arrCount][i])));
-                  if (arr2.some(obj => haveSameClassAndQuest2(obj, highestSingleClassCountTotalArr[arrCount][i]))) {
-                    tempCheckArr.push(arrCount);
-                    i = arr2.length;
-                  }
-                }
-                arrCount++;
-              });
-        
-              //console.log(tempCheckArr);
-              tempCheckArr.sort((a, b) => b - a);
-              tempCheckArr.forEach( num => {
-                let tempNum = num;
-                highestSingleClassCountTotalArr.splice(tempNum, 1);
-              });
-              setMuleGemsFiltered(highestSingleClassCountTotalArr[0]);
-              setMuleGems(foundQuestGems);
-            }
-          } else {
-            let tempCheckArr = [];
-            let arrCount = 0;
-            //console.log(highestSingleClassCountTotalArr);
-            highestSingleClassCountTotalArr.forEach( arr2 => {
-              let tempCount1 = 0;
-              for (let i=0; i<arr2.length; i++) {
-                //console.log(arr2.some(obj => haveSameClassAndQuest2(obj, arr2[i])));
-                if (arr2.some(obj => haveSameClassAndQuest2(obj, arr2[i]))) {
-                  //console.log(arr2[i]);
-                  tempCount1++;
-                  if (tempCount1 > 1) {
-                    tempCheckArr.push(arrCount);
-                    i = arr2.length;
-                    //console.log('push ' + arrCount);
-                  }
-                }
-              }
-              arrCount++;
-            });
-      
-            //console.log(highestSingleClassCountTotalArr);
-            let tempHighSing = Object.assign([],highestSingleClassCountTotalArr);
-            //console.log(tempCheckArr);
-            tempCheckArr.sort((a, b) => b - a);
-            tempCheckArr.forEach( num => {
-              let tempNum = (num);
-              //console.log(tempNum);
-              tempHighSing.splice(tempNum, 1);
-            });
-            //console.log(tempHighSing);
-            setMuleGemsFiltered(tempHighSing[0]);
-            setMuleGems(foundQuestGems);
+            highestSingleClassCountTotalArr = Object.assign([], lowestDiffClassArr);
           }
         }
+
+        if(mainClassRef.current !== '' && !optimalPathFound) {
+          let maxFound = false;
+          let mainClassFound = false;
+          highestSingleClassCountTotalArr.forEach( arr => {
+            let checkClass = countClassNames(arr);
+            //console.log(typeof checkClass[mainClassRef.current]);
+            //code breaking here if removing gem with mainclass selected and it is last gem for mainclass and multiple possible options remain
+            if (typeof checkClass[mainClassRef.current] !== 'undefined') {
+              mainClassFound = true;
+              if(checkClass[mainClassRef.current] === highestClassCount) {
+                setMuleGemsFiltered(arr);
+                setMuleGems(foundQuestGems);
+                optimalPathFound = true;
+                maxFound = true;
+              }
+            }
+          });
+          //console.log('next up while loop');
+          //console.log(mainClassFound);
+          while (!maxFound && mainClassFound) {
+            for (let x=highestClassCount-1; x>0; x--) {
+              highestSingleClassCountTotalArr.forEach( arr => {
+                let checkClass = countClassNames(arr);
+                //console.log(checkClass[mainClassRef.current]);
+                if(checkClass[mainClassRef.current] === x) {
+                  setMuleGemsFiltered(arr);
+                  setMuleGems(foundQuestGems);
+                  optimalPathFound = true;
+                  maxFound = true;
+                }
+              });
+              if(!maxFound && x===1) {
+                maxFound = true;
+              }
+            }
+          }
+          if (!mainClassFound) {
+            //console.log('selected class not found in any array')
+            //console.log(highestSingleClassCountTotalArr);
+            //let tempCheckArr = getArrayWithoutQuestDupe(highestSingleClassCountTotalArr);
+            //console.log(tempCheckArr);
+            //console.log(highestSingleClassCountTotalArr[0]);
+            setMuleGemsFiltered(highestSingleClassCountTotalArr[0]);
+            setMuleGems(foundQuestGems);
+            optimalPathFound = true;
+          }
+        } else if (!optimalPathFound) {
+
+          //console.log(highestSingleClassCountTotalArr);
+          //let tempCheckArr = getArrayWithoutQuestDupe(highestSingleClassCountTotalArr);
+          //console.log(tempCheckArr);
+          //if (tempCheckArr.length === 0) {
+            //console.log('no great path');
+            //console.log(lowestDiffClassArr);
+            //console.log(highestSingleClassCountTotalArr);
+            setMuleGemsFiltered(highestSingleClassCountTotalArr[0]);
+            setMuleGems(foundQuestGems);
+          //} else {
+            //setMuleGemsFiltered(tempCheckArr[0]);
+            //setMuleGems(foundQuestGems);
+          //}
+          //console.log(highestSingleClassCountTotalArr);
+          //let tempHighSing = Object.assign([],highestSingleClassCountTotalArr);
+          //console.log(tempCheckArr);
+          //console.log(tempHighSing);
+        }
+        
+        //console.log(muleGemsFilteredRef.current);
+        //console.log(countClassNames(muleGemsFilteredRef.current));
       }
-      //console.log(muleGemsFilteredRef.current);
-      //console.log(countClassNames(muleGemsFilteredRef.current));
-      
       //run through props on object, apply to shit
       let classActArr = [];
+      //console.log('breaks here?');
+      //console.log(muleGemsFilteredRef.current);
       setCharsNeeded(countClassNames(muleGemsFilteredRef.current));
       //console.log(Object.keys(charsNeededRef.current));
       Object.keys(charsNeededRef.current).forEach( cl => {
@@ -528,7 +465,7 @@ export default function GemGuide() {
         });
         classActArr.push(x);
       });
-      const allClassActArr = classActArr;
+      const allClassActArr = Object.assign([],classActArr);
       //console.log(charsNeededRef.current);
       //console.log(classActArr);
       //add notification about duplicate class WIP WIP
@@ -557,6 +494,7 @@ export default function GemGuide() {
       }
       //console.log(classActArr);
       setActCount(classActArr);
+      
     } else {
       setMuleGemsFiltered([]);
       setMuleGems([]);
