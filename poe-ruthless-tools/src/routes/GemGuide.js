@@ -110,6 +110,7 @@ export default function GemGuide() {
     setGem([]);
     //console.log('before');
     setMainClass('');
+    setSearchTerm('');
     //console.log('after');
     //console.log(gemRef.current);
     getRequiredMules(gemRef.current);
