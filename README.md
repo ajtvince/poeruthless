@@ -15,6 +15,3 @@ This page contains information on ruthless specific vendor recipes.
 
 ### ***League Content Rundown***
 This page contains information regarding the different league mechanics and any notable changes to the mechanic specifically for the ruthless game mode.
-
-### ***Ruthless Streamer Information***
-This page contains a list of different Twitch/YouTube streamers who make content that caters towards the ruthless game mode.
